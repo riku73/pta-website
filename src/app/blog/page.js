@@ -1,0 +1,147 @@
+import React from "react";
+import PageHeader from "../../Components/Shared/PageHeader";
+import Link from "next/link";
+import { ArrowRight, Calendar, Person } from "react-bootstrap-icons";
+
+const blogPosts = [
+  {
+    id: 1,
+    title: "Rückenschmerzen? Diese Übungen helfen wirklich",
+    excerpt: "Stundenlanges Sitzen macht den Rücken mürbe – aber mit den richtigen Übungen kannst du gegensteuern und langfristig schmerzfrei bleiben.",
+    date: "15. November 2024",
+    author: "PTA Team",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop"
+  },
+  {
+    id: 2,
+    title: "Was du vor und nach dem Training essen solltest",
+    excerpt: "Die richtige Ernährung kann deine Performance pushen und die Regeneration beschleunigen. Wir zeigen dir, welche Nährstoffe dein Körper wann braucht.",
+    date: "10. November 2024",
+    author: "PTA Team",
+    category: "Ernährung",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=500&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Keine Lust auf Training? 5 Tricks, die wirklich funktionieren",
+    excerpt: "Wir alle kennen diese Tage, an denen die Couch verlockender ist. Mit diesen einfachen Strategien überwindest du den inneren Schweinehund.",
+    date: "5. November 2024",
+    author: "PTA Team",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop"
+  },
+  {
+    id: 4,
+    title: "HIIT oder Dauerlauf – was bringt mehr?",
+    excerpt: "Kurz und knackig oder lang und gleichmäßig? Beide Trainingsformen haben ihre Stärken. Wir helfen dir zu entscheiden.",
+    date: "28. Oktober 2024",
+    author: "PTA Team",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop"
+  },
+  {
+    id: 5,
+    title: "So wichtig ist Schlaf für deinen Muskelaufbau",
+    excerpt: "Schlaf ist genauso wichtig wie Training und Ernährung. Wir zeigen dir, wie du deine Erholung optimierst.",
+    date: "20. Oktober 2024",
+    author: "PTA Team",
+    category: "Regeneration",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop"
+  },
+  {
+    id: 6,
+    title: "Die 10 häufigsten Anfängerfehler – und wie du sie vermeidest",
+    excerpt: "Viele Anfänger machen die gleichen Fehler. Wir zeigen dir, wie du von Anfang an richtig trainierst.",
+    date: "15. Oktober 2024",
+    author: "PTA Team",
+    category: "Anfänger",
+    image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800&h=500&fit=crop"
+  }
+];
+
+const Blog = () => {
+  return (
+    <>
+      <PageHeader
+        heading={"Blog"}
+        page={"Blog"}
+      />
+
+      <section className="pt_120 pb_120">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
+            <span className="text-clr_base font-caveat text-2xl mb-4 block">Wissen & Tipps</span>
+            <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
+              Fitness-Wissen für deinen Erfolg
+            </h2>
+            <p className="text-clr_pra text-lg">
+              Entdecke wertvolle Tipps zu Training, Ernährung und Motivation
+              von unserem Experten-Team.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map(({ id, title, excerpt, date, author, category, image }) => (
+              <article
+                key={id}
+                className="bg-common_bg rounded-lg overflow-hidden group"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={id * 100}
+              >
+                <div className="h-56 overflow-hidden relative">
+                  <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-full object-cover group-hover:scale-110 duration-500"
+                  />
+                  <span className="absolute top-4 left-4 bg-clr_base text-clr_title px-3 py-1 rounded text-sm font-medium">
+                    {category}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-clr_pra text-sm mb-4">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="text-clr_base" />
+                      {date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Person className="text-clr_base" />
+                      {author}
+                    </span>
+                  </div>
+
+                  <h3 className="text-white text-xl font-semibold mb-3 group-hover:text-clr_base duration-300">
+                    {title}
+                  </h3>
+                  <p className="text-clr_pra mb-4">{excerpt}</p>
+
+                  <Link
+                    href="#"
+                    className="inline-flex items-center gap-2 text-clr_base hover:text-white duration-300"
+                  >
+                    <span>Weiterlesen</span>
+                    <ArrowRight />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 font-medium px-[30px] py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
+            >
+              <span className="z-10 relative duration-500">Mehr Artikel laden</span>
+              <ArrowRight className="z-10 relative duration-500 text-xl" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Blog;
