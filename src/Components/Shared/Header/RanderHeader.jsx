@@ -102,19 +102,8 @@ const RanderHeader = () => {
               }`}
               aria-label="Main navigation"
             >
-              {/* Mobile Menu Header - Close button only, no duplicate logo */}
-              <div className="flex justify-end p-5 border-b border-clr_cusborder lg:hidden">
-                <button
-                  onClick={toggleMenu}
-                  className="w-11 h-11 flex items-center justify-center hover:bg-white/10 rounded-lg transition-colors"
-                  aria-label="Close menu"
-                >
-                  <X className="text-[28px] text-clr_white" />
-                </button>
-              </div>
-
               {/* Menu List */}
-              <ul className="flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 px-5 lg:px-0 py-6 lg:py-0 overflow-y-auto h-[calc(100%-81px)] lg:h-auto">
+              <ul className="flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 px-5 lg:px-0 pt-8 pb-6 lg:py-0 overflow-y-auto h-full lg:h-auto">
                 {menuList.map(({ id, name, path, dropDown }, index) => {
                   return (
                     <li
