@@ -9,6 +9,7 @@ const Contact = () => {
       <PageHeader
         heading={"Lass uns sprechen"}
         page={"Kontakt"}
+        backgroundImage="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1920&q=80"
       />
       <section className="contact__section">
         <div className="container">

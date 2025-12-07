@@ -18,9 +18,10 @@ const Blogs = () => {
               <div>
                 {blogsList
                   .slice(0, 3)
-                  .map(({ id, date, image, heading }, index) => (
+                  .map(({ id, slug, date, image, heading }, index) => (
                     <Blog
                       key={id}
+                      slug={slug}
                       date={date}
                       image={image}
                       heading={heading}

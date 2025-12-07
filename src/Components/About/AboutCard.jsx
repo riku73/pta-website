@@ -6,7 +6,7 @@ const AboutCard = ({ title, para, info }) => {
       <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
         <div>
           <div>
-            <img src={"/img/about/personal-infothumb.png"} alt="img" />
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=600&fit=crop" alt="Personal Training" className="w-full rounded-lg object-cover" />
           </div>
         </div>
         <div>
@@ -18,16 +18,16 @@ const AboutCard = ({ title, para, info }) => {
             <div className="lg:mt-[30px] mt-5">
               {info.map(({date, instition, position}, index) => {
                 return (
-                  <div key={index} className="flex items-center justify-between border-t border-t-clr_cusborder py-6 duration-500 last:border-y last:border-b-clr_cusborder hover:border-clr_hover">
-                    <span className="md:text-lg text-base font-medium text-clr_base">
+                  <div key={index} className="flex items-center gap-8 border-t border-t-clr_cusborder py-6 duration-500 last:border-y last:border-b-clr_cusborder hover:border-clr_hover">
+                    <span className="md:text-lg text-base font-medium text-clr_base min-w-[120px]">
                       {date}
                     </span>
                     <div>
-                      <h4 className="mb-[15px] text-white font-semibold md:text-2xl text-lg leading-[130px]">
-                        {instition}
-                      </h4>
-                      <p className="md:text-lg text-base text-clr_pra d-block">
+                      <h4 className="mb-[10px] text-white font-semibold md:text-2xl text-lg leading-normal">
                         {position}
+                      </h4>
+                      <p className="md:text-lg text-base text-clr_pra">
+                        {instition}
                       </p>
                     </div>
                   </div>

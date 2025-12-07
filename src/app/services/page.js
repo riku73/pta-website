@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircleFill } from "react-bootstrap-icons";
 const services = [
   {
     id: 1,
+    slug: "personal-training",
     title: "Personal Training",
     subtitle: "Training, das sich nach dir richtet",
     description: "Im 1:1-Training gehört die volle Aufmerksamkeit nur dir. Wir bauen dein Programm um deine Ziele, deinen Körper und deinen Alltag herum.",
@@ -15,11 +16,11 @@ const services = [
       "Flexible Terminvereinbarung",
       "Motivation & Unterstützung"
     ],
-    price: "79",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop"
   },
   {
     id: 2,
+    slug: "ernaehrungsberatung",
     title: "Ernährungsberatung",
     subtitle: "Essen, das zu dir passt",
     description: "Keine starren Diätpläne, sondern Ernährung, die sich in dein Leben einfügt – realistisch, nachhaltig und ohne Verzichtsdruck.",
@@ -29,11 +30,11 @@ const services = [
       "Einkaufslisten & Rezepte",
       "Wöchentliche Check-ins"
     ],
-    price: "49",
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop"
   },
   {
     id: 3,
+    slug: "gruppentraining",
     title: "Gruppentraining",
     subtitle: "Gemeinsam stärker",
     description: "In kleinen Gruppen trainierst du effektiv und hast dabei jede Menge Spaß. Die Motivation der anderen zieht dich mit.",
@@ -43,25 +44,11 @@ const services = [
       "Qualifizierte Trainer",
       "Starkes Gemeinschaftsgefühl"
     ],
-    price: "29",
     image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop"
   },
   {
     id: 4,
-    title: "Online Coaching",
-    subtitle: "Flexibel, wo du willst",
-    description: "Dein Trainer in der Tasche: Mit Trainingsplänen, Video-Check-ins und persönlichem Support erreichst du deine Ziele – egal wo du bist.",
-    features: [
-      "Training von zu Hause",
-      "Video-Calls mit Trainer",
-      "Trainings-App Zugang",
-      "Chat-Support"
-    ],
-    price: "59",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop"
-  },
-  {
-    id: 5,
+    slug: "fitness-bootcamp",
     title: "Fitness Bootcamp",
     subtitle: "Intensiv, dynamisch, motivierend",
     description: "Kurze, knackige Workouts – hier wird richtig Gas gegeben. Functional Training, HIIT und jede Menge gute Laune.",
@@ -71,11 +58,11 @@ const services = [
       "Ernährungsplan inklusive",
       "Starke Community"
     ],
-    price: "199",
     image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=600&h=400&fit=crop"
   },
   {
-    id: 6,
+    id: 5,
+    slug: "rehabilitation",
     title: "Rehabilitation & Aufbautraining",
     subtitle: "Zurück zu voller Beweglichkeit",
     description: "Nach einer Verletzung, OP oder bei chronischen Beschwerden begleiten wir dich behutsam zurück in die Bewegung – sicher und mit viel Geduld.",
@@ -85,8 +72,21 @@ const services = [
       "Schmerzfreies Training",
       "Langfristige Betreuung"
     ],
-    price: "Auf Anfrage",
     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+  },
+  {
+    id: 6,
+    slug: "sportmannschaften",
+    title: "Sportmannschaften",
+    subtitle: "Leistung für dein Team",
+    description: "Professionelles Athletiktraining für Sportvereine und Mannschaften aus ganz Luxemburg – für jede Sportart und jedes Niveau.",
+    features: [
+      "Teamspezifische Programme",
+      "Athletik & Kondition",
+      "Verletzungsprävention",
+      "Saisonplanung & Periodisierung"
+    ],
+    image: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=600&h=400&fit=crop"
   }
 ];
 
@@ -96,6 +96,7 @@ const Services = () => {
       <PageHeader
         heading={"Unsere Leistungen"}
         page={"Leistungen"}
+        backgroundImage="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1920&q=80"
       />
 
       <section className="pt_120 pb_120">
@@ -112,7 +113,7 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map(({ id, title, subtitle, description, features, price, image }) => (
+            {services.map(({ id, slug, title, subtitle, description, features, image }) => (
               <div
                 key={id}
                 className="bg-common_bg rounded-lg overflow-hidden group"
@@ -141,24 +142,13 @@ const Services = () => {
                     ))}
                   </ul>
 
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-clr_base text-3xl font-bold">
-                        {typeof price === "string" && price.includes("Anfrage") ? "" : "€"}
-                        {price}
-                      </span>
-                      {typeof price === "number" || !price.includes("Anfrage") ? (
-                        <span className="text-clr_pra text-sm"> / Monat</span>
-                      ) : null}
-                    </div>
-                    <Link
-                      href="/contact"
-                      className="flex items-center gap-2 text-clr_base hover:text-white duration-300"
-                    >
-                      <span>Anfragen</span>
-                      <ArrowRight />
-                    </Link>
-                  </div>
+                  <Link
+                    href={`/services/${slug}`}
+                    className="inline-flex items-center gap-2 text-clr_base hover:text-white duration-300 font-medium"
+                  >
+                    <span>Mehr erfahren</span>
+                    <ArrowRight />
+                  </Link>
                 </div>
               </div>
             ))}

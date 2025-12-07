@@ -9,7 +9,7 @@ const Form = ({ isColTwo }) => {
         Lass uns sprechen
       </h3>
       <p className="text-clr_pra mb-[30px]">
-        Du hast Fragen oder möchtest ein kostenloses Erstgespräch vereinbaren? Schreib uns – wir melden uns schnellstmöglich bei dir.
+        Du hast Fragen oder möchtest ein kostenloses Erstgespräch vereinbaren? Schreib uns – wir melden uns in Kürze bei dir.
       </p>
       <form action="#" className={`flex flex-col gap-6`}>
         <div className={`gap-6 flex ${isColTwo ? " sm:flex-row flex-col " : "flex-col"}`}>

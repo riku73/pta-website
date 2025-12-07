@@ -6,8 +6,8 @@ import { ArrowRight } from "react-bootstrap-icons";
 const teamMembers = [
   {
     id: 1,
-    name: "Das PTA Team",
-    role: "Functional Training Experten",
+    name: "Functional Training",
+    role: "Unser Kernbereich",
     description: "Zertifizierte Trainer mit Leidenschaft für Bewegung und Gesundheit. Wir begleiten dich auf deinem Weg – egal wo du startest.",
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop"
   },
@@ -33,6 +33,7 @@ const AboutUs = () => {
       <PageHeader
         heading={"Über Uns"}
         page={"Über Uns"}
+        backgroundImage="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=1920&q=80"
       />
 
       <section className="pt_120 pb_120">

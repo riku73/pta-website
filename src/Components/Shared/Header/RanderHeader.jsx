@@ -2,12 +2,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { List, ArrowRight, X } from "react-bootstrap-icons";
-import Drawer from "./Drawer";
 import { menuList } from "@/Utlits/menuList";
 
 
 const RanderHeader = () => {
-  const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
   const [dropDownId, setDropDownId] = useState(null);
   const [fixedHeader, setFixedHeader] = useState(false);
@@ -30,15 +28,21 @@ const RanderHeader = () => {
     setDropDownId((prevId) => (prevId === id ? null : id)); // Toggle submenu
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <header
-      className={` ${fixedHeader ? "fixed top-0 left-0 z-50 bg-black" : "relative"
-        } w-full border-b border-b-clr_cusborder z-10  xxl:after:block after:hidden after:absolute after:right-[calc(20%-30px)] after:top-0 after:w-[1px] after:h-full after:content:[''] after:bg-clr_cusborder  xxl:before:block before:hidden before:absolute before:left-[calc(15%-40px)] before:top-0 before:w-[1px] before:h-full before:content:[''] before:bg-clr_cusborder`}
-    >
+    <>
+      {/* Spacer to prevent layout shift when header becomes fixed */}
+      {fixedHeader && <div className="h-[82px]" />}
+      <header
+        className={`${fixedHeader ? "fixed top-0 left-0 z-50 bg-black" : "relative"} w-full z-10`}
+      >
       <div className="xxl:max-w-[1805px] container mx-auto px-3">
         <div className="flex justify-between items-center w-full relative py-5">
           <div className="main__logo">
-            <Link href={"/"} className="block">
+            <Link href={"/"} onClick={scrollToTop} scroll={false} className="block">
               <span className="text-3xl xl:text-4xl font-bold text-clr_base">PTA</span>
             </Link>
           </div>
@@ -57,6 +61,8 @@ const RanderHeader = () => {
                 >
                   <Link
                     href={`${path}${section ? section : ""}`}
+                    onClick={path === "/" ? scrollToTop : undefined}
+                    scroll={path === "/" ? false : undefined}
                     className="text-clr_white font-500 xxl:text-base text-sm uppercase lg:py-[10px] py-0 xxl:px-[16px] xl:px-[10px] px-1 hover:text-clr_base "
                   >
                     {name}
@@ -106,20 +112,11 @@ const RanderHeader = () => {
                 <List className="text-[32px]  text-clr_white cursor-pointer" />
               )}
             </div>
-            <div
-              onClick={() => setIsSidebarActive(true)}
-              className="xl:w-[58px] xl:h-[58px]  w-[39px] h-[39px] rounded-md flex items-center justify-center bg-clr_white cursor-pointer"
-            >
-              <List className="lg:text-[32px] text-[22px] text-clr_title" />
-            </div>
           </div>
         </div>
       </div>
-      <Drawer
-        isSidebarActive={isSidebarActive}
-        setIsSidebarActive={setIsSidebarActive}
-      />
     </header>
+    </>
   );
 };
 

@@ -8,13 +8,10 @@ import Testimonial from "../Components/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/MarqueeWapper";
 import Awards from "../Components/About/Awards";
-import EventBanner from "../Components/EventBanner";
-
 
 const Home = () => {
   return (
     <>
-      <EventBanner />
       <MarqueeWapper direction="left" images={images} />
       <About />
       <Services isHeading={true} />

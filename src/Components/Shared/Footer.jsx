@@ -12,18 +12,18 @@ const navigation = [
 ];
 
 const services = [
-  { id: 1, name: "Personal Training" },
-  { id: 2, name: "Ernährungsberatung" },
-  { id: 3, name: "Gruppentraining" },
-  { id: 4, name: "Online Coaching" },
-  { id: 5, name: "Fitness Bootcamp" },
-  { id: 6, name: "Rehabilitation & Aufbautraining" },
+  { id: 1, name: "Personal Training", path: "/services/personal-training" },
+  { id: 2, name: "Ernährungsberatung", path: "/services/ernaehrungsberatung" },
+  { id: 3, name: "Gruppentraining", path: "/services/gruppentraining" },
+  { id: 4, name: "Fitness Bootcamp", path: "/services/fitness-bootcamp" },
+  { id: 5, name: "Rehabilitation", path: "/services/rehabilitation" },
+  { id: 6, name: "Sportmannschaften", path: "/services/sportmannschaften" },
 ];
 
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-common_bg">
+      <div className="bg-[#0a0a0a]">
         <div className="container">
           <div className="pt-16 pb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -76,10 +76,10 @@ const Footer = () => {
               <div>
                 <h4 className="text-white text-xl font-semibold mb-6">Leistungen</h4>
                 <ul className="space-y-3">
-                  {services.map(({ id, name }) => (
+                  {services.map(({ id, name, path }) => (
                     <li key={id}>
                       <Link
-                        href="/services"
+                        href={path}
                         className="text-clr_pra hover:text-clr_base duration-300"
                       >
                         {name}
@@ -124,7 +124,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-[#0a0a0a]">
+      <div className="bg-[#1a1a1a]">
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center justify-between py-6 gap-4">
             <p className="text-clr_pra text-sm">

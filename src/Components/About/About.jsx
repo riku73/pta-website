@@ -40,13 +40,6 @@ const About = () => {
       <section className="pt_120 pb_120" id="about">
         <div className="container">
           <div className="text-center mx-auto xl:mb-[60px] md:mb-[50px] mb-[30px]">
-            <img
-              src={"/img/about/section-star.png"}
-              className="mb-[30px] animate-spin mx-auto"
-              alt="star"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            />
             <p
               className="lg:text-[42px] md:text-[28px] sm:text-xl text-base font-medium text-clr_white lg:leading-[66px]"
               data-aos="fade-up"

@@ -5,25 +5,25 @@ const skillsList = [
     id: 1,
     skill: "Krafttraining",
     percentage: "95%",
-    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=60&h=60&fit=crop",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=120&h=120&fit=crop",
   },
   {
     id: 2,
     skill: "Ernährung",
     percentage: "90%",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=60&h=60&fit=crop",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&h=120&fit=crop",
   },
   {
     id: 3,
     skill: "Cardio & HIIT",
     percentage: "92%",
-    image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=60&h=60&fit=crop",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=120&h=120&fit=crop",
   },
   {
     id: 4,
     skill: "Rehabilitation",
     percentage: "88%",
-    image: "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=60&h=60&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=120&h=120&fit=crop",
   },
 ];
 
@@ -57,7 +57,7 @@ const Skills = ({ isTabActive }) => {
                           </div>
                           <div>
                             <span className="md:text-lg text-base lg:mb-[15px] mb-[10px] block text-clr_pra">{skill}</span>
-                            <h1 className="font-semibold text-5xl text-clr_white">{percentage}</h1>
+                            <span className="font-semibold text-5xl text-clr_white block">{percentage}</span>
                           </div>
                         </div>
                       </div>

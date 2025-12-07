@@ -55,7 +55,7 @@ const Price = ({ image, planName, price, time, fetcher, id }) => {
               id === 2 ? "text-white" : "text-black"
             } relative z-10 duration-500`}
           >
-            Start My Project Now
+            Jetzt starten
           </span>
           <span>
             <i

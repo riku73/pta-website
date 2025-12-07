@@ -4,6 +4,10 @@ import { socialIcons } from "../../../Utlits/socilIcons";
 import Link from "next/link";
 
 const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div
       className={`w-80 h-full fixed z-50  top-0 duration-500 overflow-y-scroll bg-black ${
@@ -19,7 +23,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
         </i>
       </div>
       <div className="grid py-10 px-5">
-        <Link href={"/"} className="mb-5">
+        <Link href={"/"} onClick={scrollToTop} scroll={false} className="mb-5">
           <span className="text-3xl font-bold text-clr_base">PTA</span>
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">

@@ -6,6 +6,7 @@ import { ArrowRight, Calendar, Person } from "react-bootstrap-icons";
 const blogPosts = [
   {
     id: 1,
+    slug: "rueckenschmerzen-uebungen",
     title: "Rückenschmerzen? Diese Übungen helfen wirklich",
     excerpt: "Stundenlanges Sitzen macht den Rücken mürbe – aber mit den richtigen Übungen kannst du gegensteuern und langfristig schmerzfrei bleiben.",
     date: "15. November 2024",
@@ -15,6 +16,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "ernaehrung-vor-nach-training",
     title: "Was du vor und nach dem Training essen solltest",
     excerpt: "Die richtige Ernährung kann deine Performance pushen und die Regeneration beschleunigen. Wir zeigen dir, welche Nährstoffe dein Körper wann braucht.",
     date: "10. November 2024",
@@ -24,6 +26,7 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "motivation-training-tipps",
     title: "Keine Lust auf Training? 5 Tricks, die wirklich funktionieren",
     excerpt: "Wir alle kennen diese Tage, an denen die Couch verlockender ist. Mit diesen einfachen Strategien überwindest du den inneren Schweinehund.",
     date: "5. November 2024",
@@ -33,6 +36,7 @@ const blogPosts = [
   },
   {
     id: 4,
+    slug: "hiit-vs-dauerlauf",
     title: "HIIT oder Dauerlauf – was bringt mehr?",
     excerpt: "Kurz und knackig oder lang und gleichmäßig? Beide Trainingsformen haben ihre Stärken. Wir helfen dir zu entscheiden.",
     date: "28. Oktober 2024",
@@ -42,6 +46,7 @@ const blogPosts = [
   },
   {
     id: 5,
+    slug: "schlaf-muskelaufbau",
     title: "So wichtig ist Schlaf für deinen Muskelaufbau",
     excerpt: "Schlaf ist genauso wichtig wie Training und Ernährung. Wir zeigen dir, wie du deine Erholung optimierst.",
     date: "20. Oktober 2024",
@@ -51,6 +56,7 @@ const blogPosts = [
   },
   {
     id: 6,
+    slug: "anfaengerfehler-vermeiden",
     title: "Die 10 häufigsten Anfängerfehler – und wie du sie vermeidest",
     excerpt: "Viele Anfänger machen die gleichen Fehler. Wir zeigen dir, wie du von Anfang an richtig trainierst.",
     date: "15. Oktober 2024",
@@ -66,6 +72,7 @@ const Blog = () => {
       <PageHeader
         heading={"Blog"}
         page={"Blog"}
+        backgroundImage="https://images.unsplash.com/photo-1486218119243-13883505764c?w=1920&q=80"
       />
 
       <section className="pt_120 pb_120">
@@ -82,7 +89,7 @@ const Blog = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map(({ id, title, excerpt, date, author, category, image }) => (
+            {blogPosts.map(({ id, slug, title, excerpt, date, author, category, image }) => (
               <article
                 key={id}
                 className="bg-common_bg rounded-lg overflow-hidden group"
@@ -118,7 +125,7 @@ const Blog = () => {
                   <p className="text-clr_pra mb-4">{excerpt}</p>
 
                   <Link
-                    href="#"
+                    href={`/blog/${slug}`}
                     className="inline-flex items-center gap-2 text-clr_base hover:text-white duration-300"
                   >
                     <span>Weiterlesen</span>
@@ -129,15 +136,6 @@ const Blog = () => {
             ))}
           </div>
 
-          <div className="mt-16 text-center" data-aos="fade-up" data-aos-duration="1000">
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 font-medium px-[30px] py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
-            >
-              <span className="z-10 relative duration-500">Mehr Artikel laden</span>
-              <ArrowRight className="z-10 relative duration-500 text-xl" />
-            </Link>
-          </div>
         </div>
       </section>
     </>

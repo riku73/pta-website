@@ -13,17 +13,17 @@ const Education = ({ isTabActive }) => {
           {
             date: "Zertifiziert",
             position: "Personal Trainer Lizenz",
-            instition: "DSSV & BSA Akademie",
+            instition: "EuropeActive & EREPS",
           },
           {
             date: "Spezialisiert",
             position: "Ernährungsberatung",
-            instition: "DGE Zertifizierung",
+            instition: "Anerkannte Zertifizierung",
           },
           {
             date: "Fortbildung",
             position: "Funktionelles Training",
-            instition: "FMS & Kettlebell",
+            instition: "FMS, Kettlebell & TRX",
           },
         ]}
       />

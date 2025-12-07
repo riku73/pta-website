@@ -59,25 +59,25 @@ const AboutMe = ({ isTabActive }) => {
                 Die Personal Training Academy wurde 2015 gegründet – aus der Überzeugung heraus, dass Fitness mehr ist als nur Schwitzen im Studio. Unser Team aus erfahrenen Trainern und Ernährungsexperten arbeitet mit Menschen jeden Alters und jeder Lebenssituation: vom Reha-Patienten über den Wiedereinsteiger bis zum ambitionierten Sportler. Was uns verbindet? Die Leidenschaft dafür, dich Schritt für Schritt voranzubringen – ganz gleich, wo du gerade stehst.
               </p>
               <div className="mt-10">
-                <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-between  gap-6">
+                <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-6">
                   {contactInfo.map(({ id, contact, socalContact, system }) => {
                     return (
                       <div
                         key={id}
-                        className=""
+                        className="h-full"
                         data-aos="zoom-in"
                       >
-                        <div className="rounded-[10px] bg-[#1D1D1D] p-[35px] border border-[#1D1D1D] duration-500 hover:border-clr_base">
+                        <div className="rounded-[10px] bg-[#1D1D1D] p-[35px] border border-[#1D1D1D] duration-500 hover:border-clr_base h-full">
                           <div>
-                            <span className="text-clr_pra fz-18 md:text-lg text-base mb-5 block">
+                            <span className="text-clr_pra md:text-lg text-base mb-5 block">
                               {system}
                             </span>
                             <span className="text-xl text-clr_white">{contact}</span>
                             {socalContact && (
-                              <ul className="flex items-center xl:gap-4 gap-2 ">
+                              <ul className="flex items-center xl:gap-4 gap-2">
                                 {socalContact.map((info, index) => (
                                   <li key={index}>
-                                    <Link href={"#"} className="text-clr_white text-xl">{info} </Link>
+                                    <Link href={"#"} className="text-clr_white text-2xl">{info}</Link>
                                   </li>
                                 ))}
                               </ul>

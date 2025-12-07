@@ -1,6 +1,5 @@
 'use client'
 import React from "react";
-import Partner from "./Partner";
 import Rating from "./Shared/Rating";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,7 +22,7 @@ const reviewList = [
     id: 2,
     name: "Michael T.",
     position: "IT-Consultant",
-    review: `Ich war nach einem Bandscheibenvorfall monatelang außer Gefecht und hatte ehrlich gesagt Angst, wieder anzufangen. Mein Trainer hat genau verstanden, wo meine Grenzen sind, und mich Schritt für Schritt aufgebaut. Heute bin ich schmerzfrei, beweglicher als vorher und sogar beim Laufen wieder dabei. Die Geduld und Fachkenntnis hier sind wirklich beeindruckend.`,
+    review: `Nach einem Bandscheibenvorfall hatte ich Angst, wieder anzufangen. Mein Trainer hat mich Schritt für Schritt aufgebaut – heute bin ich schmerzfrei und sogar wieder beim Laufen. Die Geduld hier ist wirklich beeindruckend.`,
     stars: 5,
   },
   {
@@ -115,17 +114,7 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-          <div className="absolute top-5 left-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[100px]">
-            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=100&h=100&fit=crop" alt="customer" className="w-full rounded-full object-cover" />
-          </div>
-          <div className="absolute left-5 bottom-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[100px]">
-            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=100&h=100&fit=crop" alt="customer" className="w-full rounded-full object-cover" />
-          </div>
-          <div className="absolute top-5 right-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[100px]">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=100&h=100&fit=crop" alt="customer" className="w-full rounded-full object-cover" />
-          </div>
         </div>
-        <Partner />
       </div>
     </section>
   );

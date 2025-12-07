@@ -19,25 +19,25 @@ const serviceList = [
     id: "03",
     heading: "Gruppentraining",
     subHeading: "Gemeinsam stärker",
-    para: "In kleinen Gruppen trainierst du effektiv und hast dabei jede Menge Spaß. Die Motivation der anderen zieht dich mit, während dein Trainer trotzdem jeden einzelnen im Blick behält – perfekt für alle, die Teamspirit lieben.",
+    para: "In kleinen Gruppen trainierst du effektiv und hast dabei jede Menge Spaß. Die Motivation der anderen zieht dich mit, während dein Trainer trotzdem jeden einzelnen im Blick behält – perfekt für alle, die Teamgeist lieben.",
   },
   {
     id: "04",
-    heading: "Online Coaching",
-    subHeading: "Flexibel, wo du willst",
-    para: "Dein Trainer in der Tasche: Mit individuellen Trainingsplänen, Video-Check-ins und persönlichem Support erreichst du deine Ziele – egal, ob zu Hause, auf Reisen oder im Fitnessstudio um die Ecke.",
-  },
-  {
-    id: "05",
     heading: "Fitness Bootcamp",
     subHeading: "Intensiv, dynamisch, motivierend",
     para: "Kurze, knackige Workouts an der frischen Luft oder indoor – hier wird richtig Gas gegeben. Functional Training, HIIT und jede Menge gute Laune sorgen dafür, dass du über dich hinauswächst.",
   },
   {
-    id: "06",
+    id: "05",
     heading: "Rehabilitation & Aufbautraining",
     subHeading: "Zurück zu voller Beweglichkeit",
     para: "Nach einer Verletzung, OP oder bei chronischen Beschwerden begleiten wir dich behutsam zurück in die Bewegung. In enger Abstimmung mit deinem Arzt oder Physiotherapeuten trainieren wir gezielt, sicher und mit viel Geduld.",
+  },
+  {
+    id: "06",
+    heading: "Sportmannschaften",
+    subHeading: "Leistung für dein Team",
+    para: "Ob Fußball, Handball, Basketball oder jede andere Sportart – wir machen dein Team fit für die nächste Saison. Athletiktraining, Verletzungsprävention und teamspezifische Programme für Vereine und Mannschaften aus ganz Luxemburg.",
   },
 ];
 

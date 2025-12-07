@@ -7,19 +7,19 @@ const awardList = [
   {
     id: 1,
     awardName: "Beste Personal Training Academy",
-    contest: "Fitness Awards Berlin",
+    contest: "Luxembourg Fitness Awards",
     year: "2023",
   },
   {
     id: 2,
     awardName: "Top Ernährungsberatung",
-    contest: "Health & Wellness",
+    contest: "Gesundheit & Wellness",
     year: "2022",
   },
   {
     id: 3,
     awardName: "Innovation im Training",
-    contest: "Digital Fitness Award",
+    contest: "Digitaler Fitness Preis",
     year: "2021",
   },
   {

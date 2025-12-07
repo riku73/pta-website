@@ -1,12 +1,14 @@
 import Link from "next/link";
 import React from "react";
 
-const PageHeader = ({heading, page}) => {
+const defaultBg = "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&q=80";
+
+const PageHeader = ({heading, page, backgroundImage}) => {
   return (
     <div
       className="relative bg-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&q=80')`
+        backgroundImage: `url('${backgroundImage || defaultBg}')`
       }}
     >
       {/* Dark overlay */}

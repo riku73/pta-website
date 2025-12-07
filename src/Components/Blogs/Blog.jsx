@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Eye } from "react-bootstrap-icons";
 import Lightbox from "../Shared/LightBox";
 
-const Blog = ({ date, heading, image, index }) => {
+const Blog = ({ date, heading, image, index, slug }) => {
   const [currentId, setCurrentId] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const Blog = ({ date, heading, image, index }) => {
               </span>
               <h3 className="xl:text-3xl sm:text-[22px] text-xl text-white sm:leading-[44px] leading-8 font-semibold capitalize">
                 <Link
-                  href={"/blog-details"}
+                  href={`/blog/${slug}`}
                   className="text-white duration-500 group-hover:text-clr_base"
                 >
                   {heading}
@@ -36,7 +36,7 @@ const Blog = ({ date, heading, image, index }) => {
               </h3>
             </div>
           </div>
-          <div className="duration-500 md:opacity-0 opacity-100 group-hover:opacity-100">
+          <div className="duration-500 opacity-100">
             <img
               src={image}
               alt="img-opa "

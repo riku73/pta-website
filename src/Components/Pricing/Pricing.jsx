@@ -5,43 +5,42 @@ import Title from "../Shared/Title";
 const planData = [
   {
     id: 1,
-    planName: "Basic Plan",
-    price: "$35",
-    time: "per month",
+    planName: "Basis",
+    price: "€49",
+    time: "pro Monat",
     fetcher: [
-      " Web Development",
-      " Mobile Development",
-      "Advetising",
-      "Graphic design",
-      "Project management",
+      "1x Personal Training pro Woche",
+      "Zugang zum Trainingsbereich",
+      "Individueller Trainingsplan",
+      "Monatliche Fortschrittskontrolle",
     ],
     image: "/img/project/basic.png",
   },
   {
     id: 2,
-    planName: "Ultra Plan",
-    price: "$65",
-    time: "per month",
+    planName: "Standard",
+    price: "€79",
+    time: "pro Monat",
     fetcher: [
-      " Web Development",
-      " Mobile Development",
-      "Advetising",
-      "Graphic design",
-      "Project management",
+      "2x Personal Training pro Woche",
+      "Zugang zum Trainingsbereich",
+      "Individueller Trainingsplan",
+      "Ernährungsberatung Grundpaket",
+      "14-tägige Fortschrittskontrolle",
     ],
     image: "/img/project/warranty.png",
   },
   {
     id: 3,
-    planName: "Gold Plan",
-    price: "$95",
-    time: "per month",
+    planName: "Premium",
+    price: "€129",
+    time: "pro Monat",
     fetcher: [
-      " Web Development",
-      " Mobile Development",
-      "Advetising",
-      "Graphic design",
-      "Project management",
+      "Unbegrenztes Personal Training",
+      "Voller Zugang zu allen Kursen",
+      "Individueller Trainings- & Ernährungsplan",
+      "Wöchentliche Check-ins",
+      "Priority-Terminbuchung",
     ],
     image: "/img/project/premium-quality.png",
   },
@@ -52,8 +51,8 @@ const Pricing = () => {
     <section className="pt_120 pb_120">
       <div className="container">
         <Title
-          mainTitle={"The best pricing plans to get your best"}
-          sortTitle={"Choose Your Plan"}
+          mainTitle={"Finde das Angebot, das zu deinem Ziel passt"}
+          sortTitle={"Unsere Mitgliedschaften"}
         />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
           {planData.map(({ id, image, planName, fetcher, price, time }) => (
