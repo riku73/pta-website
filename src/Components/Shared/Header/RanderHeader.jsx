@@ -28,10 +28,6 @@ const RanderHeader = () => {
     setDropDownId((prevId) => (prevId === id ? null : id)); // Toggle submenu
   };
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <>
       {/* Spacer to prevent layout shift when header becomes fixed */}
@@ -52,7 +48,7 @@ const RanderHeader = () => {
               : "opacity-0 invisible lg:opacity-100 lg:visible"
               }`}
           >
-            {menuList.map(({ id, name, path, dropDown, section }) => {
+            {menuList.map(({ id, name, path, dropDown }) => {
               return (
                 <li
                   className="relative transition-all border-b-2 border-b-clr_cusborder lg:border-none last:border-none lg:py-0 py-4 group/dropdown"
@@ -60,9 +56,7 @@ const RanderHeader = () => {
                   onClick={() => setActiveSubMenu(id)}
                 >
                   <Link
-                    href={`${path}${section ? section : ""}`}
-                    onClick={path === "/" ? scrollToTop : undefined}
-                    scroll={path === "/" ? false : undefined}
+                    href={path}
                     className="text-clr_white font-500 xxl:text-base text-sm uppercase lg:py-[10px] py-0 xxl:px-[16px] xl:px-[10px] px-1 hover:text-clr_base "
                   >
                     {name}
