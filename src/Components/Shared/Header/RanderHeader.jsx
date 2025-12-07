@@ -1,6 +1,7 @@
 'use client'
 import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { List, ArrowRight, X } from "react-bootstrap-icons";
 import { menuList } from "@/Utlits/menuList";
 
@@ -9,6 +10,33 @@ const RanderHeader = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [dropDownId, setDropDownId] = useState(null);
   const [fixedHeader, setFixedHeader] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Handle navigation with forced scroll to top
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+
+    // Always scroll to top first
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    // If already on the same path, force a refresh-like behavior
+    if (pathname === path) {
+      // Small delay to ensure scroll happens
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 0);
+    } else {
+      router.push(path, { scroll: false });
+      // Scroll after navigation
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
+    }
+  };
+
   // Function for handling the sticky header
   const updateHeaderStickyState = useCallback(() => {
     setFixedHeader(window.scrollY >= 35);
@@ -37,7 +65,7 @@ const RanderHeader = () => {
       <div className="container">
         <div className="flex justify-between items-center w-full relative py-5">
           <div className="main__logo">
-            <Link href={"/"} scroll={true} className="block">
+            <Link href={"/"} scroll={false} className="block" onClick={(e) => handleNavigation(e, "/")}>
               <span className="text-3xl xl:text-4xl font-bold text-clr_base">PTA</span>
             </Link>
           </div>
@@ -56,7 +84,8 @@ const RanderHeader = () => {
                 >
                   <Link
                     href={path}
-                    scroll={true}
+                    scroll={false}
+                    onClick={(e) => handleNavigation(e, path)}
                     className="text-clr_white font-500 xxl:text-base text-sm uppercase lg:py-[10px] py-0 xxl:px-[16px] xl:px-[10px] px-1 hover:text-clr_base "
                   >
                     {name}

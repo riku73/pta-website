@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import React from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { ArrowUpShort, Facebook, Instagram, Linkedin, Youtube, GeoAlt, Telephone, Envelope, Clock } from "react-bootstrap-icons";
 
 const navigation = [
@@ -21,6 +22,23 @@ const services = [
 ];
 
 const Footer = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    if (pathname === path) {
+      setTimeout(() => window.scrollTo(0, 0), 0);
+    } else {
+      router.push(path, { scroll: false });
+      setTimeout(() => window.scrollTo(0, 0), 50);
+    }
+  };
+
   return (
     <footer>
       <div className="bg-[#0a0a0a]">
@@ -29,7 +47,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
               {/* Column 1: Brand */}
               <div>
-                <Link href="/" scroll={true} className="block mb-6">
+                <Link href="/" scroll={false} onClick={(e) => handleNavigation(e, "/")} className="block mb-6">
                   <span className="text-3xl font-bold text-clr_base">PTA</span>
                 </Link>
                 <p className="text-clr_pra mb-6 leading-relaxed">
@@ -63,7 +81,8 @@ const Footer = () => {
                     <li key={id}>
                       <Link
                         href={path}
-                        scroll={true}
+                        scroll={false}
+                        onClick={(e) => handleNavigation(e, path)}
                         className="text-clr_pra hover:text-clr_base duration-300"
                       >
                         {name}
@@ -81,7 +100,8 @@ const Footer = () => {
                     <li key={id}>
                       <Link
                         href={path}
-                        scroll={true}
+                        scroll={false}
+                        onClick={(e) => handleNavigation(e, path)}
                         className="text-clr_pra hover:text-clr_base duration-300"
                       >
                         {name}
@@ -131,7 +151,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between py-6 gap-4">
             <p className="text-clr_pra text-sm">
               Copyright © 2025{" "}
-              <Link href="/" scroll={true} className="text-clr_base hover:text-white duration-300">
+              <Link href="/" scroll={false} onClick={(e) => handleNavigation(e, "/")} className="text-clr_base hover:text-white duration-300">
                 PTA
               </Link>
               . Alle Rechte vorbehalten.

@@ -1,53 +1,43 @@
 'use client'
-import { useLayoutEffect, useEffect, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
 
 const HomeScrollFix = () => {
-  const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const navigationCount = useRef(0)
 
-  // Force scroll to 0 immediately and repeatedly until stable
-  useLayoutEffect(() => {
-    // Disable scroll restoration
+  // Disable browser scroll restoration once
+  useEffect(() => {
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual'
     }
-
-    // Immediate scroll
-    document.documentElement.scrollTop = 0
-    document.body.scrollTop = 0
-    window.scrollTo(0, 0)
-
-    setMounted(true)
   }, [])
 
+  // Scroll to top on EVERY navigation (including same-route)
   useEffect(() => {
-    if (!mounted) return
+    navigationCount.current += 1
 
-    // Aggressive scroll reset - multiple attempts at different timings
     const scrollToTop = () => {
+      window.scrollTo(0, 0)
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0
-      window.scrollTo(0, 0)
     }
 
-    // Immediate
+    // Immediate scroll
     scrollToTop()
 
     // After microtask
     Promise.resolve().then(scrollToTop)
 
-    // After animation frames (catches Marquee init)
-    requestAnimationFrame(() => {
-      scrollToTop()
-      requestAnimationFrame(scrollToTop)
-    })
+    // After animation frame
+    requestAnimationFrame(scrollToTop)
 
-    // Multiple delayed attempts to catch late layout shifts
-    const timeouts = [0, 50, 100, 200, 300, 500].map(delay =>
-      setTimeout(scrollToTop, delay)
-    )
+    // Delayed fallback
+    const timeout = setTimeout(scrollToTop, 50)
 
-    return () => timeouts.forEach(clearTimeout)
-  }, [mounted])
+    return () => clearTimeout(timeout)
+  }, [pathname, searchParams]) // Re-run on any route change
 
   return null
 }
