@@ -78,7 +78,7 @@ const RanderHeader = () => {
       {/* Mobile Menu Backdrop Overlay */}
       {menuActive && (
         <div
-          className="fixed inset-0 bg-black/60 z-40 lg:hidden transition-opacity duration-300"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300"
           onClick={toggleMenu}
           aria-hidden="true"
         />
@@ -102,12 +102,11 @@ const RanderHeader = () => {
               }`}
               aria-label="Main navigation"
             >
-              {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between p-5 border-b border-clr_cusborder lg:hidden">
-                <span className="text-2xl font-bold text-clr_base">PTA</span>
+              {/* Mobile Menu Header - Close button only, no duplicate logo */}
+              <div className="flex justify-end p-5 border-b border-clr_cusborder lg:hidden">
                 <button
                   onClick={toggleMenu}
-                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                  className="w-11 h-11 flex items-center justify-center hover:bg-white/10 rounded-lg transition-colors"
                   aria-label="Close menu"
                 >
                   <X className="text-[28px] text-clr_white" />
@@ -116,11 +115,12 @@ const RanderHeader = () => {
 
               {/* Menu List */}
               <ul className="flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 px-5 lg:px-0 py-6 lg:py-0 overflow-y-auto h-[calc(100%-81px)] lg:h-auto">
-                {menuList.map(({ id, name, path, dropDown }) => {
+                {menuList.map(({ id, name, path, dropDown }, index) => {
                   return (
                     <li
-                      className="relative transition-all border-b border-b-clr_cusborder/30 lg:border-none last:border-none group/dropdown"
+                      className={`relative transition-all border-b border-b-clr_cusborder/30 lg:border-none last:border-none group/dropdown ${menuActive ? 'menu-item-animate' : ''}`}
                       key={id}
+                      style={{ animationDelay: `${index * 50}ms` }}
                     >
                       <Link
                         href={path}
@@ -174,17 +174,19 @@ const RanderHeader = () => {
                 </span>
               </Link>
 
-              {/* Mobile Menu Toggle Button - Only show when menu is closed */}
-              {!menuActive && (
-                <button
-                  onClick={toggleMenu}
-                  className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
-                  aria-label="Open menu"
-                  aria-expanded={menuActive}
-                >
-                  <List className="text-[32px] text-clr_white" />
-                </button>
-              )}
+              {/* Mobile Menu Toggle Button - Always visible, shows hamburger or X */}
+              <button
+                onClick={toggleMenu}
+                className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+                aria-label={menuActive ? "Close menu" : "Open menu"}
+                aria-expanded={menuActive}
+              >
+                {menuActive ? (
+                  <X className="text-[32px] text-clr_white transition-transform duration-200" />
+                ) : (
+                  <List className="text-[32px] text-clr_white transition-transform duration-200" />
+                )}
+              </button>
             </div>
           </div>
         </div>
