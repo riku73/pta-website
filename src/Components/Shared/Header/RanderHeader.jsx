@@ -126,7 +126,7 @@ const RanderHeader = () => {
                         href={path}
                         scroll={false}
                         onClick={(e) => handleNavigation(e, path)}
-                        className={`block text-clr_white font-medium xxl:text-base text-base uppercase lg:py-[10px] py-4 xxl:px-[16px] xl:px-[10px] lg:px-2 px-0 hover:text-clr_base transition-colors duration-200 ${
+                        className={`block text-clr_white font-medium xxl:text-base text-base uppercase lg:py-[10px] py-4 xxl:px-[16px] xl:px-[10px] lg:px-2 px-0 hover:text-clr_base transition-colors duration-200 text-right lg:text-left ${
                           pathname === path ? "text-clr_base" : ""
                         }`}
                       >
@@ -174,19 +174,17 @@ const RanderHeader = () => {
                 </span>
               </Link>
 
-              {/* Mobile Menu Toggle Button */}
-              <button
-                onClick={toggleMenu}
-                className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
-                aria-label={menuActive ? "Close menu" : "Open menu"}
-                aria-expanded={menuActive}
-              >
-                {menuActive ? (
-                  <X className="text-[32px] text-clr_white" />
-                ) : (
+              {/* Mobile Menu Toggle Button - Only show when menu is closed */}
+              {!menuActive && (
+                <button
+                  onClick={toggleMenu}
+                  className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+                  aria-label="Open menu"
+                  aria-expanded={menuActive}
+                >
                   <List className="text-[32px] text-clr_white" />
-                )}
-              </button>
+                </button>
+              )}
             </div>
           </div>
         </div>
