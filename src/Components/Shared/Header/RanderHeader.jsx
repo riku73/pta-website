@@ -17,6 +17,9 @@ const RanderHeader = () => {
   const handleNavigation = (e, path) => {
     e.preventDefault();
 
+    // Close mobile menu when navigating
+    setMenuActive(false);
+
     // Always scroll to top first
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
@@ -70,9 +73,9 @@ const RanderHeader = () => {
             </Link>
           </div>
           <ul
-            className={`flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 fixed lg:static top-20 left-0 w-full lg:w-auto bg-[#121212] h-[calc(100vh-80px)] lg:h-auto lg:bg-transparent duration-500 origin-top px-3 ${menuActive
-              ? "opacity-100 visible"
-              : "opacity-0 invisible lg:opacity-100 lg:visible"
+            className={`flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 fixed lg:static top-20 left-0 w-full lg:w-auto bg-[#121212] h-[calc(100vh-80px)] lg:h-auto lg:bg-transparent duration-500 origin-top px-3 z-40 overflow-y-auto ${menuActive
+              ? "translate-x-0"
+              : "-translate-x-full lg:translate-x-0"
               }`}
           >
             {menuList.map(({ id, name, path, dropDown }) => {
