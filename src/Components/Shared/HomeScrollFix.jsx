@@ -1,8 +1,8 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
-const HomeScrollFix = () => {
+const HomeScrollFixInner = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const navigationCount = useRef(0)
@@ -40,6 +40,14 @@ const HomeScrollFix = () => {
   }, [pathname, searchParams]) // Re-run on any route change
 
   return null
+}
+
+const HomeScrollFix = () => {
+  return (
+    <Suspense fallback={null}>
+      <HomeScrollFixInner />
+    </Suspense>
+  )
 }
 
 export default HomeScrollFix
