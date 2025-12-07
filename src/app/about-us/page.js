@@ -9,21 +9,21 @@ const teamMembers = [
     name: "Functional Training",
     role: "Unser Kernbereich",
     description: "Zertifizierte Trainer mit Leidenschaft für Bewegung und Gesundheit. Wir begleiten dich auf deinem Weg – egal wo du startest.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&h=400&fit=crop"
   },
   {
     id: 2,
     name: "Rehabilitation",
     role: "Spezialisierte Betreuung",
     description: "Erfahrung mit Reha-Patienten, Verletzungsprävention und Wiederaufbau. Wir arbeiten eng mit Ärzten und Physiotherapeuten zusammen.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=400&h=400&fit=crop"
   },
   {
     id: 3,
     name: "Ernährung",
     role: "Ganzheitlicher Ansatz",
     description: "Training und Ernährung gehen Hand in Hand. Wir helfen dir, beides in deinen Alltag zu integrieren – ohne Verzicht.",
-    image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=400&fit=crop"
   }
 ];
 
@@ -41,7 +41,7 @@ const AboutUs = () => {
           <div className="grid lg:grid-cols-2 gap-10 items-center mb-20">
             <div data-aos="fade-right" data-aos-duration="1000">
               <img
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1570829460005-c840387bb1ca?w=800&h=600&fit=crop"
                 alt="PTA Gym"
                 className="rounded-lg w-full h-auto object-cover"
               />

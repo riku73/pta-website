@@ -80,7 +80,7 @@ const Metting = () => {
               data-aos="zoom-in"
               data-aos-duration="2000"
             >
-              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=500&fit=crop" alt="Fitness Training" className="rounded-lg" />
+              <img src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?w=500&h=500&fit=crop" alt="Personal Training Consultation" className="rounded-lg" />
             </div>
           </div>
         </div>

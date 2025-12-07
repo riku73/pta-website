@@ -28,6 +28,7 @@ const Experience = ({ isTabActive }) => {
             instition: "Professionelles Team",
           },
         ]}
+        image="https://images.unsplash.com/photo-1594882645126-14020914d58d?w=500&h=600&fit=crop"
       />
     </div>
   );

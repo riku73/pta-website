@@ -1,12 +1,12 @@
 import React from "react";
 
-const AboutCard = ({ title, para, info }) => {
+const AboutCard = ({ title, para, info, image }) => {
   return (
     <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px]">
       <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
         <div>
           <div>
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=600&fit=crop" alt="Personal Training" className="w-full rounded-lg object-cover" />
+            <img src={image} alt={title} className="w-full rounded-lg object-cover" />
           </div>
         </div>
         <div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const defaultBg = "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&q=80";
+const defaultBg = "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80";
 
 const PageHeader = ({heading, page, backgroundImage}) => {
   return (

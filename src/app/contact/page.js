@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "../../Components/Shared/PageHeader";
-import Form from "../../Components/Shared/Form";
+import MultiStepForm from "../../Components/Contact/MultiStepForm";
 import Link from "next/link";
 
 const Contact = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
               data-aos-duration="1000"
             >
               <div>
-                <Form isColTwo={false} />
+                <MultiStepForm />
               </div>
             </div>
             <div

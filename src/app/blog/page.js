@@ -12,7 +12,7 @@ const blogPosts = [
     date: "15. November 2024",
     author: "PTA Team",
     category: "Training",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop"
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=500&fit=crop"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const blogPosts = [
     date: "10. November 2024",
     author: "PTA Team",
     category: "Ernährung",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=500&fit=crop"
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=500&fit=crop"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const blogPosts = [
     date: "5. November 2024",
     author: "PTA Team",
     category: "Mindset",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop"
+    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&h=500&fit=crop"
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const blogPosts = [
     date: "28. Oktober 2024",
     author: "PTA Team",
     category: "Training",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop"
+    image: "https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?w=800&h=500&fit=crop"
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const blogPosts = [
     date: "20. Oktober 2024",
     author: "PTA Team",
     category: "Regeneration",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop"
+    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=500&fit=crop"
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const blogPosts = [
     date: "15. Oktober 2024",
     author: "PTA Team",
     category: "Anfänger",
-    image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800&h=500&fit=crop"
+    image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=800&h=500&fit=crop"
   }
 ];
 

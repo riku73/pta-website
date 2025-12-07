@@ -12,8 +12,8 @@ const blogData = {
     author: "PTA Team",
     category: "Training",
     readTime: "8 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=600&fit=crop",
     content: `
 ## Warum Rückenschmerzen so verbreitet sind
 
@@ -116,8 +116,8 @@ Bei PTA unterstützen wir dich gerne dabei, deinen Rücken zu stärken und schme
     author: "PTA Team",
     category: "Ernährung",
     readTime: "10 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1517130038641-a774d04afb3c?w=1200&h=600&fit=crop",
     content: `
 ## Warum Ernährung rund ums Training so wichtig ist
 
@@ -230,8 +230,8 @@ Bei PTA helfen wir dir gerne, deine Ernährung auf dein Training abzustimmen. Un
     author: "PTA Team",
     category: "Mindset",
     readTime: "6 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?w=1200&h=600&fit=crop",
     content: `
 ## Der innere Schweinehund ist real – aber besiegbar
 
@@ -329,8 +329,8 @@ Bei PTA unterstützen wir dich dabei, dranzubleiben. Unsere Trainer und unsere C
     author: "PTA Team",
     category: "Training",
     readTime: "9 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1519505907962-0a6cb0167c73?w=1200&h=600&fit=crop",
     content: `
 ## Die ewige Debatte: Kurz und intensiv oder lang und gleichmäßig?
 
@@ -468,8 +468,8 @@ Bei PTA helfen wir dir, den optimalen Mix für deine Ziele zu finden. Egal ob in
     author: "PTA Team",
     category: "Regeneration",
     readTime: "7 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1515894203077-9cd36032142f?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1581122584612-713f89daa8eb?w=1200&h=600&fit=crop",
     content: `
 ## Der unterschätzte Faktor: Schlaf
 
@@ -596,8 +596,8 @@ Bei PTA berücksichtigen wir Regeneration als Teil des Trainingsplans. Denn wir 
     author: "PTA Team",
     category: "Anfänger",
     readTime: "11 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1593476123561-9516f2097158?w=1200&h=600&fit=crop",
     content: `
 ## Der Einstieg ins Training: So machst du es richtig
 

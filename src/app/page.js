@@ -15,7 +15,6 @@ const Home = () => {
       <MarqueeWapper direction="left" images={images} />
       <About />
       <Services isHeading={true} />
-      <MarqueeWapper direction="right" images={images2} />
       <WorkeProcess />
       <Testimonial />
       <Metting />

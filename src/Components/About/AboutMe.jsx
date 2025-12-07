@@ -39,17 +39,19 @@ const AboutMe = ({ isTabActive }) => {
               data-aos="zoom-in"
               data-aos-duration="500"
             >
-              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=600&fit=crop" alt="Personal Training" className="w-full rounded-lg object-cover" />
+              <img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=500&h=600&fit=crop" alt="Personal Training" className="w-full rounded-lg object-cover" />
             </div>
           </div>
           <div>
             <div className="lg:pl-10 pl-0">
               <h2
-                className="text-[42px] font-semibold text-clr_white mb-5"
+                className="text-[32px] lg:text-[42px] font-semibold text-clr_white mb-5 leading-tight"
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                Wer wir sind
+                Mach mehr aus dir.<br />
+                <span className="text-clr_base">Professionell begleitet.</span><br />
+                Persönlich betreut.
               </h2>
               <p
                 className="text-lg text-clr_pra mb-0"

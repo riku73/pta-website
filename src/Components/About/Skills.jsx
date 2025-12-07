@@ -5,25 +5,25 @@ const skillsList = [
     id: 1,
     skill: "Krafttraining",
     percentage: "95%",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=120&h=120&fit=crop",
+    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=120&h=120&fit=crop",
   },
   {
     id: 2,
     skill: "Ernährung",
     percentage: "90%",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&h=120&fit=crop",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=120&h=120&fit=crop",
   },
   {
     id: 3,
     skill: "Cardio & HIIT",
     percentage: "92%",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=120&h=120&fit=crop",
+    image: "https://images.unsplash.com/photo-1434596922112-19c563067271?w=120&h=120&fit=crop",
   },
   {
     id: 4,
     skill: "Rehabilitation",
     percentage: "88%",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=120&h=120&fit=crop",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=120&h=120&fit=crop",
   },
 ];
 
@@ -34,7 +34,7 @@ const Skills = ({ isTabActive }) => {
         <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
           <div>
             <div>
-              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=600&fit=crop" alt="Fitness Training" className="w-full rounded-lg object-cover" />
+              <img src="https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=500&h=600&fit=crop" alt="Fitness Training" className="w-full rounded-lg object-cover" />
             </div>
           </div>
           <div>

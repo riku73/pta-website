@@ -16,7 +16,7 @@ const services = [
       "Flexible Terminvereinbarung",
       "Motivation & Unterstützung"
     ],
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=600&h=400&fit=crop"
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const services = [
       "Einkaufslisten & Rezepte",
       "Wöchentliche Check-ins"
     ],
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1518310952931-b1de897abd40?w=600&h=400&fit=crop"
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const services = [
       "Qualifizierte Trainer",
       "Starkes Gemeinschaftsgefühl"
     ],
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1561214078-f3247647fc5e?w=600&h=400&fit=crop"
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const services = [
       "Ernährungsplan inklusive",
       "Starke Community"
     ],
-    image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1517963628607-235ccdd5476c?w=600&h=400&fit=crop"
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const services = [
       "Schmerzfreies Training",
       "Langfristige Betreuung"
     ],
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1535743686920-55e4145369b9?w=600&h=400&fit=crop"
   },
   {
     id: 6,
@@ -86,7 +86,7 @@ const services = [
       "Verletzungsprävention",
       "Saisonplanung & Periodisierung"
     ],
-    image: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=600&h=400&fit=crop"
   }
 ];
 

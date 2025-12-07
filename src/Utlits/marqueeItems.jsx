@@ -1,42 +1,42 @@
 export const images = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1600881333168-2ef49b341f30?w=300&h=200&fit=crop",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1550345332-09e3ac987658?w=300&h=200&fit=crop",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=300&h=200&fit=crop",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1558017487-06bf9f82613a?w=300&h=200&fit=crop",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=300&h=200&fit=crop",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=300&h=200&fit=crop",
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?w=300&h=200&fit=crop",
   },
 ];
 
 export const images2 = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1616803689943-5601631c7fec?w=300&h=200&fit=crop",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=300&h=200&fit=crop",
   },
   {
     id: 3,
@@ -56,6 +56,6 @@ export const images2 = [
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=300&h=200&fit=crop",
+    image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=300&h=200&fit=crop",
   },
 ];

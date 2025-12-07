@@ -9,7 +9,8 @@ const servicesData = {
     title: "Personal Training",
     subtitle: "Training, das sich nach dir richtet",
     metaDescription: "Individuelles Personal Training in Luxemburg. Maßgeschneiderte Trainingspläne für Muskelaufbau, Gewichtsreduktion und mehr Fitness. Jetzt kostenloses Erstgespräch buchen!",
-    heroImage: "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=1200&h=600&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1623874228601-f4193c7b1818?w=1200&h=600&fit=crop",
+    contentImage: "https://images.unsplash.com/photo-1578762560042-46ad127c95ea?w=800&h=500&fit=crop",
     intro: "Im Personal Training bei PTA steht nur eines im Fokus: Du. Keine Ablenkungen, keine Kompromisse – nur volle Konzentration auf deine individuellen Ziele. Ob du Muskeln aufbauen, Gewicht verlieren oder einfach fitter werden möchtest, wir entwickeln gemeinsam einen Plan, der zu deinem Leben passt.",
     description: `Personal Training ist die effektivste Form des Trainings, weil jede Übung, jede Wiederholung und jede Trainingseinheit speziell auf dich zugeschnitten ist. Bei PTA in Luxemburg arbeiten wir nach einem bewährten System, das bereits hunderten von Kunden geholfen hat, ihre Fitnessziele zu erreichen.
 
@@ -43,6 +44,7 @@ Ob Krafttraining, Functional Fitness oder gezielte Mobility-Arbeit – wir passe
     subtitle: "Essen, das zu dir passt",
     metaDescription: "Professionelle Ernährungsberatung in Luxemburg. Nachhaltige Ernährungspläne ohne Verzicht. Abnehmen, Muskelaufbau oder gesünder leben. Jetzt beraten lassen!",
     heroImage: "https://images.unsplash.com/photo-1547592180-85f173990554?w=1200&h=600&fit=crop",
+    contentImage: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=800&h=500&fit=crop",
     intro: "Vergiss Crash-Diäten und starre Ernährungspläne. Bei PTA entwickeln wir gemeinsam eine Ernährungsstrategie, die zu deinem Leben passt – realistisch, genussvoll und nachhaltig wirksam.",
     description: `Die richtige Ernährung ist der Schlüssel zu deinen Fitnesszielen. Egal ob Gewichtsreduktion, Muskelaufbau oder einfach mehr Energie im Alltag – ohne die passende Ernährung bleiben selbst die besten Trainingsergebnisse aus.
 
@@ -76,6 +78,7 @@ Unsere Ernährungsexperten begleiten dich kontinuierlich mit wöchentlichen Chec
     subtitle: "Gemeinsam stärker",
     metaDescription: "Motivierendes Gruppentraining in Luxemburg. Kleine Gruppen, qualifizierte Trainer, maximaler Spaß. Krafttraining, HIIT und mehr. Jetzt Probetraining buchen!",
     heroImage: "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1200&h=600&fit=crop",
+    contentImage: "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=800&h=500&fit=crop",
     intro: "Training macht in der Gruppe einfach mehr Spaß. Bei PTA trainierst du in kleinen, motivierten Gruppen unter professioneller Anleitung – mit dem Teamgeist als Extra-Antrieb.",
     description: `Gruppentraining bei PTA verbindet das Beste aus zwei Welten: die Motivation und den Spaß einer Trainingsgemeinschaft mit der Qualität und Aufmerksamkeit eines professionellen Trainers.
 
@@ -109,6 +112,7 @@ Das Besondere am Gruppentraining ist die Community. Du lernst Gleichgesinnte ken
     subtitle: "Intensiv, dynamisch, motivierend",
     metaDescription: "Intensives Fitness Bootcamp in Luxemburg. 4-Wochen Transformation mit HIIT, Functional Training und Ernährungsplan. Jetzt anmelden und durchstarten!",
     heroImage: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1200&h=600&fit=crop",
+    contentImage: "https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=800&h=500&fit=crop",
     intro: "Bereit für die Challenge deines Lebens? Unser 4-Wochen Bootcamp bringt dich an deine Grenzen – und darüber hinaus. Intensive Workouts, starke Community und sichtbare Ergebnisse.",
     description: `Das PTA Fitness Bootcamp ist unser intensivstes Programm. In vier Wochen bringen wir dich durch eine Kombination aus hochintensivem Training, strukturierter Ernährung und mentaler Stärke auf ein neues Fitnesslevel.
 
@@ -141,6 +145,7 @@ Im Preis inbegriffen ist ein kompletter Ernährungsplan, der auf die intensiven 
     subtitle: "Zurück zu voller Beweglichkeit",
     metaDescription: "Professionelles Rehabilitationstraining in Luxemburg. Behutsamer Aufbau nach Verletzung oder OP. In Abstimmung mit Ärzten und Physiotherapeuten. Jetzt Termin vereinbaren!",
     heroImage: "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1200&h=600&fit=crop",
+    contentImage: "https://images.unsplash.com/photo-1593164842264-854604db2260?w=800&h=500&fit=crop",
     intro: "Nach einer Verletzung, Operation oder bei chronischen Beschwerden ist der Weg zurück zur vollen Fitness eine Herausforderung. Bei PTA begleiten wir dich Schritt für Schritt – sicher, geduldig und professionell.",
     description: `Rehabilitation bei PTA bedeutet mehr als nur Übungen. Wir verstehen, dass eine Verletzung oder Operation nicht nur körperlich, sondern auch mental belastend sein kann. Deshalb begleiten wir dich ganzheitlich auf deinem Weg zurück zur vollen Leistungsfähigkeit.
 
@@ -174,6 +179,7 @@ Besonders wichtig ist uns die Kommunikation mit deinem medizinischen Team. Wir a
     subtitle: "Leistung für dein Team",
     metaDescription: "Professionelles Athletiktraining für Sportmannschaften in Luxemburg. Teamspezifische Programme für Fußball, Handball, Basketball und mehr. Jetzt Team-Training anfragen!",
     heroImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=600&fit=crop",
+    contentImage: "https://images.unsplash.com/photo-1580086319619-3ed498161c77?w=800&h=500&fit=crop",
     intro: "Ob Fußball, Handball, Basketball oder jede andere Sportart – professionelles Athletiktraining macht den Unterschied zwischen gut und großartig. Wir machen dein Team fit für die nächste Saison.",
     description: `Athletiktraining für Sportmannschaften bei PTA geht weit über klassisches Konditionstraining hinaus. Wir entwickeln sportartspezifische Programme, die genau auf die Anforderungen deiner Mannschaft zugeschnitten sind.
 
@@ -257,7 +263,7 @@ const ServicePage = async ({ params }) => {
             </div>
             <div data-aos="fade-left" data-aos-duration="1000">
               <img
-                src={service.heroImage}
+                src={service.contentImage}
                 alt={service.title}
                 className="w-full h-[400px] object-cover rounded-lg"
               />

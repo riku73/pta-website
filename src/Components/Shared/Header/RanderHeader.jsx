@@ -35,10 +35,10 @@ const RanderHeader = () => {
       <header
         className={`${fixedHeader ? "fixed top-0 left-0 z-50 bg-black" : "relative"} w-full z-10`}
       >
-      <div className="xxl:max-w-[1805px] container mx-auto px-3">
+      <div className="container">
         <div className="flex justify-between items-center w-full relative py-5">
           <div className="main__logo">
-            <Link href={"/"} onClick={scrollToTop} scroll={false} className="block">
+            <Link href={"/"} className="block">
               <span className="text-3xl xl:text-4xl font-bold text-clr_base">PTA</span>
             </Link>
           </div>
