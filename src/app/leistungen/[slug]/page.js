@@ -299,7 +299,7 @@ const ServicePage = async ({ params }) => {
       <section className="pt_120 pb-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div>
               <span className="text-clr_base font-caveat text-2xl mb-4 block">{service.subtitle}</span>
               <h2 className="text-white text-3xl lg:text-4xl font-bold mb-6">
                 {service.title}
@@ -315,7 +315,7 @@ const ServicePage = async ({ params }) => {
                 <ArrowRight className="z-10 relative duration-500 text-xl" />
               </Link>
             </div>
-            <div data-aos="fade-left" data-aos-duration="1000">
+            <div>
               <img
                 src={service.contentImage}
                 alt={service.title}
@@ -330,7 +330,7 @@ const ServicePage = async ({ params }) => {
       <section className="pb-16">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg prose-invert" data-aos="fade-up" data-aos-duration="1000">
+            <div className="prose prose-lg prose-invert">
               {service.description.split('\n\n').map((paragraph, index) => (
                 <p key={index} className="text-clr_pra text-lg leading-relaxed mb-6">
                   {paragraph}
@@ -344,7 +344,7 @@ const ServicePage = async ({ params }) => {
       {/* Benefits Section */}
       <section className="pb_120">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Vorteile</span>
             <h2 className="text-white text-3xl lg:text-4xl font-bold">
               Das bekommst du bei uns
@@ -355,9 +355,9 @@ const ServicePage = async ({ params }) => {
               <div
                 key={index}
                 className="bg-common_bg p-6 rounded-lg"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={index * 100}
+               
+               
+               
               >
                 <div className="w-12 h-12 bg-clr_base rounded-full flex items-center justify-center mb-4">
                   <CheckCircleFill className="text-clr_title text-xl" />
@@ -373,7 +373,7 @@ const ServicePage = async ({ params }) => {
       {/* Pricing Section */}
       <section className="pb_120 bg-common_bg">
         <div className="container py-20">
-          <div className="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Pakete & Preise</span>
             <h2 className="text-white text-3xl lg:text-4xl font-bold">
               Wähle dein passendes Paket
@@ -384,9 +384,9 @@ const ServicePage = async ({ params }) => {
               <div
                 key={index}
                 className={`bg-[#1a1a1a] p-8 rounded-lg relative ${pkg.popular ? 'ring-2 ring-clr_base' : ''}`}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={index * 100}
+               
+               
+               
               >
                 {pkg.popular && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-clr_base text-clr_title text-sm font-semibold px-4 py-1 rounded-full">
@@ -429,7 +429,7 @@ const ServicePage = async ({ params }) => {
       {/* FAQ Section */}
       <section className="pb_120">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">FAQ</span>
             <h2 className="text-white text-3xl lg:text-4xl font-bold">
               Häufig gestellte Fragen
@@ -440,9 +440,9 @@ const ServicePage = async ({ params }) => {
               <div
                 key={index}
                 className="bg-common_bg p-6 rounded-lg"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={index * 100}
+               
+               
+               
               >
                 <h3 className="text-white text-lg font-semibold mb-3">{item.q}</h3>
                 <p className="text-clr_pra">{item.a}</p>
@@ -455,7 +455,7 @@ const ServicePage = async ({ params }) => {
       {/* CTA Section */}
       <section className="pb_120">
         <div className="container">
-          <div className="bg-common_bg rounded-lg p-10 lg:p-16 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div className="bg-common_bg rounded-lg p-10 lg:p-16 text-center">
             <h3 className="text-white text-3xl lg:text-4xl font-bold mb-6">
               Bereit loszulegen?
             </h3>

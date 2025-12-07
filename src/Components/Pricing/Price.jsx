@@ -4,7 +4,7 @@ import { ArrowRight } from "react-bootstrap-icons";
 
 const Price = ({ image, planName, price, time, fetcher, id }) => {
   return (
-    <div data-aos="fade-up" data-aos-duration="1000">
+    <div>
       <div
         className={`before:hidden border border-clr_cusborder py-5 px-[18px] rounded-[10px] duration-500 hover:border-clr_base ${
           id === 2 && "bg-clr_base"

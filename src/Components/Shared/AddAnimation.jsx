@@ -1,26 +1,9 @@
 'use client'
-import React, { useEffect } from 'react'
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+// AOS has been removed - using simple CSS fade-in animations instead
+// See FadeIn component and .fade-in class in globals.css
 
 const AddAnimation = () => {
-    useEffect(() => {
-        // Initialize AOS with settings that prevent scroll interference
-        AOS.init({
-            once: true,
-            disable: false,
-            startEvent: 'DOMContentLoaded',
-            initClassName: 'aos-init',
-            animatedClassName: 'aos-animate',
-            useClassNames: false,
-            disableMutationObserver: false,
-            debounceDelay: 50,
-            throttleDelay: 99,
-        });
-
-        // Force scroll to top after AOS init
-        window.scrollTo(0, 0);
-    }, []);
     return null
 }
 

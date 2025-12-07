@@ -35,8 +35,8 @@ const Partner = () => {
       <div className="pt_120">
         <h4
           className="text-center mx-auto mb-[60px] text-white text-2xl font-semibold leading-[130%]"
-          data-aos="fade-down"
-          data-aos-duration="1000"
+         
+         
         >
           Zertifiziert und anerkannt von führenden Verbänden
         </h4>

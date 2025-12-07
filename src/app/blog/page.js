@@ -90,7 +90,7 @@ const Blog = () => {
 
       <section className="pt_120 pb_120">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Wissen & Tipps</span>
             <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
               Fitness-Wissen für deinen Erfolg
@@ -106,9 +106,9 @@ const Blog = () => {
               <article
                 key={id}
                 className="bg-common_bg rounded-lg overflow-hidden group"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={id * 100}
+               
+               
+               
               >
                 <div className="h-56 overflow-hidden relative">
                   <img

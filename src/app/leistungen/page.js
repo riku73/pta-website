@@ -114,7 +114,7 @@ const Services = () => {
 
       <section className="pt_120 pb_120">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Was wir bieten</span>
             <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
               Das bieten wir dir
@@ -130,9 +130,9 @@ const Services = () => {
               <div
                 key={id}
                 className="bg-common_bg rounded-lg overflow-hidden group"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={id * 100}
+               
+               
+               
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -167,7 +167,7 @@ const Services = () => {
             ))}
           </div>
 
-          <div className="mt-20 text-center" data-aos="fade-up" data-aos-duration="1000">
+          <div className="mt-20 text-center">
             <div className="bg-common_bg rounded-lg p-10 lg:p-16">
               <h3 className="text-white text-3xl lg:text-4xl font-bold mb-6">
                 Nicht sicher, was zu dir passt?

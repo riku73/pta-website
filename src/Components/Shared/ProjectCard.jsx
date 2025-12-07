@@ -13,8 +13,8 @@ const ProjectCard = ({
   return (
     <div
       className={`overflow-hidden group ${(index === 2 || index === 5) ? "md:mb-0 mb-[30px]":"xl:mb-[60px] lg:mb-[50px] mb-[30px]"}`}
-      data-aos="fade-up"
-      data-aos-duration="1000"
+     
+     
     >
       <div onClick={() => openLightbox(index)} className="overflow-hidden lg:mb-[30px] mb-[20px] block w-full cursor-pointer">
         <img src={image} alt={subHeading} className="w-full overflow-hidden duration-500 rounded-[10px] group-hover:scale-105" />

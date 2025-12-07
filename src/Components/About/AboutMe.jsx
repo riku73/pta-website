@@ -36,8 +36,8 @@ const AboutMe = ({ isTabActive }) => {
           <div>
             <div
               className="w-full"
-              data-aos="zoom-in"
-              data-aos-duration="500"
+             
+             
             >
               <img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=500&h=600&fit=crop" alt="Personal Training" className="w-full rounded-lg object-cover" />
             </div>
@@ -46,8 +46,8 @@ const AboutMe = ({ isTabActive }) => {
             <div className="lg:pl-10 pl-0">
               <h2
                 className="text-[32px] lg:text-[42px] font-semibold text-clr_white mb-5 leading-tight"
-                data-aos="fade-up"
-                data-aos-duration="500"
+               
+               
               >
                 Mach mehr aus dir.<br />
                 <span className="text-clr_base">Professionell begleitet.</span><br />
@@ -55,8 +55,8 @@ const AboutMe = ({ isTabActive }) => {
               </h2>
               <p
                 className="text-lg text-clr_pra mb-0"
-                data-aos="fade-up"
-                data-aos-duration="500"
+               
+               
               >
                 Die Personal Training Academy wurde 2015 gegründet – aus der Überzeugung heraus, dass Fitness mehr ist als nur Schwitzen im Studio. Unser Team aus erfahrenen Trainern und Ernährungsexperten arbeitet mit Menschen jeden Alters und jeder Lebenssituation: vom Reha-Patienten über den Wiedereinsteiger bis zum ambitionierten Sportler. Was uns verbindet? Die Leidenschaft dafür, dich Schritt für Schritt voranzubringen – ganz gleich, wo du gerade stehst.
               </p>
@@ -67,7 +67,7 @@ const AboutMe = ({ isTabActive }) => {
                       <div
                         key={id}
                         className="h-full"
-                        data-aos="zoom-in"
+                       
                       >
                         <div className="rounded-[10px] bg-[#1D1D1D] p-[35px] border border-[#1D1D1D] duration-500 hover:border-clr_base h-full">
                           <div>

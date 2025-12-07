@@ -753,7 +753,7 @@ const BlogPost = async ({ params }) => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             {/* Article Header */}
-            <header className="mb-12" data-aos="fade-up" data-aos-duration="1000">
+            <header className="mb-12">
               <div className="flex flex-wrap items-center gap-4 text-sm text-clr_pra mb-6">
                 <span className="bg-clr_base text-clr_title px-3 py-1 rounded font-medium">
                   {post.category}
@@ -777,7 +777,7 @@ const BlogPost = async ({ params }) => {
             </header>
 
             {/* Featured Image */}
-            <div className="mb-12 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <div className="mb-12 rounded-lg overflow-hidden">
               <img
                 src={post.image}
                 alt={post.title}
@@ -788,8 +788,8 @@ const BlogPost = async ({ params }) => {
             {/* Article Content */}
             <div
               className="prose prose-lg prose-invert max-w-none"
-              data-aos="fade-up"
-              data-aos-duration="1000"
+             
+             
             >
               {post.content.split('\n\n').map((block, index) => {
                 if (block.startsWith('## ')) {
@@ -835,7 +835,7 @@ const BlogPost = async ({ params }) => {
             </div>
 
             {/* CTA Section */}
-            <div className="mt-16 bg-common_bg rounded-lg p-8 lg:p-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <div className="mt-16 bg-common_bg rounded-lg p-8 lg:p-12 text-center">
               <h3 className="text-white text-2xl lg:text-3xl font-bold mb-4">
                 Bereit, dein Training auf das nächste Level zu bringen?
               </h3>
@@ -852,7 +852,7 @@ const BlogPost = async ({ params }) => {
             </div>
 
             {/* Navigation */}
-            <div className="mt-12 flex justify-between items-center" data-aos="fade-up" data-aos-duration="1000">
+            <div className="mt-12 flex justify-between items-center">
               {prevSlug ? (
                 <Link
                   href={`/blog/${prevSlug}`}

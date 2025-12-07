@@ -6,8 +6,8 @@ const BlogCard = ({ heading, para, image, date }) => {
   return (
     <div
       className="xl:mb-[50px] mb-[30px] group "
-      data-aos="fade-up"
-      data-aos-duration="1000"
+     
+     
     >
       <Link href={"/blog-details"} className="overflow-hidden block">
         <img src={image} alt={heading} className="w-full overflow-hidden duration-500 group-hover:scale-105" />

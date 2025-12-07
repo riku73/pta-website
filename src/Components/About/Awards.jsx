@@ -35,8 +35,8 @@ const Awards = () => {
     <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden xxl:py-[120px] xl:py-[100px] py-[60px] ">
       <div className="container">
         <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
+         
+         
         >
           <table className="w-full">
             <tbody>

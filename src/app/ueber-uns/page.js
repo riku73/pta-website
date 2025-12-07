@@ -52,14 +52,14 @@ const AboutUs = () => {
       <section className="pt_120 pb_120">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-10 items-center mb-20">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div>
               <img
                 src="https://images.unsplash.com/photo-1570829460005-c840387bb1ca?w=800&h=600&fit=crop"
                 alt="PTA Gym"
                 className="rounded-lg w-full h-auto object-cover"
               />
             </div>
-            <div data-aos="fade-left" data-aos-duration="1000">
+            <div>
               <span className="text-clr_base font-caveat text-2xl mb-4 block">Unsere Geschichte</span>
               <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
                 Deine Personal Training Academy
@@ -83,7 +83,7 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-center mb-16">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Was uns ausmacht</span>
             <h2 className="text-white text-4xl lg:text-5xl font-bold">
               Lokal, familiär, professionell
@@ -95,9 +95,9 @@ const AboutUs = () => {
               <div
                 key={id}
                 className="bg-common_bg rounded-lg overflow-hidden group"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={id * 100}
+               
+               
+               
               >
                 <div className="h-64 overflow-hidden">
                   <img
@@ -115,7 +115,7 @@ const AboutUs = () => {
             ))}
           </div>
 
-          <div className="mt-20 bg-common_bg rounded-lg p-10 lg:p-16" data-aos="fade-up" data-aos-duration="1000">
+          <div className="mt-20 bg-common_bg rounded-lg p-10 lg:p-16">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
                 <span className="text-clr_base text-5xl lg:text-6xl font-bold block mb-2">500+</span>

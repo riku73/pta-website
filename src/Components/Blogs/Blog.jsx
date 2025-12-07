@@ -17,8 +17,8 @@ const Blog = ({ date, heading, image, index, slug }) => {
     <>
       <div
         className="flex sm:flex-row flex-col justify-between items-center gap-4 lg:pb-10 pb-[30px] lg:pt-10 pt-[30px] group duration-500 border-b border-b-[rgb(38_37_37)] hover:border-b-clr_base hover:first:border-t-clr_base first:border-t first:border-t-[rgb(38_37_37)]"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+       
+       
       >
         <div className="shrink basis-4/5 flex md:flex-row flex-col justify-between md:items-center sm:items-start items-center gap-4 ">
           <div className="shrink basis-1/2 ">

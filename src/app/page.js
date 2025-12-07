@@ -1,11 +1,9 @@
-import { images } from "../Utlits/marqueeItems";
 import About from "../Components/About/About";
 import Metting from "../Components/Metting";
 import Services from "../Components/Services/Services";
 import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
 import Testimonial from "../Components/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
-import MarqueeWapper from "../Components/Shared/MarqueeWapper";
 import Awards from "../Components/About/Awards";
 import HomeScrollFix from "../Components/Shared/HomeScrollFix";
 
@@ -42,8 +40,8 @@ export const metadata = {
 const Home = () => {
   return (
     <>
+      <div id="top" style={{ position: 'absolute', top: 0, left: 0, height: 0, width: 0 }} />
       <HomeScrollFix />
-      <MarqueeWapper direction="left" images={images} />
       <About />
       <Services isHeading={true} />
       <WorkeProcess />

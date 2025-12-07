@@ -52,8 +52,8 @@ const ProfolioTab = () => {
                 <div>
                     <ul
                         className="border border-clr_cusborder p-[10px] rounded-lg max-w-[683px] mx-auto md:mb-[60px] mb-10 flex items-center md:flex-nowrap flex-wrap md:justify-normal justify-center md:gap-0 gap-[5px] "
-                        data-aos="fade-down"
-                        data-aos-duration="2000"
+                       
+                       
                     >
                         {categoryList.map(({ id, categoryName, value }) => (
                             <li

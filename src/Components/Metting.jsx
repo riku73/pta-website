@@ -18,8 +18,8 @@ const Metting = () => {
               </div>
               <div
                 className="hover:border-b hover:border-b-clr_base flex ga-5 items-center md:gap-5 gap-4 duration-500 transition-all border-b border-b-[rgb(38_37_37)] lg:pb-[30px] pb-5 lg:pt-[30px] pt-[20px]"
-                data-aos="fade-up"
-                data-aos-duration="1000"
+               
+               
               >
                 <span className="w-[60px] h-[60px] rounded-full bg-clr_base flex justify-center items-center">
                   <Envelope className="text-[26px] text-clr_title" />
@@ -38,8 +38,8 @@ const Metting = () => {
               </div>
               <div
                 className="hover:border-b hover:border-b-clr_base flex ga-5 items-center md:gap-5 gap-4 duration-500 border-b border-b-[rgb(38_37_37)] lg:pb-[30px] pb-5 lg:pt-[30px] pt-[20px]"
-                data-aos="fade-up"
-                data-aos-duration="1500"
+               
+               
               >
                 <span className="w-[60px] h-[60px] rounded-full bg-clr_base flex justify-center items-center">
                   <Telephone className="text-[26px] text-clr_title" />
@@ -58,8 +58,8 @@ const Metting = () => {
               </div>
               <div
                 className="hover:border-b hover:border-b-clr_base flex ga-5 items-center md:gap-5 gap-4 duration-500 border-b border-b-[rgb(38_37_37)] lg:pb-[30px] pb-5 lg:pt-[30px] pt-[20px]"
-                data-aos="fade-up"
-                data-aos-duration="2000"
+               
+               
               >
                 <span className="w-[60px] h-[60px] rounded-full bg-clr_base flex justify-center items-center">
                   <GeoAlt className="text-[26px] text-clr_title" />
@@ -77,8 +77,8 @@ const Metting = () => {
           </div>
           <div>
             <div
-              data-aos="zoom-in"
-              data-aos-duration="2000"
+             
+             
             >
               <img src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?w=500&h=500&fit=crop" alt="Personal Training Consultation" className="rounded-lg" />
             </div>

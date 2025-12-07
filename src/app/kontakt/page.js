@@ -28,8 +28,8 @@ const Contact = () => {
         <div className="container">
           <div className="grid lg:grid-cols-[66.66%_auto] grid-cols-1 gap-6">
             <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
+             
+             
             >
               <div>
                 <MultiStepForm />
@@ -37,8 +37,8 @@ const Contact = () => {
             </div>
             <div
               className="col-lg-4"
-              data-aos="fade-up"
-              data-aos-duration="1500"
+             
+             
             >
               <div className="bg-common_bg py-[30px] px-4 sm:px-5 xl:px-[30px] xl:py-[60px]">
                 <h4 className="lg:mb-[30px] mb-5xl xl:text-2xl text-xl font-semibold text-white capitalize ">Wir freuen uns auf deine Nachricht</h4>

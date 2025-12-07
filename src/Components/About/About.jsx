@@ -42,15 +42,15 @@ const About = () => {
           <div className="text-center mx-auto xl:mb-[60px] md:mb-[50px] mb-[30px]">
             <span
               className="text-clr_base font-caveat text-2xl mb-4 block"
-              data-aos="fade-up"
-              data-aos-duration="1000"
+             
+             
             >
               Personal Training Academy Luxembourg
             </span>
             <p
               className="lg:text-[42px] md:text-[28px] sm:text-xl text-base font-medium text-clr_white lg:leading-[66px]"
-              data-aos="fade-up"
-              data-aos-duration="1500"
+             
+             
             >
               Egal, ob du gerade erst anfängst, nach einer Verletzung wieder in Bewegung kommen möchtest oder als Athlet deine Performance steigern willst – bei uns bist du richtig. Wir glauben, dass jeder Körper einzigartig ist und sein eigenes Tempo hat.
             </p>
