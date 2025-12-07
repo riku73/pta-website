@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { ArrowUpRight } from "react-bootstrap-icons";
 
-const Service = ({ heading, subHeading, para, id }) => {
+const Service = ({ heading, subHeading, para, id, slug }) => {
   return (
     <div
       className="lg:pb-10 pb-[30px] lg:pt-10 pt-[30px] flex justify-between items-center sm:gap-[14px] gap-5 sm:flex-nowrap flex-wrap border-b duration-500 border-b-[rgb(38_37_37)] first:border-t first:border-t-[rgb(38_37_37)] hover:border-b-clr_base hover:first:border-t-clr_base group"
@@ -15,7 +15,7 @@ const Service = ({ heading, subHeading, para, id }) => {
           <div>
             <h5 className="text-base lg:text-xl font-semibold text-white mb-2">{subHeading}</h5>
             <h2 className="text-[26px] xl:text-[40px] lg:text-3xl font-semibold lg:leading-[120%]">
-              <Link href={"/service-details"} className="text-white duration-500">
+              <Link href={`/services/${slug}`} className="text-white duration-500">
                 {" "}
                 {heading}{" "}
               </Link>
@@ -26,7 +26,7 @@ const Service = ({ heading, subHeading, para, id }) => {
       </div>
 
       <Link
-        href={"/service-details"}
+        href={`/services/${slug}`}
         className="h-[45px] w-[45px] sm:w-[60px] sm:h-[60px] rounded-md bg-[#1D1D1D] flex justify-center items-center duration-500 group-hover:bg-clr_base cursor-pointer"
       >
         <ArrowUpRight className="duration-500 group-hover:text-clr_title text-lg sm:text-xl text-white " />
