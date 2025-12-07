@@ -37,20 +37,16 @@ const About = () => {
 
   return (
     <>
-      <section className="pt_120 pb_120">
+      <section className="pt-16 pb_120">
         <div className="container">
-          <div className="text-center mx-auto xl:mb-[60px] md:mb-[50px] mb-[30px]">
+          <div className="text-center mx-auto xl:mb-[60px] md:mb-[50px] mb-[30px] px-4 sm:px-6 lg:px-0">
             <span
-              className="text-clr_base font-caveat text-2xl mb-4 block"
-             
-             
+              className="text-clr_base font-caveat text-xl sm:text-2xl mb-4 block"
             >
               Personal Training Academy Luxembourg
             </span>
             <p
-              className="lg:text-[42px] md:text-[28px] sm:text-xl text-base font-medium text-clr_white lg:leading-[66px]"
-             
-             
+              className="lg:text-[42px] md:text-[28px] sm:text-xl text-lg font-medium text-clr_white lg:leading-[66px] md:leading-[44px] leading-[32px]"
             >
               Egal, ob du gerade erst anfängst, nach einer Verletzung wieder in Bewegung kommen möchtest oder als Athlet deine Performance steigern willst – bei uns bist du richtig. Wir glauben, dass jeder Körper einzigartig ist und sein eigenes Tempo hat.
             </p>

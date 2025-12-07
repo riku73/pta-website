@@ -51,7 +51,7 @@ const Services = ({ isHeading }) => {
   return (
     <section
       id="services"
-      className={`${isHeading && "pt_120"}  pb_120`}
+      className="bg-common_bg bg-center bg-no-repeat bg-cover pt-16 pb_120"
     >
       <div className="container">
         {isHeading && (

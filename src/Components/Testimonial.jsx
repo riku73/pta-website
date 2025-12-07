@@ -1,12 +1,10 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import Rating from "./Shared/Rating";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 
 
@@ -42,77 +40,80 @@ const reviewList = [
 ];
 
 const Testimonial = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState(null);
+
+  const handleDotClick = (index) => {
+    if (swiperInstance) {
+      swiperInstance.slideToLoop(index);
+    }
+  };
+
   return (
     <section
-      className="overflow-hidden pt_120 pb_120"
+      className="bg-common_bg bg-center bg-no-repeat bg-cover overflow-hidden pt-16 pb-16"
       id="testimonial"
     >
       <div className="container">
-        <div className="text-center md:mb-[60px] sm:mb-[50px] mb-[45px] max-w-[920px] mx-auto">
-          <span
-            className="text-2xl font-caveat text-clr_base relative flex justify-center items-center sm:gap-6 gap-[14px] mx-auto mb-[30px]"
-           
-           
-          >
-            <span className="sm:w-20 w-[50px] h-[1px] bg-clr_base"></span>
+        <div className="text-center mb-10 max-w-[920px] mx-auto">
+          <span className="text-2xl font-caveat text-clr_base relative flex justify-center items-center gap-4 mx-auto mb-4">
+            <span className="w-12 h-[1px] bg-clr_base"></span>
             <span>Kundenstimmen</span>
-            <span className="sm:w-20 w-[50px] h-[1px] bg-clr_base"></span>
+            <span className="w-12 h-[1px] bg-clr_base"></span>
           </span>
-          <h2
-            className="font-medium lg:text-6xl md:text-5xl sm:text-4xl text-[29px] text-white lg:leading-[120%] md:leading-tight leading-9"
-           
-           
-          >
+          <h2 className="font-medium lg:text-5xl md:text-4xl text-3xl text-white leading-tight">
             Was unsere Community sagt
           </h2>
         </div>
-        <div
-          className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden lg:py-[130px] lg:px-[60px] md:py-[100px] md:px-[30px] sm:py-4 px-0 py-[10px] relative"
-         
-         
-        >
-          <div>
-            <div className="lg:max-w-[66%] w-auto mx-auto">
-              <div className="sm:mr-[10px] sm:ml-[30px] mr-0 ml-0">
-                <Swiper
-                  spaceBetween={50}
-                  slidesPerView={1}
-                  speed={3000}
-                  pagination={{
-                    clickable: true,
-                    el: ".swiper-pagination3",
-                  }}
-                  autoplay={{
-                    delay: 2000,
-                  }}
-                  loop={true}
-                  modules={[Pagination, Autoplay]}
-                >
-                  {reviewList.map(({ id, name, position, review, stars }) => {
-                    return (
-                      <SwiperSlide key={id}>
-                        <div className="relative">
-                          <div>
-                            <Rating star={stars} />
-                          </div>
-                          <i className="sm:text-xl text-base text-clr_white sm:mb-10 mb-5 block ">
-                            {review}
-                          </i>
-                          <h4 className="text-clr_base mb-2 font-semibold text-2xl leading-[130%]">
-                            {name}
-                          </h4>
-                          <span className="text-lg text-clr_pra">
-                            {position}{" "}
-                          </span>
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
+        <div className="max-w-4xl mx-auto">
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            speed={800}
+            autoplay={{
+              delay: 4000,
+            }}
+            loop={true}
+            modules={[Autoplay]}
+            onSwiper={setSwiperInstance}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          >
+            {reviewList.map(({ id, name, position, review, stars }) => {
+              return (
+                <SwiperSlide key={id}>
+                  <div className="text-center px-4">
+                    <div className="flex justify-center mb-4">
+                      <Rating star={stars} />
+                    </div>
+                    <p className="text-lg md:text-xl text-clr_white mb-6 italic leading-relaxed">
+                      "{review}"
+                    </p>
+                    <h4 className="text-clr_base font-semibold text-xl">
+                      {name}
+                    </h4>
+                    <span className="text-base text-clr_pra">
+                      {position}
+                    </span>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
 
-                <div className="swiper-pagination3"></div>
-              </div>
-            </div>
+          {/* Custom Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {reviewList.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  activeIndex === index
+                    ? "bg-clr_base w-8"
+                    : "bg-white/30 w-3 hover:bg-white/50"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>

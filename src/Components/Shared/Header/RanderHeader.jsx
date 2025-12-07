@@ -60,7 +60,7 @@ const RanderHeader = () => {
       {/* Spacer to prevent layout shift when header becomes fixed */}
       {fixedHeader && <div className="h-[82px]" />}
       <header
-        className={`${fixedHeader ? "fixed top-0 left-0 z-50 bg-black" : "relative"} w-full z-10`}
+        className={`${fixedHeader ? "fixed top-0 left-0 z-50 bg-[#121212]" : "relative"} w-full z-10`}
       >
       <div className="container">
         <div className="flex justify-between items-center w-full relative py-5">
@@ -70,7 +70,7 @@ const RanderHeader = () => {
             </Link>
           </div>
           <ul
-            className={`flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 fixed lg:static top-20 left-0 w-full lg:w-auto bg-clr_subtitle max-h-[calc(100vh-130px)]  lg:h-full  lg:bg-transparent  duration-500 origin-top px-3 ${menuActive
+            className={`flex lg:flex-row flex-col lg:items-center lg:gap-[14px] gap-0 fixed lg:static top-20 left-0 w-full lg:w-auto bg-[#121212] h-[calc(100vh-80px)] lg:h-auto lg:bg-transparent duration-500 origin-top px-3 ${menuActive
               ? "opacity-100 visible"
               : "opacity-0 invisible lg:opacity-100 lg:visible"
               }`}

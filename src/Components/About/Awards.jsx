@@ -32,7 +32,7 @@ const awardList = [
 const Awards = () => {
 
   return (
-    <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden xxl:py-[120px] xl:py-[100px] py-[60px] ">
+    <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden pt-16 pb_120">
       <div className="container">
         <div
          

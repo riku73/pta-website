@@ -36,7 +36,7 @@ const processList = [
 ];
 const WorkeProcess = () => {
   return (
-    <section className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px] pt_120 pb_120">
+    <section className="pt-16 pb_120">
       <div className="container">
         <Title
           mainTitle="In drei Schritten zu deinem persönlichen Trainingsplan"

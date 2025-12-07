@@ -1,3 +1,4 @@
+import Banner from "../Components/Banner";
 import About from "../Components/About/About";
 import Metting from "../Components/Metting";
 import Services from "../Components/Services/Services";
@@ -42,6 +43,7 @@ const Home = () => {
     <>
       <div id="top" style={{ position: 'absolute', top: 0, left: 0, height: 0, width: 0 }} />
       <HomeScrollFix />
+      <Banner />
       <About />
       <Services isHeading={true} />
       <WorkeProcess />

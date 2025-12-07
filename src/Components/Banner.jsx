@@ -16,10 +16,19 @@ const socalIcon = [
 ];
 const Banner = () => {
   return (
-    <section id="home" className="relative w-full">
-      <div className="container">
-        <div>
-            <div className="xl:pt-[40px] lg:pt-[30px] md:pt-[30px] sm:pt-[20px] pt-[15px]">
+    <section id="home" className="relative w-full min-h-screen">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/75" />
+      </div>
+      <div className="container relative z-10 min-h-screen flex items-center">
+        <div className="w-full">
+            <div className="xl:pt-0 lg:pt-0 md:pt-0 pt-0">
               <Link href={"/kontakt"} className="md:text-[24px] text-lg leading-[140%] md:mb-[50px] mb-8 border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base">
                 <span className="block">
                   Starten ist leichter als du denkst.
