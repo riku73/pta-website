@@ -5,7 +5,7 @@ const Preloader = () => {
     <div>
       <div className="text-center">
         <div className="mb-10">
-          <img src={"/img/banner/banner-man.png"} alt="img" />
+          <img src={"/img/banner/banner-man.png"} alt="PTA Personal Training" />
         </div>
         <span className="fz-30 mati fw-600 text-uppercase">Matias</span>
       </div>

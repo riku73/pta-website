@@ -3,6 +3,19 @@ import PageHeader from "../../Components/Shared/PageHeader";
 import Link from "next/link";
 import { ArrowRight } from "react-bootstrap-icons";
 
+export const metadata = {
+  title: "Über Uns | PTA Personal Training Academy Luxembourg",
+  description: "Lerne das PTA Team kennen. Seit 2015 begleiten wir Menschen in Luxemburg auf ihrem Weg zu mehr Fitness und Gesundheit. Zertifizierte Trainer, familiäre Atmosphäre.",
+  openGraph: {
+    title: "Über Uns | PTA Personal Training Academy",
+    description: "Lerne das PTA Team kennen. Seit 2015 begleiten wir Menschen in Luxemburg auf ihrem Weg zu mehr Fitness und Gesundheit.",
+    url: "https://pta-training.lu/ueber-uns",
+    siteName: "PTA Training",
+    locale: "de_DE",
+    type: "website",
+  },
+};
+
 const teamMembers = [
   {
     id: 1,
@@ -61,7 +74,7 @@ const AboutUs = () => {
                 dafür, dich Schritt für Schritt voranzubringen – ganz gleich, wo du gerade stehst.
               </p>
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="inline-flex items-center gap-2 font-medium px-[30px] py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
               >
                 <span className="z-10 relative duration-500">Termin vereinbaren</span>

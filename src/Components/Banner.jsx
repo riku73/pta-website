@@ -20,7 +20,7 @@ const Banner = () => {
       <div className="container">
         <div>
             <div className="xl:pt-[40px] lg:pt-[30px] md:pt-[30px] sm:pt-[20px] pt-[15px]">
-              <Link href={"/contact"} className="md:text-[24px] text-lg leading-[140%] md:mb-[50px] mb-8 border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base">
+              <Link href={"/kontakt"} className="md:text-[24px] text-lg leading-[140%] md:mb-[50px] mb-8 border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base">
                 <span className="block">
                   Starten ist leichter als du denkst.
                 </span>

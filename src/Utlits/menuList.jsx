@@ -6,12 +6,12 @@ export const menuList = [
     },
     {
         id: 2,
-        path: "/about-us",
+        path: "/ueber-uns",
         name: "Über Uns",
     },
     {
         id: 3,
-        path: "/services",
+        path: "/leistungen",
         name: "Leistungen",
     },
     {
@@ -21,7 +21,7 @@ export const menuList = [
     },
     {
         id: 5,
-        path: "/contact",
+        path: "/kontakt",
         name: "Kontakt",
     },
 ];

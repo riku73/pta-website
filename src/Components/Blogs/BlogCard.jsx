@@ -10,7 +10,7 @@ const BlogCard = ({ heading, para, image, date }) => {
       data-aos-duration="1000"
     >
       <Link href={"/blog-details"} className="overflow-hidden block">
-        <img src={image} alt="img" className="w-full overflow-hidden duration-500 group-hover:scale-105" />
+        <img src={image} alt={heading} className="w-full overflow-hidden duration-500 group-hover:scale-105" />
       </Link>
       <div className="w-[90%] bg-clr_body rounded-tr-lg py-[30px] pr-[14px] pl-5 -translate-y-[70px] -mb-[70px]">
         <span className="flex items-center gap-1 text-clr_pra text-base mb-[30px]">

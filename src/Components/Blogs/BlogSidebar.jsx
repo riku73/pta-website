@@ -81,6 +81,7 @@ const BlogSidebar = () => {
             <li key={id} className="duration-500 group mb-6 last:mb-0">
               <Link
                 href="/"
+                scroll={true}
                 className="flex items-center justify-between duration-500"
               >
                 <span className="text-clr_pra text-lg">{category}</span>
@@ -103,9 +104,10 @@ const BlogSidebar = () => {
             <li key={id} className="mb-[30px] last:mb-0">
               <Link
                 href="/"
+                scroll={true}
                 className="flex items-center flex-wrap xl:flex-nowrap xl:gap-5 gap-[10px]"
               >
-                <img src={image} alt="img" />
+                <img src={image} alt={title} />
                 <div>
                   <span className="text-white text-xl font-medium mb-[14px] block">
                     {title}
@@ -129,7 +131,7 @@ const BlogSidebar = () => {
         <ul className="flex flex-wrap gap-3">
           {tagsList.map((list, index) => (
             <li key={index}>
-              <Link href={"/"} className="border border-clr_cusborder py-3 px-5 text-sm uppercase text-clr_pra inline-block duration-500 rounded-[10px] hover:bg-clr_base hover:text-clr_title">{list}</Link>
+              <Link href={"/"} scroll={true} className="border border-clr_cusborder py-3 px-5 text-sm uppercase text-clr_pra inline-block duration-500 rounded-[10px] hover:bg-clr_base hover:text-clr_title">{list}</Link>
             </li>
           ))}
         </ul>

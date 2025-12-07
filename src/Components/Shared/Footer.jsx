@@ -5,19 +5,19 @@ import { ArrowUpShort, Facebook, Instagram, Linkedin, Youtube, GeoAlt, Telephone
 
 const navigation = [
   { id: 1, name: "Startseite", path: "/" },
-  { id: 2, name: "Über Uns", path: "/about-us" },
-  { id: 3, name: "Leistungen", path: "/services" },
+  { id: 2, name: "Über Uns", path: "/ueber-uns" },
+  { id: 3, name: "Leistungen", path: "/leistungen" },
   { id: 4, name: "Blog", path: "/blog" },
-  { id: 5, name: "Kontakt", path: "/contact" },
+  { id: 5, name: "Kontakt", path: "/kontakt" },
 ];
 
 const services = [
-  { id: 1, name: "Personal Training", path: "/services/personal-training" },
-  { id: 2, name: "Ernährungsberatung", path: "/services/ernaehrungsberatung" },
-  { id: 3, name: "Gruppentraining", path: "/services/gruppentraining" },
-  { id: 4, name: "Fitness Bootcamp", path: "/services/fitness-bootcamp" },
-  { id: 5, name: "Rehabilitation", path: "/services/rehabilitation" },
-  { id: 6, name: "Sportmannschaften", path: "/services/sportmannschaften" },
+  { id: 1, name: "Personal Training", path: "/leistungen/personal-training" },
+  { id: 2, name: "Ernährungsberatung", path: "/leistungen/ernaehrungsberatung" },
+  { id: 3, name: "Gruppentraining", path: "/leistungen/gruppentraining" },
+  { id: 4, name: "Fitness Bootcamp", path: "/leistungen/fitness-bootcamp" },
+  { id: 5, name: "Rehabilitation", path: "/leistungen/rehabilitation" },
+  { id: 6, name: "Sportmannschaften", path: "/leistungen/sportmannschaften" },
 ];
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
               {/* Column 1: Brand */}
               <div>
-                <Link href="/" className="block mb-6">
+                <Link href="/" scroll={true} className="block mb-6">
                   <span className="text-3xl font-bold text-clr_base">PTA</span>
                 </Link>
                 <p className="text-clr_pra mb-6 leading-relaxed">
@@ -63,6 +63,7 @@ const Footer = () => {
                     <li key={id}>
                       <Link
                         href={path}
+                        scroll={true}
                         className="text-clr_pra hover:text-clr_base duration-300"
                       >
                         {name}
@@ -80,6 +81,7 @@ const Footer = () => {
                     <li key={id}>
                       <Link
                         href={path}
+                        scroll={true}
                         className="text-clr_pra hover:text-clr_base duration-300"
                       >
                         {name}
@@ -129,7 +131,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between py-6 gap-4">
             <p className="text-clr_pra text-sm">
               Copyright © 2025{" "}
-              <Link href="/" className="text-clr_base hover:text-white duration-300">
+              <Link href="/" scroll={true} className="text-clr_base hover:text-white duration-300">
                 PTA
               </Link>
               . Alle Rechte vorbehalten.
@@ -152,7 +154,7 @@ const Footer = () => {
               </li>
             </ul>
             <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.scrollTo(0, 0)}
               className="w-10 h-10 bg-clr_base rounded flex justify-center items-center hover:bg-[#aad302] duration-300"
             >
               <ArrowUpShort className="text-xl text-clr_title" />

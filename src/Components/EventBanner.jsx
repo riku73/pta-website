@@ -18,7 +18,7 @@ const EventBanner = () => {
           <span className="text-clr_title hidden md:inline">|</span>
           <span className="text-clr_title">Tag der offenen Tür mit Essen, Getränken & Tombola</span>
           <Link
-            href="/contact"
+            href="/kontakt"
             className="flex items-center gap-2 bg-clr_title text-clr_base px-4 py-2 rounded-full font-medium hover:bg-white duration-300"
           >
             <span>Mehr erfahren</span>

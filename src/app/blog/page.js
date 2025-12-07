@@ -3,6 +3,19 @@ import PageHeader from "../../Components/Shared/PageHeader";
 import Link from "next/link";
 import { ArrowRight, Calendar, Person } from "react-bootstrap-icons";
 
+export const metadata = {
+  title: "Fitness Blog | PTA Personal Training Academy Luxembourg",
+  description: "Tipps zu Training, Ernährung und Motivation. Expertenwissen von zertifizierten Personal Trainern aus Luxemburg. Rückenschmerzen, HIIT, Muskelaufbau und mehr.",
+  openGraph: {
+    title: "Fitness Blog | PTA Training Luxembourg",
+    description: "Tipps zu Training, Ernährung und Motivation. Expertenwissen von zertifizierten Personal Trainern aus Luxemburg.",
+    url: "https://pta-training.lu/blog",
+    siteName: "PTA Training",
+    locale: "de_DE",
+    type: "website",
+  },
+};
+
 const blogPosts = [
   {
     id: 1,

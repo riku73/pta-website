@@ -118,7 +118,7 @@ Das Besondere am Gruppentraining ist die Community. Du lernst Gleichgesinnte ken
 
 Das Bootcamp basiert auf dem Prinzip der progressiven Überlastung: Woche für Woche steigerst du dich, während dein Körper sich anpasst und stärker wird. Die Workouts kombinieren Functional Training, HIIT, Kraftübungen und Cardio zu einem ganzheitlichen Programm.
 
-Was das Bootcamp besonders macht, ist die Gruppenдинамik. Du trainierst mit anderen Teilnehmern, die dasselbe Ziel haben: In kurzer Zeit das Maximum herausholen. Diese Community-Energie ist ansteckend und trägt dich auch durch die härtesten Workouts.
+Was das Bootcamp besonders macht, ist die Gruppendynamik. Du trainierst mit anderen Teilnehmern, die dasselbe Ziel haben: In kurzer Zeit das Maximum herausholen. Diese Community-Energie ist ansteckend und trägt dich auch durch die härtesten Workouts.
 
 Im Preis inbegriffen ist ein kompletter Ernährungsplan, der auf die intensiven Trainingswochen abgestimmt ist. Du bekommst alles, was du brauchst: Rezepte, Einkaufslisten und klare Anweisungen, was wann zu essen ist.`,
     benefits: [
@@ -233,8 +233,62 @@ const ServicePage = async ({ params }) => {
     notFound();
   }
 
+  // Generate FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faq.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
+  // Generate Service Schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.metaDescription,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "PTA - Personal Training Academy",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Heiderscheid",
+        "addressCountry": "LU"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Luxembourg"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": `${service.title} Pakete`,
+      "itemListElement": service.packages.map(pkg => ({
+        "@type": "Offer",
+        "name": pkg.name,
+        "description": pkg.features.join(", "),
+        "price": pkg.price.replace("Ab ", "").replace("/Monat", ""),
+        "priceCurrency": "EUR"
+      }))
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHeader
         heading={service.title}
         page={service.title}
@@ -254,7 +308,7 @@ const ServicePage = async ({ params }) => {
                 {service.intro}
               </p>
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="inline-flex items-center gap-2 font-medium px-8 py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
               >
                 <span className="z-10 relative duration-500">Jetzt anfragen</span>
@@ -356,7 +410,7 @@ const ServicePage = async ({ params }) => {
                   ))}
                 </ul>
                 <Link
-                  href="/contact"
+                  href="/kontakt"
                   className={`w-full inline-flex items-center justify-center gap-2 font-medium px-6 py-3 rounded-[5px] duration-300 ${
                     pkg.popular
                       ? 'bg-clr_base text-clr_title hover:bg-[#aad302]'
@@ -410,7 +464,7 @@ const ServicePage = async ({ params }) => {
               herausfinden, wie wir dich am besten unterstützen können.
             </p>
             <Link
-              href="/contact"
+              href="/kontakt"
               className="inline-flex items-center gap-2 font-medium px-[30px] py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
             >
               <span className="z-10 relative duration-500">Kostenloses Erstgespräch</span>

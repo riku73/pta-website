@@ -3,6 +3,19 @@ import PageHeader from "../../Components/Shared/PageHeader";
 import MultiStepForm from "../../Components/Contact/MultiStepForm";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Kontakt | PTA Personal Training Academy Luxembourg",
+  description: "Kontaktiere uns für ein kostenloses Erstgespräch. PTA Personal Training Academy in Heiderscheid, Luxembourg. Tel: +352 123 456, Email: info@pta-training.lu",
+  openGraph: {
+    title: "Kontakt | PTA Training Luxembourg",
+    description: "Kontaktiere uns für ein kostenloses Erstgespräch. Personal Training Academy in Heiderscheid, Luxembourg.",
+    url: "https://pta-training.lu/kontakt",
+    siteName: "PTA Training",
+    locale: "de_DE",
+    type: "website",
+  },
+};
+
 const Contact = () => {
   return (
     <>

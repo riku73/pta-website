@@ -746,6 +746,7 @@ const BlogPost = async ({ params }) => {
         heading={"Blog"}
         page={post.title}
         backgroundImage={post.heroImage}
+        useH2={true}
       />
 
       <article className="pt_120 pb_120">
@@ -842,7 +843,7 @@ const BlogPost = async ({ params }) => {
                 Buche jetzt dein kostenloses Erstgespräch und lass uns gemeinsam an deinen Zielen arbeiten.
               </p>
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="inline-flex items-center gap-2 font-medium px-8 py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
               >
                 <span className="z-10 relative duration-500">Kostenloses Erstgespräch</span>

@@ -46,7 +46,7 @@ const Awards = () => {
                 </td>
                 <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]"></td>
                 <td className="text-end bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">
-                  <Link href={"/about-us"}
+                  <Link href={"/ueber-uns"}
                     className="md:text-lg sm:text-base text-sm  flex justify-end items-center text-clr_base gap-2"
                   >
                     <span className="whitespace-nowrap">Mehr erfahren</span>

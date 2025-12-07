@@ -3,6 +3,19 @@ import PageHeader from "../../Components/Shared/PageHeader";
 import Link from "next/link";
 import { ArrowRight, CheckCircleFill } from "react-bootstrap-icons";
 
+export const metadata = {
+  title: "Unsere Leistungen | PTA Personal Training Academy Luxembourg",
+  description: "Personal Training, Ernährungsberatung, Gruppentraining, Fitness Bootcamp, Rehabilitation und Sportmannschaften. Professionelle Betreuung in Luxemburg.",
+  openGraph: {
+    title: "Unsere Leistungen | PTA Training Luxembourg",
+    description: "Personal Training, Ernährungsberatung, Gruppentraining und mehr. Professionelle Fitness-Betreuung in Luxemburg.",
+    url: "https://pta-training.lu/leistungen",
+    siteName: "PTA Training",
+    locale: "de_DE",
+    type: "website",
+  },
+};
+
 const services = [
   {
     id: 1,
@@ -143,7 +156,7 @@ const Services = () => {
                   </ul>
 
                   <Link
-                    href={`/services/${slug}`}
+                    href={`/leistungen/${slug}`}
                     className="inline-flex items-center gap-2 text-clr_base hover:text-white duration-300 font-medium"
                   >
                     <span>Mehr erfahren</span>
@@ -164,7 +177,7 @@ const Services = () => {
                 welches Angebot am besten zu deinen Zielen passt.
               </p>
               <Link
-                href="/contact"
+                href="/kontakt"
                 className="inline-flex items-center gap-2 font-medium px-[30px] py-4 text-lg capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
               >
                 <span className="z-10 relative duration-500">Kostenloses Erstgespräch</span>

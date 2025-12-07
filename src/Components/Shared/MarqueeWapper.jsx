@@ -9,7 +9,7 @@ const MarqueeWapper = ({images, direction}) => {
       <div>
         <Marquee direction={direction}>
           {
-            images?.map(({id, image})=> <img key={id} src={image} alt=""/>)
+            images?.map(({id, image}, index)=> <img key={id} src={image} alt={`Fitness Training ${index + 1}`} className="h-[70px] w-auto mx-2 rounded"/>)
           }
         </Marquee>
       </div>
