@@ -97,8 +97,8 @@ const RanderHeader = () => {
 
             {/* Navigation Menu */}
             <nav
-              className={`fixed lg:static top-0 left-0 w-[280px] sm:w-[320px] lg:w-auto h-full lg:h-auto bg-[#121212] lg:bg-transparent z-50 lg:z-auto transition-transform duration-300 ease-in-out ${
-                menuActive ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+              className={`fixed lg:static top-0 right-0 w-[280px] sm:w-[320px] lg:w-auto h-full lg:h-auto bg-[#121212] lg:bg-transparent z-50 lg:z-auto transition-transform duration-300 ease-in-out ${
+                menuActive ? "translate-x-0" : "translate-x-full lg:translate-x-0"
               }`}
               aria-label="Main navigation"
             >
