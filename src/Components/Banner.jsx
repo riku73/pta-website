@@ -31,7 +31,7 @@ const Banner = () => {
       >
         <div className="absolute inset-0 bg-black/75" />
       </div>
-      <div className="container relative z-10 h-screen min-h-[100dvh] flex items-center">
+      <div className="container relative z-10 h-screen min-h-[100dvh] flex items-start pt-24 md:items-center md:pt-0">
         <div className="w-full">
             <div className="xl:pt-0 lg:pt-0 md:pt-0 pt-0">
               <Link href={"/kontakt"} className="md:text-[24px] text-lg leading-[140%] md:mb-[50px] mb-8 border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base">
