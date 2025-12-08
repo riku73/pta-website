@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#141410"/>
+  <!-- Stylized P inspired by PTA logo -->
+  <path fill="#c9f31d" d="M8 6h10c3.3 0 6 2.7 6 6s-2.7 6-6 6h-6v8H8V6zm4 8h6c1.1 0 2-.9 2-2s-.9-2-2-2h-6v4z"/>
+  <!-- Accent bar -->
+  <rect x="8" y="25" width="16" height="2" rx="1" fill="#c9f31d"/>
+</svg>
