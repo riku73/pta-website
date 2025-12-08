@@ -1,7 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy initialization to avoid build-time errors
+let resend = null;
+const getResend = () => {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+};
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@pta-training.lu";
 
 const goalLabels = {
@@ -153,7 +160,7 @@ ${message || "Keine zusätzliche Nachricht"}
     `.trim();
 
     // Send email via Resend
-    const { error } = await resend.emails.send({
+    const { error } = await getResend().emails.send({
       from: "PTA Website <onboarding@resend.dev>",
       to: [CONTACT_EMAIL],
       subject: `Neue Anfrage: ${serviceLabels[service] || service} - ${name}`,
