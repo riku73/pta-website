@@ -254,3 +254,29 @@ When adding German text content, be careful with apostrophes. Use `&apos;` or `{
 1. Add entry to services arrays in `/src/app/leistungen/page.js`
 2. Add full content to `servicesData` in `/src/app/leistungen/[slug]/page.js`
 3. Update schema.org in `layout.js` if needed
+
+## Performance Optimizations
+
+### Image Optimization
+- All hero/large images use `quality={60}` for optimal compression
+- Use Next.js `<Image>` component with `fill` and `sizes` attributes
+- Responsive `sizes` example: `"(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 400px"`
+
+### Font Loading
+- Google Fonts (Caveat) loaded via `next/font/google` in `layout.js`
+- CSS variable `--font-caveat` used in Tailwind config
+- Eliminates render-blocking font requests
+
+### Browser Targeting
+- `browserslist` in package.json targets last 2 versions of modern browsers
+- Reduces polyfill overhead in production builds
+
+### Accessibility (WCAG)
+- All interactive elements have 48px minimum touch targets
+- Social links include `aria-label` attributes
+- Proper heading hierarchy (H1 → H2 → H3, no skipped levels)
+- Links distinguished by more than color alone (underlines added)
+
+### Known Limitations
+- **Swiper.js** includes ~12KB of polyfills for older browsers
+- **CSS render-blocking** is intentional to prevent flash of unstyled content

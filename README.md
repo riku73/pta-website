@@ -40,6 +40,17 @@ RESEND_API_KEY=your_resend_api_key
 CONTACT_EMAIL=your_email@example.com
 ```
 
+## Performance
+
+Optimized for PageSpeed Insights with:
+
+- **Next.js Image** optimization with `quality={60}` for large images
+- **next/font** for Google Fonts (Caveat) - no render-blocking
+- **Responsive images** with proper `sizes` attributes
+- **Modern browsers only** via browserslist (last 2 versions)
+- **48px touch targets** for accessibility compliance
+- **Proper heading hierarchy** (H1 → H2 → H3)
+
 ## Documentation
 
 See [CLAUDE.md](./CLAUDE.md) for detailed project documentation including:
