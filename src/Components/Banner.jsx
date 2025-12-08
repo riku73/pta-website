@@ -6,12 +6,14 @@ const socalIcon = [
   {
     id: 1,
     link: "https://www.facebook.com/PTAlTraining",
-    icon: <Facebook />,
+    icon: <Facebook aria-hidden="true" />,
+    label: "Besuche uns auf Facebook",
   },
   {
     id: 2,
     link: "https://www.instagram.com/pta.training",
-    icon: <Instagram />,
+    icon: <Instagram aria-hidden="true" />,
+    label: "Folge uns auf Instagram",
   },
 ];
 const Banner = () => {
@@ -40,9 +42,7 @@ const Banner = () => {
                 </span>
                 <span className="flex gap-4 items-center">
                   Termin vereinbaren
-                  <i className="">
-                    <ArrowUpRight />
-                  </i>
+                  <ArrowUpRight aria-hidden="true" />
                 </span>
               </Link>
               <h1 className="xl:text-[116px] lg:text-[80px] md:text-[68px] sm:text-[48px] text-[48px] font-semibold sm:mb-[20px] mb-[15px] leading-[110%]">
@@ -60,16 +60,16 @@ const Banner = () => {
       </div>
             <div className="absolute right-4 top-[55%] -translate-y-1/2 hidden xl:grid gap-[80px] z-20">
         <div className="rotate-90 flex items-center justify-center gap-[16px]">
-          <Telephone className="text-clr_base -rotate-90 text-lg" />
-          <Link href={"tel:+352691789483"} className="text-clr_white hover:text-clr_base duration-300 cursor-pointer">+352 691 789 483</Link>
+          <Telephone className="text-clr_base -rotate-90 text-lg" aria-hidden="true" />
+          <Link href={"tel:+352691789483"} className="text-clr_white hover:text-clr_base duration-300 cursor-pointer" aria-label="Rufen Sie uns an: +352 691 789 483">+352 691 789 483</Link>
         </div>
         <div>
           <ul className="grid justify-center lg:gap-[14px] gap-[10px]">
-            {socalIcon.map(({ icon, id, link }) => {
+            {socalIcon.map(({ icon, id, link, label }) => {
               return (
                 <li key={id}>
-                  <Link href={link} target="_blank" rel="noopener noreferrer" className="lg:w-[46px] lg:h-[46px] h-[38px] w-[38px] rounded-full bg-[rgb(18_18_18)] flex justify-center items-center hover:bg-clr_base cursor-pointer transition-colors duration-300">
-                    <i className="text-white">{icon}</i>
+                  <Link href={link} target="_blank" rel="noopener noreferrer me" aria-label={label} className="lg:w-[46px] lg:h-[46px] h-[38px] w-[38px] rounded-full bg-[rgb(18_18_18)] flex justify-center items-center hover:bg-clr_base cursor-pointer transition-colors duration-300">
+                    <span className="text-white">{icon}</span>
                   </Link>
                 </li>
               );

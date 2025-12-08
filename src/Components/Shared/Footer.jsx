@@ -64,18 +64,20 @@ const Footer = () => {
                   <Link
                     href="https://www.facebook.com/PTAlTraining"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer me"
+                    aria-label="Besuche uns auf Facebook"
                     className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
                   >
-                    <Facebook className="text-lg" />
+                    <Facebook className="text-lg" aria-hidden="true" />
                   </Link>
                   <Link
                     href="https://www.instagram.com/pta.training"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer me"
+                    aria-label="Folge uns auf Instagram"
                     className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
                   >
-                    <Instagram className="text-lg" />
+                    <Instagram className="text-lg" aria-hidden="true" />
                   </Link>
                 </div>
               </div>
@@ -123,23 +125,23 @@ const Footer = () => {
                 <h4 className="text-white text-xl font-medium mb-6">Kontakt</h4>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <GeoAlt className="text-clr_base text-lg mt-1 flex-shrink-0" />
+                    <GeoAlt className="text-clr_base text-lg mt-1 flex-shrink-0" aria-hidden="true" />
                     <span className="text-clr_pra">1 Fuussekaul, Heiderscheid, Luxembourg</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <Telephone className="text-clr_base text-lg flex-shrink-0" />
+                    <Telephone className="text-clr_base text-lg flex-shrink-0" aria-hidden="true" />
                     <Link href="tel:+352691789483" className="text-clr_pra hover:text-clr_base duration-300">
                       +352 691 789 483
                     </Link>
                   </li>
                   <li className="flex items-center gap-3">
-                    <Envelope className="text-clr_base text-lg flex-shrink-0" />
+                    <Envelope className="text-clr_base text-lg flex-shrink-0" aria-hidden="true" />
                     <Link href="mailto:info@pta-training.lu" className="text-clr_pra hover:text-clr_base duration-300">
                       info@pta-training.lu
                     </Link>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Clock className="text-clr_base text-lg mt-1 flex-shrink-0" />
+                    <Clock className="text-clr_base text-lg mt-1 flex-shrink-0" aria-hidden="true" />
                     <div className="text-clr_pra">
                       <span className="block">Mo-Do: 08:00 - 21:00</span>
                       <span className="block">Fr: 09:00 - 19:00</span>
@@ -184,9 +186,10 @@ const Footer = () => {
             </ul>
             <button
               onClick={() => window.scrollTo(0, 0)}
+              aria-label="Nach oben scrollen"
               className="w-10 h-10 bg-clr_base rounded flex justify-center items-center hover:bg-[#aad302] duration-300"
             >
-              <ArrowUpShort className="text-xl text-clr_title" />
+              <ArrowUpShort className="text-xl text-clr_title" aria-hidden="true" />
             </button>
           </div>
         </div>

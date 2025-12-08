@@ -4,7 +4,6 @@ import Footer from "@/components/Shared/Footer";
 import Header from "@/components/Shared/Header/Header";
 import ScrollToTop from "@/components/Shared/ScrollToTop";
 
-
 export const metadata = {
   metadataBase: new URL('https://pta-training.lu'),
   title: {
@@ -12,7 +11,7 @@ export const metadata = {
     template: "%s | PTA Training Luxembourg",
   },
   description: "Deine Personal Training Academy in Luxembourg - Functional Training, Rehabilitation und mehr. Für jeden Körper, für jedes Ziel.",
-  keywords: ["Personal Training", "Fitness", "Luxembourg", "Luxemburg", "Heiderscheid", "Ernährungsberatung", "Gruppentraining", "Rehabilitation", "Bootcamp"],
+  keywords: ["Personal Training", "Fitness Luxembourg", "Personal Trainer Heiderscheid", "Ernährungsberatung", "Gruppentraining"],
   authors: [{ name: "PTA Training" }],
   creator: "PTA Personal Training Academy",
   publisher: "PTA Training",
@@ -30,7 +29,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop",
+        url: "https://pta-training.lu/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "PTA Personal Training Academy Luxembourg",
@@ -41,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "PTA - Personal Training Academy Luxembourg",
     description: "Deine Personal Training Academy in Luxembourg - Functional Training, Rehabilitation und mehr.",
-    images: ["https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop"],
+    images: ["https://pta-training.lu/images/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -71,7 +70,7 @@ const organizationSchema = {
   "email": "info@pta-training.lu",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Hauptstraße 1",
+    "streetAddress": "1 Fuussekaul",
     "addressLocality": "Heiderscheid",
     "postalCode": "9156",
     "addressCountry": "LU"
@@ -115,6 +114,13 @@ const organizationSchema = {
     "https://www.facebook.com/PTAlTraining",
     "https://www.instagram.com/pta.training"
   ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+352 691 789 483",
+    "contactType": "customer service",
+    "email": "info@pta-training.lu",
+    "availableLanguage": ["German", "French", "English", "Luxembourgish"]
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Fitness Services",
@@ -191,10 +197,19 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        {/* Skip to main content link for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-clr_base focus:text-clr_title focus:px-4 focus:py-2 focus:rounded"
+        >
+          Zum Hauptinhalt springen
+        </a>
         <ScrollToTop />
         <AddAnimation/>
         <Header/>
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Footer/>
       </body>
     </html>

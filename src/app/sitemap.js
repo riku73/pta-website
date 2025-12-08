@@ -1,70 +1,70 @@
 export default function sitemap() {
   const baseUrl = 'https://pta-training.lu';
 
-  // Static pages
+  // Static pages with actual modification dates
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: '2024-12-01',
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/ueber-uns`,
-      lastModified: new Date(),
+      lastModified: '2024-11-15',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/leistungen`,
-      lastModified: new Date(),
+      lastModified: '2024-11-15',
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: '2024-11-15',
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/kontakt`,
-      lastModified: new Date(),
+      lastModified: '2024-11-15',
       changeFrequency: 'monthly',
       priority: 0.7,
     },
   ];
 
-  // Service pages
+  // Service pages with dates
   const services = [
-    'personal-training',
-    'ernaehrungsberatung',
-    'gruppentraining',
-    'fitness-bootcamp',
-    'rehabilitation',
-    'sportmannschaften',
+    { slug: 'personal-training', date: '2024-11-15' },
+    { slug: 'ernaehrungsberatung', date: '2024-11-15' },
+    { slug: 'gruppentraining', date: '2024-11-15' },
+    { slug: 'fitness-bootcamp', date: '2024-11-15' },
+    { slug: 'rehabilitation', date: '2024-11-15' },
+    { slug: 'sportmannschaften', date: '2024-11-15' },
   ];
 
-  const servicePages = services.map((slug) => ({
+  const servicePages = services.map(({ slug, date }) => ({
     url: `${baseUrl}/leistungen/${slug}`,
-    lastModified: new Date(),
+    lastModified: date,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
-  // Blog posts
+  // Blog posts with actual publication dates
   const blogPosts = [
-    'rueckenschmerzen-uebungen',
-    'ernaehrung-vor-nach-training',
-    'motivation-training-tipps',
-    'hiit-vs-dauerlauf',
-    'schlaf-muskelaufbau',
-    'anfaengerfehler-vermeiden',
+    { slug: 'rueckenschmerzen-uebungen', date: '2024-11-15' },
+    { slug: 'ernaehrung-vor-nach-training', date: '2024-11-10' },
+    { slug: 'motivation-training-tipps', date: '2024-11-05' },
+    { slug: 'hiit-vs-dauerlauf', date: '2024-10-28' },
+    { slug: 'schlaf-muskelaufbau', date: '2024-10-20' },
+    { slug: 'anfaengerfehler-vermeiden', date: '2024-10-15' },
   ];
 
-  const blogPages = blogPosts.map((slug) => ({
+  const blogPages = blogPosts.map(({ slug, date }) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
+    lastModified: date,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));

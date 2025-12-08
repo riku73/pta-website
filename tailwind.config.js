@@ -15,7 +15,7 @@ export default {
         "clr_white": "#ffffff",
         "clr_title": "#181818",
         "clr_mtitle": "#000d27",
-        "clr_pra": "#999999",
+        "clr_pra": "#b3b3b3",
         "clr_subtitle": "#121212",
         "clr_base": "#c9f31d",
         "clr_hover": "#c2ec1d9e",
@@ -36,8 +36,7 @@ export default {
         "mainShadow": "rgba(0, 0, 0, 0.15) 0px -1px 34px 0px"
       },
       backgroundImage: {
-        "banner_image": "url('/img/banner/banner-bg.png')",
-        "common_bg": "url('/img/about/about-bg.png')",
+        "common_bg": "url('/images/about-bg.png')",
       },
       keyframes: {
         scales: {

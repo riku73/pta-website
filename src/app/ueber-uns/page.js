@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../../components/Shared/PageHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "react-bootstrap-icons";
 
 export const metadata = {
@@ -13,6 +14,14 @@ export const metadata = {
     siteName: "PTA Training",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "https://pta-training.lu/images/team-trainers.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PTA Team - Personal Training Academy Luxembourg",
+      },
+    ],
   },
 };
 
@@ -53,11 +62,13 @@ const AboutUs = () => {
       <section className="pt_120 pb_120">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <img
+            <div className="relative h-[400px] lg:h-[500px]">
+              <Image
                 src="/images/team-trainers.jpg"
                 alt="PTA Team - Jason, Jimmy und João"
-                className="rounded-lg w-full h-auto object-cover"
+                fill
+                className="rounded-lg object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div>
@@ -105,11 +116,13 @@ const AboutUs = () => {
 
 
               >
-                <div className="h-64 overflow-hidden">
-                  <img
+                <div className="h-64 overflow-hidden relative">
+                  <Image
                     src={image}
                     alt={name}
-                    className="w-full h-full object-cover group-hover:scale-110 duration-500"
+                    fill
+                    className="object-cover group-hover:scale-110 duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">

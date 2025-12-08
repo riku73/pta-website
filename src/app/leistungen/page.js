@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../../components/Shared/PageHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircleFill } from "react-bootstrap-icons";
 
 export const metadata = {
@@ -13,6 +14,14 @@ export const metadata = {
     siteName: "PTA Training",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "https://pta-training.lu/images/functional-training-area.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PTA Leistungen - Personal Training und Fitness Services",
+      },
+    ],
   },
 };
 
@@ -134,11 +143,13 @@ const Services = () => {
                
                
               >
-                <div className="h-48 overflow-hidden">
-                  <img
+                <div className="h-48 overflow-hidden relative">
+                  <Image
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-110 duration-500"
+                    fill
+                    className="object-cover group-hover:scale-110 duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6">

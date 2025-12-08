@@ -1,4 +1,8 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@pta-training.lu";
 
 const goalLabels = {
   muskelaufbau: "Muskelaufbau",
@@ -34,7 +38,7 @@ const availabilityLabels = {
 
 export async function POST(request) {
   try {
-    const data = await request.json();
+    const formData = await request.json();
 
     const {
       goals,
@@ -47,7 +51,7 @@ export async function POST(request) {
       email,
       phone,
       message,
-    } = data;
+    } = formData;
 
     // Validate required fields
     if (!name || !email || !goals?.length || !service || !fitnessLevel) {
@@ -85,10 +89,85 @@ ${healthIssues === "yes" ? `Ja: ${healthDetails || "Keine Details angegeben"}` :
 ${message || "Keine zusätzliche Nachricht"}
     `.trim();
 
-    // Log the submission (in production, send email via nodemailer, Resend, etc.)
-    console.log("=== NEW CONTACT FORM SUBMISSION ===");
-    console.log(emailContent);
-    console.log("===================================");
+    // Create HTML email template
+    const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; }
+    .header { background: #c9f31d; padding: 20px; text-align: center; }
+    .header h1 { color: #141410; margin: 0; font-size: 24px; }
+    .content { padding: 20px; background: #f9f9f9; }
+    .section { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #c9f31d; }
+    .section h3 { color: #141410; margin: 0 0 10px 0; font-size: 16px; }
+    .section p { margin: 5px 0; }
+    .label { color: #666; font-weight: bold; }
+    .footer { padding: 15px; text-align: center; font-size: 12px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Neue Kontaktanfrage - PTA Training</h1>
+  </div>
+  <div class="content">
+    <div class="section">
+      <h3>Kontaktdaten</h3>
+      <p><span class="label">Name:</span> ${name}</p>
+      <p><span class="label">E-Mail:</span> ${email}</p>
+      <p><span class="label">Telefon:</span> ${phone || "Nicht angegeben"}</p>
+    </div>
+    <div class="section">
+      <h3>Ziele</h3>
+      <p>${goals.map((g) => goalLabels[g] || g).join(", ")}</p>
+    </div>
+    <div class="section">
+      <h3>Gewünschtes Angebot</h3>
+      <p>${serviceLabels[service] || service}</p>
+    </div>
+    <div class="section">
+      <h3>Fitness-Level</h3>
+      <p>${fitnessLabels[fitnessLevel] || fitnessLevel}</p>
+    </div>
+    <div class="section">
+      <h3>Verfügbarkeit</h3>
+      <p>${availability.length > 0 ? availability.map((a) => availabilityLabels[a] || a).join(", ") : "Nicht angegeben"}</p>
+    </div>
+    <div class="section">
+      <h3>Gesundheitliche Einschränkungen</h3>
+      <p>${healthIssues === "yes" ? healthDetails || "Ja (keine Details)" : "Keine"}</p>
+    </div>
+    ${message ? `
+    <div class="section">
+      <h3>Nachricht</h3>
+      <p>${message}</p>
+    </div>
+    ` : ""}
+  </div>
+  <div class="footer">
+    <p>Diese Nachricht wurde über das Kontaktformular auf pta-training.lu gesendet.</p>
+  </div>
+</body>
+</html>
+    `.trim();
+
+    // Send email via Resend
+    const { error } = await resend.emails.send({
+      from: "PTA Website <onboarding@resend.dev>",
+      to: [CONTACT_EMAIL],
+      subject: `Neue Anfrage: ${serviceLabels[service] || service} - ${name}`,
+      html: htmlContent,
+      text: emailContent,
+      replyTo: email,
+    });
+
+    if (error) {
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

@@ -29,10 +29,10 @@ const tabList = [
 ];
 
 const About = () => {
-  const [isTabActive, setIsTabAative] = useState("about");
+  const [isTabActive, setIsTabActive] = useState("about");
 
   const handleTabClick = (e) => {
-    setIsTabAative(e);
+    setIsTabActive(e);
   };
 
   return (

@@ -13,6 +13,14 @@ export const metadata = {
     siteName: "PTA Training",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "https://pta-training.lu/images/pta-entrance.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PTA Kontakt - Personal Training Academy Luxembourg",
+      },
+    ],
   },
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../../components/Shared/PageHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Calendar, Person } from "react-bootstrap-icons";
 
 export const metadata = {
@@ -13,6 +14,14 @@ export const metadata = {
     siteName: "PTA Training",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "https://pta-training.lu/images/blog/blog-header.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "PTA Fitness Blog",
+      },
+    ],
   },
 };
 
@@ -25,7 +34,7 @@ const blogPosts = [
     date: "15. November 2024",
     author: "PTA Team",
     category: "Training",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=500&fit=crop"
+    image: "/images/blog/rueckenschmerzen-thumb.jpg"
   },
   {
     id: 2,
@@ -35,7 +44,7 @@ const blogPosts = [
     date: "10. November 2024",
     author: "PTA Team",
     category: "Ernährung",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=500&fit=crop"
+    image: "/images/blog/ernaehrung-thumb.jpg"
   },
   {
     id: 3,
@@ -45,7 +54,7 @@ const blogPosts = [
     date: "5. November 2024",
     author: "PTA Team",
     category: "Mindset",
-    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&h=500&fit=crop"
+    image: "/images/blog/motivation-thumb.jpg"
   },
   {
     id: 4,
@@ -55,7 +64,7 @@ const blogPosts = [
     date: "28. Oktober 2024",
     author: "PTA Team",
     category: "Training",
-    image: "https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?w=800&h=500&fit=crop"
+    image: "/images/blog/hiit-thumb.jpg"
   },
   {
     id: 5,
@@ -65,7 +74,7 @@ const blogPosts = [
     date: "20. Oktober 2024",
     author: "PTA Team",
     category: "Regeneration",
-    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=500&fit=crop"
+    image: "/images/blog/schlaf-thumb.jpg"
   },
   {
     id: 6,
@@ -75,7 +84,7 @@ const blogPosts = [
     date: "15. Oktober 2024",
     author: "PTA Team",
     category: "Anfänger",
-    image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=800&h=500&fit=crop"
+    image: "/images/blog/anfaengerfehler-thumb.jpg"
   }
 ];
 
@@ -85,7 +94,7 @@ const Blog = () => {
       <PageHeader
         heading={"Blog"}
         page={"Blog"}
-        backgroundImage="https://images.unsplash.com/photo-1486218119243-13883505764c?w=1920&q=80"
+        backgroundImage="/images/blog/blog-header.jpg"
       />
 
       <section className="pt_120 pb_120">
@@ -106,28 +115,26 @@ const Blog = () => {
               <article
                 key={id}
                 className="bg-common_bg rounded-lg overflow-hidden group"
-               
-               
-               
               >
                 <div className="h-56 overflow-hidden relative">
-                  <img
+                  <Image
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-110 duration-500"
+                    fill
+                    className="object-cover group-hover:scale-110 duration-500"
                   />
-                  <span className="absolute top-4 left-4 bg-clr_base text-clr_title px-3 py-1 rounded text-sm font-medium">
+                  <span className="absolute top-4 left-4 bg-clr_base text-clr_title px-3 py-1 rounded text-sm font-medium z-10">
                     {category}
                   </span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-clr_pra text-sm mb-4">
                     <span className="flex items-center gap-1">
-                      <Calendar className="text-clr_base" />
+                      <Calendar className="text-clr_base" aria-hidden="true" />
                       {date}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Person className="text-clr_base" />
+                      <Person className="text-clr_base" aria-hidden="true" />
                       {author}
                     </span>
                   </div>
@@ -142,7 +149,7 @@ const Blog = () => {
                     className="inline-flex items-center gap-2 text-clr_base hover:text-white duration-300"
                   >
                     <span>Weiterlesen</span>
-                    <ArrowRight />
+                    <ArrowRight aria-hidden="true" />
                   </Link>
                 </div>
               </article>

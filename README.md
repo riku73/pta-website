@@ -11,6 +11,7 @@ Website for PTA Personal Training Academy, a fitness studio in Heiderscheid, Lux
 - Tailwind CSS 3.4
 - react-bootstrap-icons
 - Swiper.js
+- Resend (email delivery)
 
 ## Quick Start
 
@@ -29,6 +30,15 @@ npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Environment Variables
+
+Create a `.env.local` file:
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+CONTACT_EMAIL=your_email@example.com
+```
 
 ## Documentation
 

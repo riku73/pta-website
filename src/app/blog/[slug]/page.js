@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../../../components/Shared/PageHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowLeft, Calendar, Person, Clock, Tag } from "react-bootstrap-icons";
 import { notFound } from "next/navigation";
 
@@ -9,11 +10,12 @@ const blogData = {
     title: "Rückenschmerzen? Diese Übungen helfen wirklich",
     metaDescription: "Effektive Übungen gegen Rückenschmerzen. Stärke deinen Rücken, löse Verspannungen und werde langfristig schmerzfrei. Jetzt kostenlose Tipps von Experten!",
     date: "15. November 2024",
+    dateISO: "2024-11-15",
     author: "PTA Team",
     category: "Training",
     readTime: "8 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=600&fit=crop",
+    heroImage: "/images/blog/rueckenschmerzen-hero.jpg",
+    image: "/images/blog/rueckenschmerzen-main.jpg",
     content: `
 ## Warum Rückenschmerzen so verbreitet sind
 
@@ -113,11 +115,12 @@ Bei PTA unterstützen wir dich gerne dabei, deinen Rücken zu stärken und schme
     title: "Was du vor und nach dem Training essen solltest",
     metaDescription: "Die optimale Ernährung vor und nach dem Training. Mahlzeiten-Timing, Nährstoffe und praktische Rezeptideen für bessere Ergebnisse. Jetzt lesen!",
     date: "10. November 2024",
+    dateISO: "2024-11-10",
     author: "PTA Team",
     category: "Ernährung",
     readTime: "10 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1517130038641-a774d04afb3c?w=1200&h=600&fit=crop",
+    heroImage: "/images/blog/ernaehrung-hero.jpg",
+    image: "/images/blog/ernaehrung-main.jpg",
     content: `
 ## Warum Ernährung rund ums Training so wichtig ist
 
@@ -227,11 +230,12 @@ Bei PTA helfen wir dir gerne, deine Ernährung auf dein Training abzustimmen. Un
     title: "Keine Lust auf Training? 5 Tricks, die wirklich funktionieren",
     metaDescription: "Motivation fürs Training finden und behalten. 5 bewährte Strategien gegen den inneren Schweinehund. Praktische Tipps für mehr Durchhaltevermögen.",
     date: "5. November 2024",
+    dateISO: "2024-11-05",
     author: "PTA Team",
     category: "Mindset",
     readTime: "6 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?w=1200&h=600&fit=crop",
+    heroImage: "/images/blog/motivation-hero.jpg",
+    image: "/images/blog/motivation-main.jpg",
     content: `
 ## Der innere Schweinehund ist real – aber besiegbar
 
@@ -326,11 +330,12 @@ Bei PTA unterstützen wir dich dabei, dranzubleiben. Unsere Trainer und unsere C
     title: "HIIT oder Dauerlauf – was bringt mehr?",
     metaDescription: "HIIT vs. Ausdauerlauf im Vergleich. Vorteile, Nachteile und was für deine Ziele besser geeignet ist. Expertenwissen für dein optimales Training.",
     date: "28. Oktober 2024",
+    dateISO: "2024-10-28",
     author: "PTA Team",
     category: "Training",
     readTime: "9 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1519505907962-0a6cb0167c73?w=1200&h=600&fit=crop",
+    heroImage: "/images/blog/hiit-hero.jpg",
+    image: "/images/blog/hiit-main.jpg",
     content: `
 ## Die ewige Debatte: Kurz und intensiv oder lang und gleichmäßig?
 
@@ -465,11 +470,12 @@ Bei PTA helfen wir dir, den optimalen Mix für deine Ziele zu finden. Egal ob in
     title: "So wichtig ist Schlaf für deinen Muskelaufbau",
     metaDescription: "Schlaf und Muskelaufbau: Warum Regeneration so wichtig ist. Tipps für besseren Schlaf und optimale Erholung. Jetzt mehr erfahren!",
     date: "20. Oktober 2024",
+    dateISO: "2024-10-20",
     author: "PTA Team",
     category: "Regeneration",
     readTime: "7 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1581122584612-713f89daa8eb?w=1200&h=600&fit=crop",
+    heroImage: "/images/blog/schlaf-hero.jpg",
+    image: "/images/blog/schlaf-main.jpg",
     content: `
 ## Der unterschätzte Faktor: Schlaf
 
@@ -593,11 +599,12 @@ Bei PTA berücksichtigen wir Regeneration als Teil des Trainingsplans. Denn wir 
     title: "Die 10 häufigsten Anfängerfehler – und wie du sie vermeidest",
     metaDescription: "Die häufigsten Trainingsfehler von Anfängern und wie du sie vermeidest. Tipps für einen erfolgreichen Einstieg ins Fitnesstraining. Jetzt lesen!",
     date: "15. Oktober 2024",
+    dateISO: "2024-10-15",
     author: "PTA Team",
     category: "Anfänger",
     readTime: "11 Min. Lesezeit",
-    heroImage: "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=1920&q=80",
-    image: "https://images.unsplash.com/photo-1593476123561-9516f2097158?w=1200&h=600&fit=crop",
+    heroImage: "/images/blog/anfaengerfehler-hero.jpg",
+    image: "/images/blog/anfaengerfehler-main.jpg",
     content: `
 ## Der Einstieg ins Training: So machst du es richtig
 
@@ -724,6 +731,30 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} | PTA Blog`,
     description: post.metaDescription,
+    openGraph: {
+      title: post.title,
+      description: post.metaDescription,
+      url: `https://pta-training.lu/blog/${resolvedParams.slug}`,
+      siteName: "PTA Training",
+      locale: "de_DE",
+      type: "article",
+      publishedTime: post.dateISO || "2024-11-15",
+      authors: ["PTA Team"],
+      images: [
+        {
+          url: `https://pta-training.lu${post.image}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.metaDescription,
+      images: [`https://pta-training.lu${post.image}`],
+    },
   };
 }
 
@@ -752,6 +783,36 @@ const processInlineMarkdown = (text) => {
   return parts.length > 0 ? parts : text;
 };
 
+// Generate BlogPosting JSON-LD schema
+const generateBlogPostingSchema = (post, slug) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.metaDescription,
+  "image": `https://pta-training.lu${post.image}`,
+  "datePublished": post.dateISO || "2024-11-15",
+  "dateModified": post.dateISO || "2024-11-15",
+  "author": {
+    "@type": "Organization",
+    "name": "PTA Training",
+    "url": "https://pta-training.lu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PTA - Personal Training Academy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pta-training.lu/images/pta-logo.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://pta-training.lu/blog/${slug}`
+  },
+  "articleSection": post.category,
+  "wordCount": post.content.split(/\s+/).length
+});
+
 const BlogPost = async ({ params }) => {
   const resolvedParams = await params;
   const post = blogData[resolvedParams.slug];
@@ -765,13 +826,21 @@ const BlogPost = async ({ params }) => {
   const prevSlug = currentIndex > 0 ? allSlugs[currentIndex - 1] : null;
   const nextSlug = currentIndex < allSlugs.length - 1 ? allSlugs[currentIndex + 1] : null;
 
+  const blogPostingSchema = generateBlogPostingSchema(post, resolvedParams.slug);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <PageHeader
         heading={"Blog"}
         page={post.title}
         backgroundImage={post.heroImage}
         useH2={true}
+        parentLink="/blog"
+        parentLabel="Blog"
       />
 
       <article className="pt_120 pb_120">
@@ -802,11 +871,13 @@ const BlogPost = async ({ params }) => {
             </header>
 
             {/* Featured Image */}
-            <div className="mb-12 rounded-lg overflow-hidden">
-              <img
+            <div className="mb-12 rounded-lg overflow-hidden relative h-[400px]">
+              <Image
                 src={post.image}
                 alt={post.title}
-                className="w-full h-[400px] object-cover"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
 

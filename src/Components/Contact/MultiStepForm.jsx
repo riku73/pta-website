@@ -66,6 +66,7 @@ const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     goals: [],
     service: "",
@@ -108,6 +109,7 @@ const MultiStepForm = () => {
     if (!canSubmit) return;
 
     setIsSubmitting(true);
+    setSubmitError("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -119,10 +121,10 @@ const MultiStepForm = () => {
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        alert("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
+        setSubmitError("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
       }
     } catch (error) {
-      alert("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
+      setSubmitError("Es ist ein Fehler aufgetreten. Bitte versuche es erneut.");
     } finally {
       setIsSubmitting(false);
     }
@@ -149,10 +151,17 @@ const MultiStepForm = () => {
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex justify-between items-center mb-3">
-          <span className="text-clr_pra text-sm">Schritt {currentStep} von 3</span>
+          <span className="text-clr_pra text-sm" id="step-label">Schritt {currentStep} von 3</span>
           <span className="text-clr_base font-semibold">{progressPercentage}%</span>
         </div>
-        <div className="h-2 bg-[rgb(38,37,37)] rounded-full overflow-hidden">
+        <div
+          className="h-2 bg-[rgb(38,37,37)] rounded-full overflow-hidden"
+          role="progressbar"
+          aria-valuenow={progressPercentage}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-labelledby="step-label"
+        >
           <div
             className="h-full bg-clr_base rounded-full transition-all duration-300"
             style={{ width: `${progressPercentage}%` }}
@@ -166,7 +175,7 @@ const MultiStepForm = () => {
           <div className="space-y-8">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <Trophy className="text-clr_base text-2xl" />
+                <Trophy className="text-clr_base text-2xl" aria-hidden="true" />
                 <h3 className="text-white text-2xl font-medium">Dein Ziel</h3>
               </div>
               <p className="text-clr_pra mb-6">Was möchtest du erreichen?</p>
@@ -233,7 +242,7 @@ const MultiStepForm = () => {
           <div className="space-y-8">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <BarChart className="text-clr_base text-2xl" />
+                <BarChart className="text-clr_base text-2xl" aria-hidden="true" />
                 <h3 className="text-white text-2xl font-medium">Über dich</h3>
               </div>
               <p className="text-clr_pra mb-6">Wie schätzt du dein aktuelles Fitnesslevel ein?</p>
@@ -266,7 +275,7 @@ const MultiStepForm = () => {
 
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Clock className="text-clr_base text-xl" />
+                <Clock className="text-clr_base text-xl" aria-hidden="true" />
                 <p className="text-clr_pra">Wann hast du Zeit zum Trainieren?</p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -298,7 +307,7 @@ const MultiStepForm = () => {
 
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <HeartPulse className="text-clr_base text-xl" />
+                <HeartPulse className="text-clr_base text-xl" aria-hidden="true" />
                 <p className="text-clr_pra">Gibt es gesundheitliche Einschränkungen?</p>
               </div>
               <div className="flex gap-4 mb-4">
@@ -326,13 +335,17 @@ const MultiStepForm = () => {
                 </button>
               </div>
               {formData.healthIssues === "yes" && (
-                <textarea
-                  value={formData.healthDetails}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, healthDetails: e.target.value }))}
-                  placeholder="Bitte beschreibe kurz deine Einschränkungen..."
-                  rows="3"
-                  className="w-full py-[18px] px-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra"
-                />
+                <div>
+                  <label htmlFor="health-details" className="sr-only">Beschreibe deine gesundheitlichen Einschränkungen</label>
+                  <textarea
+                    id="health-details"
+                    value={formData.healthDetails}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, healthDetails: e.target.value }))}
+                    placeholder="Bitte beschreibe kurz deine Einschränkungen..."
+                    rows="3"
+                    className="w-full py-[18px] px-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base focus:ring-2 focus:ring-clr_base/20 transition-colors"
+                  />
+                </div>
               )}
             </div>
           </div>
@@ -343,55 +356,76 @@ const MultiStepForm = () => {
           <div className="space-y-6">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <Envelope className="text-clr_base text-2xl" />
+                <Envelope className="text-clr_base text-2xl" aria-hidden="true" />
                 <h3 className="text-white text-2xl font-medium">Kontakt</h3>
               </div>
               <p className="text-clr_pra mb-6">Fast geschafft! Wie können wir dich erreichen?</p>
             </div>
 
+            {/* Error Message */}
+            {submitError && (
+              <div
+                className="p-4 rounded-lg bg-red-900/30 border border-red-500 text-red-300"
+                role="alert"
+                aria-live="polite"
+              >
+                {submitError}
+              </div>
+            )}
+
             <div className="relative">
-              <Person className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" />
+              <label htmlFor="contact-name" className="sr-only">Dein Name (erforderlich)</label>
+              <Person className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" aria-hidden="true" />
               <input
+                id="contact-name"
                 type="text"
                 value={formData.name}
                 onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 placeholder="Dein Name *"
-                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
+                aria-required="true"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base focus:ring-2 focus:ring-clr_base/20 transition-colors"
                 required
               />
             </div>
 
             <div className="relative">
-              <Envelope className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" />
+              <label htmlFor="contact-email" className="sr-only">Deine E-Mail-Adresse (erforderlich)</label>
+              <Envelope className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" aria-hidden="true" />
               <input
+                id="contact-email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                 placeholder="Deine E-Mail-Adresse *"
-                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
+                aria-required="true"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base focus:ring-2 focus:ring-clr_base/20 transition-colors"
                 required
               />
             </div>
 
             <div className="relative">
-              <Telephone className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" />
+              <label htmlFor="contact-phone" className="sr-only">Deine Telefonnummer (optional)</label>
+              <Telephone className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" aria-hidden="true" />
               <input
+                id="contact-phone"
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                 placeholder="Deine Telefonnummer (optional)"
-                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base focus:ring-2 focus:ring-clr_base/20 transition-colors"
               />
             </div>
 
             <div className="relative">
-              <ChatText className="absolute left-4 top-5 text-clr_pra text-xl" />
+              <label htmlFor="contact-message" className="sr-only">Deine Nachricht (optional)</label>
+              <ChatText className="absolute left-4 top-5 text-clr_pra text-xl" aria-hidden="true" />
               <textarea
+                id="contact-message"
                 value={formData.message}
                 onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
                 placeholder="Deine Nachricht (optional)"
                 rows="4"
-                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base focus:ring-2 focus:ring-clr_base/20 transition-colors"
               />
             </div>
           </div>
@@ -403,9 +437,10 @@ const MultiStepForm = () => {
             <button
               type="button"
               onClick={() => setCurrentStep((prev) => prev - 1)}
+              aria-label={`Zurück zu Schritt ${currentStep - 1}`}
               className="flex items-center gap-2 px-6 py-3 text-clr_pra hover:text-white transition-colors"
             >
-              <ArrowLeft />
+              <ArrowLeft aria-hidden="true" />
               <span>Zurück</span>
             </button>
           ) : (
@@ -417,6 +452,7 @@ const MultiStepForm = () => {
               type="button"
               onClick={() => setCurrentStep((prev) => prev + 1)}
               disabled={currentStep === 1 ? !canProceedStep1 : !canProceedStep2}
+              aria-label={`Weiter zu Schritt ${currentStep + 1}`}
               className={`flex items-center gap-2 px-8 py-4 rounded-[5px] font-medium transition-all duration-300 ${
                 (currentStep === 1 ? canProceedStep1 : canProceedStep2)
                   ? "bg-clr_base text-clr_subtitle hover:bg-[#aad302]"
@@ -424,12 +460,13 @@ const MultiStepForm = () => {
               }`}
             >
               <span>Weiter</span>
-              <ArrowRight />
+              <ArrowRight aria-hidden="true" />
             </button>
           ) : (
             <button
               type="submit"
               disabled={!canSubmit || isSubmitting}
+              aria-label={isSubmitting ? "Anfrage wird gesendet" : "Anfrage absenden"}
               className={`flex items-center gap-2 px-8 py-4 rounded-[5px] font-medium transition-all duration-300 ${
                 canSubmit && !isSubmitting
                   ? "bg-clr_base text-clr_subtitle hover:bg-[#aad302]"
@@ -437,7 +474,7 @@ const MultiStepForm = () => {
               }`}
             >
               <span>{isSubmitting ? "Wird gesendet..." : "Anfrage senden"}</span>
-              {!isSubmitting && <ArrowRight />}
+              {!isSubmitting && <ArrowRight aria-hidden="true" />}
             </button>
           )}
         </div>

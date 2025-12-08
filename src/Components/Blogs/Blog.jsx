@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "react-bootstrap-icons";
 
 const Blog = ({ date, heading, image, slug }) => {
@@ -14,7 +15,7 @@ const Blog = ({ date, heading, image, slug }) => {
             <span className="text-clr_pra text-base border border-clr_cusborder rounded-[100px] py-[7px] px-[15px] sm:mb-6 mb-[18px] inline-block">
               {date}
             </span>
-            <h3 className="xl:text-3xl sm:text-[22px] text-xl text-white sm:leading-[44px] leading-8 font-medium capitalize">
+            <h3 className="xl:text-3xl sm:text-[22px] text-xl text-white sm:leading-[44px] leading-8 font-medium">
               <Link
                 href={`/blog/${slug}`}
                 className="text-white duration-500 group-hover:text-clr_base"
@@ -26,9 +27,11 @@ const Blog = ({ date, heading, image, slug }) => {
         </div>
         <div className="duration-500 opacity-100">
           <Link href={`/blog/${slug}`}>
-            <img
+            <Image
               src={image}
               alt={heading}
+              width={290}
+              height={157}
               className="max-w-[290px] h-[157px] object-cover rounded-lg"
             />
           </Link>

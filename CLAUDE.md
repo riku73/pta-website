@@ -81,11 +81,11 @@ PTA (Personal Training Academy) is a fitness studio website for a gym located in
 
 **Available posts:**
 - `rueckenschmerzen-uebungen`
-- `ernaehrung-muskelaufbau`
-- `hiit-training`
-- `motivation-tipps`
-- `schlaf-regeneration`
-- `dehnen-stretching`
+- `ernaehrung-vor-nach-training`
+- `motivation-training-tipps`
+- `hiit-vs-dauerlauf`
+- `schlaf-muskelaufbau`
+- `anfaengerfehler-vermeiden`
 
 ### Contact (`/kontakt`)
 - Multi-step form (3 steps)
@@ -161,7 +161,10 @@ Handles contact form submissions.
 { "success": true }
 ```
 
-Currently logs to console. Email integration can be added with Resend, Nodemailer, etc.
+**Email Integration:**
+Uses Resend for email delivery. Requires environment variables:
+- `RESEND_API_KEY` - Resend API key
+- `CONTACT_EMAIL` - Recipient email address (defaults to info@pta-training.lu)
 
 ## SEO
 
@@ -208,10 +211,20 @@ npm run start  # Start production server
 npm run lint   # Run ESLint
 ```
 
+## Environment Variables
+
+Create a `.env.local` file with:
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+CONTACT_EMAIL=your_email@example.com
+```
+
 ## Images
 
 All images are stored in `/public/images/`:
 - `pta-logo.svg` - Main logo
+- `og-image.jpg` - OpenGraph social sharing image
 - `gym-interior-wide.jpg` - Hero background
 - `team-trainers.jpg` - Team photo
 - Various gym equipment and facility photos

@@ -1,12 +1,14 @@
 import React from "react";
 import PageHeader from "../../../components/Shared/PageHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircleFill, Clock, Calendar, Users, Award, Heart, Shield } from "react-bootstrap-icons";
 import { notFound } from "next/navigation";
 
 const servicesData = {
   "personal-training": {
     title: "Personal Training",
+    h2Title: "Individuelles Personal Training für maximale Ergebnisse",
     subtitle: "Training, das sich nach dir richtet",
     metaDescription: "Individuelles Personal Training in Luxemburg. Maßgeschneiderte Trainingspläne für Muskelaufbau, Gewichtsreduktion und mehr Fitness. Jetzt kostenloses Erstgespräch buchen!",
     heroImage: "/images/gym-interior-wide.jpg",
@@ -41,6 +43,7 @@ Ob Krafttraining, Functional Fitness oder gezielte Mobility-Arbeit – wir passe
   },
   "ernaehrungsberatung": {
     title: "Ernährungsberatung",
+    h2Title: "Professionelle Ernährungsberatung ohne Verzicht",
     subtitle: "Essen, das zu dir passt",
     metaDescription: "Professionelle Ernährungsberatung in Luxemburg. Nachhaltige Ernährungspläne ohne Verzicht. Abnehmen, Muskelaufbau oder gesünder leben. Jetzt beraten lassen!",
     heroImage: "/images/medicine-balls.jpg",
@@ -75,6 +78,7 @@ Unsere Ernährungsexperten begleiten dich kontinuierlich mit wöchentlichen Fort
   },
   "gruppentraining": {
     title: "Gruppentraining",
+    h2Title: "Effektives Gruppentraining in kleinen Gruppen",
     subtitle: "Gemeinsam stärker",
     metaDescription: "Motivierendes Gruppentraining in Luxemburg. Kleine Gruppen, qualifizierte Trainer, maximaler Spaß. Krafttraining, HIIT und mehr. Jetzt Probetraining buchen!",
     heroImage: "/images/functional-training-area.jpg",
@@ -109,6 +113,7 @@ Das Besondere am Gruppentraining ist die Gemeinschaft. Du lernst Gleichgesinnte 
   },
   "fitness-bootcamp": {
     title: "Fitness Bootcamp",
+    h2Title: "Intensives Fitness Bootcamp für deine Transformation",
     subtitle: "Intensiv, dynamisch, motivierend",
     metaDescription: "Intensives Fitness Bootcamp in Luxemburg. 4-Wochen Transformation mit HIIT, Functional Training und Ernährungsplan. Jetzt anmelden und durchstarten!",
     heroImage: "/images/kettlebells.jpg",
@@ -143,6 +148,7 @@ Im Preis inbegriffen ist ein kompletter Ernährungsplan, der auf die intensiven 
   },
   "rehabilitation": {
     title: "Rehabilitation & Aufbautraining",
+    h2Title: "Rehabilitationstraining nach Verletzung oder OP",
     subtitle: "Zurück zu voller Beweglichkeit",
     metaDescription: "Professionelles Rehabilitationstraining in Luxemburg. Behutsamer Aufbau nach Verletzung oder OP. In Abstimmung mit Ärzten und Physiotherapeuten. Jetzt Termin vereinbaren!",
     heroImage: "/images/gym-pullup-trx.jpg",
@@ -177,6 +183,7 @@ Besonders wichtig ist uns die Kommunikation mit deinem medizinischen Team. Wir a
   },
   "sportmannschaften": {
     title: "Sportmannschaften",
+    h2Title: "Athletiktraining für Sportmannschaften in Luxemburg",
     subtitle: "Leistung für dein Team",
     metaDescription: "Professionelles Athletiktraining für Sportmannschaften in Luxemburg. Teamspezifische Programme für Fußball, Handball, Basketball und mehr. Jetzt Team-Training anfragen!",
     heroImage: "/images/team-trainers.jpg",
@@ -294,6 +301,8 @@ const ServicePage = async ({ params }) => {
         heading={service.title}
         page={service.title}
         backgroundImage={service.heroImage}
+        parentLink="/leistungen"
+        parentLabel="Leistungen"
       />
 
       {/* Hero Section */}
@@ -303,7 +312,7 @@ const ServicePage = async ({ params }) => {
             <div>
               <span className="text-clr_base font-caveat text-2xl mb-4 block">{service.subtitle}</span>
               <h2 className="text-white text-3xl lg:text-4xl font-medium mb-6">
-                {service.title}
+                {service.h2Title}
               </h2>
               <p className="text-clr_pra text-lg leading-relaxed mb-8">
                 {service.intro}
@@ -316,11 +325,13 @@ const ServicePage = async ({ params }) => {
                 <ArrowRight className="z-10 relative duration-500 text-xl" />
               </Link>
             </div>
-            <div>
-              <img
+            <div className="relative h-[400px]">
+              <Image
                 src={service.contentImage}
                 alt={service.title}
-                className="w-full h-[400px] object-cover object-top rounded-lg"
+                fill
+                className="object-cover object-top rounded-lg"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
