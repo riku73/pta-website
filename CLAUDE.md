@@ -31,11 +31,10 @@ PTA (Personal Training Academy) is a fitness studio website for a gym located in
 │   ├── layout.js            # Root layout with schema.org
 │   ├── page.js              # Homepage
 │   └── sitemap.js           # Dynamic sitemap generation
-├── /components              # React components (lowercase)
+├── /components              # React components
 │   ├── /About               # About section with tabs
 │   ├── /Blogs               # Blog components
 │   ├── /Contact             # Multi-step contact form
-│   ├── /Pricing             # Pricing section
 │   ├── /Services            # Services components
 │   ├── /Shared              # Shared components (Header, Footer, etc.)
 │   ├── /WorkProcess         # How-it-works section
