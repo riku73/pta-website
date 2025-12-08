@@ -88,9 +88,9 @@ const Testimonial = () => {
                     <p className="text-lg md:text-xl text-clr_white mb-6 italic leading-relaxed">
                       "{review}"
                     </p>
-                    <h4 className="text-clr_base font-medium text-xl">
+                    <p className="text-clr_base font-medium text-xl">
                       {name}
-                    </h4>
+                    </p>
                     <span className="text-base text-clr_pra">
                       {position}
                     </span>
@@ -100,19 +100,21 @@ const Testimonial = () => {
             })}
           </Swiper>
 
-          {/* Custom Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-8">
+          {/* Custom Pagination Dots - 48px touch targets */}
+          <div className="flex justify-center gap-1 mt-8">
             {reviewList.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`h-3 rounded-full transition-all duration-300 ${
+                className="w-12 h-12 flex items-center justify-center"
+                aria-label={`Zur Bewertung ${index + 1} von ${reviewList.length}`}
+              >
+                <span className={`block h-3 rounded-full transition-all duration-300 ${
                   activeIndex === index
                     ? "bg-clr_base w-8"
                     : "bg-white/30 w-3 hover:bg-white/50"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
+                }`} />
+              </button>
             ))}
           </div>
         </div>

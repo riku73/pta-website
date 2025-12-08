@@ -193,11 +193,11 @@ const MultiStepForm = () => {
                           : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
                       }`}
                     >
-                      <div className="flex items-center gap-3">
-                        <IconComponent className={`text-xl ${formData.goals.includes(goal.id) ? "text-clr_base" : "text-clr_pra"}`} />
-                        <span className="text-white text-sm sm:text-base flex-1">{goal.label}</span>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <IconComponent className={`text-xl flex-shrink-0 ${formData.goals.includes(goal.id) ? "text-clr_base" : "text-clr_pra"}`} />
+                        <span className="text-white text-xs sm:text-sm flex-1 min-w-0 break-words leading-tight">{goal.label}</span>
                         {formData.goals.includes(goal.id) && (
-                          <Check className="text-clr_base text-lg" />
+                          <Check className="text-clr_base text-lg flex-shrink-0" />
                         )}
                       </div>
                     </button>
@@ -222,11 +222,11 @@ const MultiStepForm = () => {
                           : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
                       }`}
                     >
-                      <div className="flex items-center gap-3">
-                        <IconComponent className={`text-xl ${formData.service === service.id ? "text-clr_base" : "text-clr_pra"}`} />
-                        <span className="text-white text-sm sm:text-base flex-1">{service.label}</span>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <IconComponent className={`text-xl flex-shrink-0 ${formData.service === service.id ? "text-clr_base" : "text-clr_pra"}`} />
+                        <span className="text-white text-xs sm:text-sm flex-1 min-w-0 break-words leading-tight">{service.label}</span>
                         {formData.service === service.id && (
-                          <Check className="text-clr_base text-lg" />
+                          <Check className="text-clr_base text-lg flex-shrink-0" />
                         )}
                       </div>
                     </button>
@@ -292,11 +292,11 @@ const MultiStepForm = () => {
                           : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
                       }`}
                     >
-                      <div className="flex items-center gap-3">
-                        <IconComponent className={`text-lg ${formData.availability.includes(avail.id) ? "text-clr_base" : "text-clr_pra"}`} />
-                        <span className="text-white text-sm flex-1">{avail.label}</span>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <IconComponent className={`text-lg flex-shrink-0 ${formData.availability.includes(avail.id) ? "text-clr_base" : "text-clr_pra"}`} />
+                        <span className="text-white text-xs sm:text-sm flex-1 min-w-0 break-words leading-tight">{avail.label}</span>
                         {formData.availability.includes(avail.id) && (
-                          <Check className="text-clr_base text-lg" />
+                          <Check className="text-clr_base text-lg flex-shrink-0" />
                         )}
                       </div>
                     </button>

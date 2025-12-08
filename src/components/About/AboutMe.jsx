@@ -90,10 +90,10 @@ const AboutMe = ({ isTabActive }) => {
                             {socalContact && (
                               <ul className="flex items-center xl:gap-4 gap-2">
                                 <li>
-                                  <Link href="https://www.facebook.com/PTAlTraining" target="_blank" rel="noopener noreferrer" className="text-clr_white text-2xl hover:text-clr_base duration-300">{socalContact[0]}</Link>
+                                  <Link href="https://www.facebook.com/PTAlTraining" target="_blank" rel="noopener noreferrer" aria-label="Besuche uns auf Facebook" className="text-clr_white text-2xl hover:text-clr_base duration-300">{socalContact[0]}</Link>
                                 </li>
                                 <li>
-                                  <Link href="https://www.instagram.com/pta.training" target="_blank" rel="noopener noreferrer" className="text-clr_white text-2xl hover:text-clr_base duration-300">{socalContact[1]}</Link>
+                                  <Link href="https://www.instagram.com/pta.training" target="_blank" rel="noopener noreferrer" aria-label="Folge uns auf Instagram" className="text-clr_white text-2xl hover:text-clr_base duration-300">{socalContact[1]}</Link>
                                 </li>
                               </ul>
                             )}

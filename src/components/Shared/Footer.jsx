@@ -162,7 +162,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between py-6 gap-4">
             <p className="text-clr_pra text-sm">
               Copyright © 2025{" "}
-              <Link href="/" scroll={false} onClick={(e) => handleNavigation(e, "/")} className="text-clr_base hover:text-white duration-300">
+              <Link href="/" scroll={false} onClick={(e) => handleNavigation(e, "/")} className="text-clr_base hover:text-white duration-300 underline underline-offset-2">
                 PTA
               </Link>
               . Alle Rechte vorbehalten.

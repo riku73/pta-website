@@ -19,7 +19,7 @@ const socalIcon = [
 ];
 const Banner = () => {
   return (
-    <section id="home" className="relative w-full min-h-screen">
+    <section id="home" className="relative w-full h-[100dvh]">
       {/* Background Image - Optimized with Next.js Image */}
       <div className="absolute inset-0">
         <Image
@@ -33,7 +33,7 @@ const Banner = () => {
         />
         <div className="absolute inset-0 bg-black/75" />
       </div>
-      <div className="container relative z-10 min-h-screen flex items-center lg:pt-20">
+      <div className="container relative z-10 h-full flex items-center pt-16 lg:pt-20">
         <div className="w-full">
             <div className="xl:pt-0 lg:pt-0 md:pt-0 pt-0">
               <Link href={"/kontakt"} className="md:text-[24px] text-lg leading-[140%] md:mb-[50px] mb-8 border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base">
@@ -45,7 +45,7 @@ const Banner = () => {
                   <ArrowUpRight aria-hidden="true" />
                 </span>
               </Link>
-              <h1 className="xl:text-[116px] lg:text-[80px] md:text-[68px] sm:text-[48px] text-[48px] font-semibold sm:mb-[20px] mb-[15px] leading-[110%]">
+              <h1 className="xl:text-[116px] lg:text-[80px] md:text-[68px] sm:text-[56px] text-[64px] font-semibold sm:mb-[20px] mb-[15px] leading-[100%]">
                 <span className="block text-clr_white">Personal</span>
                 <span className="block text-clr_white">Training</span>
                 <span className="block designers" data-text="Academy">

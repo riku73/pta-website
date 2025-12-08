@@ -30,9 +30,9 @@ const AboutCard = ({ title, para, info, image }) => {
                       {date}
                     </span>
                     <div>
-                      <h4 className="mb-[10px] text-white font-medium md:text-2xl text-lg leading-normal">
+                      <h3 className="mb-[10px] text-white font-medium md:text-2xl text-lg leading-normal">
                         {position}
-                      </h4>
+                      </h3>
                       <p className="md:text-lg text-base text-clr_pra">
                         {instition}
                       </p>
