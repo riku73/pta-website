@@ -11,6 +11,7 @@ const AboutCard = ({ title, para, info, image }) => {
               src={image}
               alt={title}
               fill
+              quality={60}
               className="rounded-lg object-cover"
               sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 400px"
             />
