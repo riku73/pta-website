@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { List, ArrowRight, X } from "react-bootstrap-icons";
-import { menuList } from "@/Utlits/menuList";
+import { menuList } from "@/utils/menuList";
 
 
-const RanderHeader = () => {
+const RenderHeader = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [dropDownId, setDropDownId] = useState(null);
   const [fixedHeader, setFixedHeader] = useState(false);
@@ -196,4 +196,4 @@ const RanderHeader = () => {
   );
 };
 
-export default RanderHeader;
+export default RenderHeader;

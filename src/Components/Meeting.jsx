@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Envelope, GeoAlt, Telephone, ArrowRight } from "react-bootstrap-icons";
 import TitleSecond from "./Shared/TitleSecond";
 
-const Metting = () => {
+const Meeting = () => {
   return (
     <section className="pt-16 pb_120">
       <div className="container">
@@ -85,4 +85,4 @@ const Metting = () => {
   );
 };
 
-export default Metting;
+export default Meeting;

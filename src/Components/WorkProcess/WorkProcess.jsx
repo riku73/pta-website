@@ -34,7 +34,7 @@ const processList = [
     ],
   },
 ];
-const WorkeProcess = () => {
+const WorkProcess = () => {
   return (
     <section className="pt-16 pb_120">
       <div className="container">
@@ -52,4 +52,4 @@ const WorkeProcess = () => {
   );
 };
 
-export default WorkeProcess;
+export default WorkProcess;

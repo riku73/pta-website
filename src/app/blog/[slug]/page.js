@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from "../../../Components/Shared/PageHeader";
+import PageHeader from "../../../components/Shared/PageHeader";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, Calendar, Person, Clock, Tag } from "react-bootstrap-icons";
 import { notFound } from "next/navigation";

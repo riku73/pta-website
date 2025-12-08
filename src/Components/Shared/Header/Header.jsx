@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import RanderHeader from './RanderHeader'
+import RenderHeader from './RenderHeader'
 
 const Header = () => {
-  return <RanderHeader />
+  return <RenderHeader />
 }
 
 export default Header

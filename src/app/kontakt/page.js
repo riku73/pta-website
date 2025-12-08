@@ -1,6 +1,6 @@
 import React from "react";
-import PageHeader from "../../Components/Shared/PageHeader";
-import MultiStepForm from "../../Components/Contact/MultiStepForm";
+import PageHeader from "../../components/Shared/PageHeader";
+import MultiStepForm from "../../components/Contact/MultiStepForm";
 import Link from "next/link";
 
 export const metadata = {

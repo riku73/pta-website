@@ -1,11 +1,11 @@
-import Banner from "../Components/Banner";
-import About from "../Components/About/About";
-import Metting from "../Components/Metting";
-import Services from "../Components/Services/Services";
-import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
-import Testimonial from "../Components/Testimonial";
-import Blogs from "../Components/Blogs/Blogs";
-import HomeScrollFix from "../Components/Shared/HomeScrollFix";
+import Banner from "../components/Banner";
+import About from "../components/About/About";
+import Meeting from "../components/Meeting";
+import Services from "../components/Services/Services";
+import WorkProcess from "../components/WorkProcess/WorkProcess";
+import Testimonial from "../components/Testimonial";
+import Blogs from "../components/Blogs/Blogs";
+import HomeScrollFix from "../components/Shared/HomeScrollFix";
 
 export const metadata = {
   title: "PTA - Personal Training Academy | Fitness in Heiderscheid, Luxembourg",
@@ -45,9 +45,9 @@ const Home = () => {
       <Banner />
       <About />
       <Services isHeading={true} />
-      <WorkeProcess />
+      <WorkProcess />
       <Testimonial />
-      <Metting />
+      <Meeting />
       <Blogs />
     </>
   );

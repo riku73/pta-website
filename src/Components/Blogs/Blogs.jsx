@@ -1,6 +1,6 @@
 import React from "react";
 import Blog from "./Blog";
-import { blogsList } from "../../Utlits/blogList";
+import { blogsList } from "../../utils/blogList";
 import TitleSecond from "../Shared/TitleSecond";
 import CircleBox from "../Shared/CircleBox";
 

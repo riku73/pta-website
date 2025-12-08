@@ -90,16 +90,6 @@ ${message || "Keine zusätzliche Nachricht"}
     console.log(emailContent);
     console.log("===================================");
 
-    // TODO: Add email sending logic here
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'PTA Website <noreply@pta-training.lu>',
-    //   to: 'info@pta-training.lu',
-    //   subject: `Neue Anfrage von ${name}`,
-    //   text: emailContent,
-    // });
-
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);

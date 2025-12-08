@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from "../../Components/Shared/PageHeader";
+import PageHeader from "../../components/Shared/PageHeader";
 import Link from "next/link";
 import { ArrowRight } from "react-bootstrap-icons";
 

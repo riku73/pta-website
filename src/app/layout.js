@@ -1,8 +1,8 @@
 import "./globals.css";
-import AddAnimation from "@/Components/Shared/AddAnimation";
-import Footer from "@/Components/Shared/Footer";
-import Header from "@/Components/Shared/Header/Header";
-import ScrollToTop from "@/Components/Shared/ScrollToTop";
+import AddAnimation from "@/components/Shared/AddAnimation";
+import Footer from "@/components/Shared/Footer";
+import Header from "@/components/Shared/Header/Header";
+import ScrollToTop from "@/components/Shared/ScrollToTop";
 
 
 export const metadata = {
@@ -54,10 +54,7 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add these when you have them
-    // google: "your-google-verification-code",
-  },
+  verification: {},
 };
 
 const organizationSchema = {

@@ -1,6 +1,6 @@
 import React from "react";
 import { XLg, ChevronRight } from "react-bootstrap-icons";
-import { socialIcons } from "../../../Utlits/socilIcons";
+import { socialIcons } from "../../../utils/socialIcons";
 import Link from "next/link";
 
 const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
