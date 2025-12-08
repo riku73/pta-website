@@ -1,37 +1,65 @@
 'use client'
 import React, { useState } from "react";
-import { ArrowRight, ArrowLeft, Check } from "react-bootstrap-icons";
+import {
+  ArrowRight,
+  ArrowLeft,
+  Check,
+  Trophy,
+  GraphDownArrow,
+  Activity,
+  Lightning,
+  Heart,
+  People,
+  PersonArmsUp,
+  PeopleFill,
+  Fire,
+  Egg,
+  Bandaid,
+  Dribbble,
+  BarChart,
+  Clock,
+  HeartPulse,
+  Person,
+  Envelope,
+  Telephone,
+  ChatText,
+  Sunrise,
+  Sun,
+  SunFill,
+  Moon,
+  Calendar
+} from "react-bootstrap-icons";
 
 const goalOptions = [
-  { id: "muskelaufbau", label: "Muskelaufbau" },
-  { id: "abnehmen", label: "Abnehmen" },
-  { id: "fitter", label: "Fitter werden" },
-  { id: "energie", label: "Mehr Energie" },
-  { id: "rehabilitation", label: "Rehabilitation" },
-  { id: "teamtraining", label: "Teamtraining" },
+  { id: "muskelaufbau", label: "Muskelaufbau", icon: Trophy },
+  { id: "abnehmen", label: "Abnehmen", icon: GraphDownArrow },
+  { id: "fitter", label: "Fitter werden", icon: Activity },
+  { id: "energie", label: "Mehr Energie", icon: Lightning },
+  { id: "rehabilitation", label: "Rehabilitation", icon: Heart },
+  { id: "teamtraining", label: "Teamtraining", icon: People },
 ];
 
 const serviceOptions = [
-  { id: "personal-training", label: "Personal Training" },
-  { id: "gruppentraining", label: "Gruppentraining" },
-  { id: "fitness-bootcamp", label: "Fitness Bootcamp" },
-  { id: "ernaehrungsberatung", label: "Ernährungsberatung" },
-  { id: "rehabilitation", label: "Rehabilitation" },
-  { id: "sportmannschaften", label: "Sportmannschaften" },
+  { id: "personal-training", label: "Personal Training", icon: PersonArmsUp },
+  { id: "gruppentraining", label: "Gruppentraining", icon: PeopleFill },
+  { id: "fitness-bootcamp", label: "Fitness Bootcamp", icon: Fire },
+  { id: "ernaehrungsberatung", label: "Ernährungsberatung", icon: Egg },
+  { id: "rehabilitation", label: "Rehabilitation", icon: Bandaid },
+  { id: "sportmannschaften", label: "Sportmannschaften", icon: Dribbble },
 ];
 
 const fitnessLevels = [
-  { id: "anfaenger", label: "Anfänger" },
-  { id: "fortgeschritten", label: "Fortgeschritten" },
-  { id: "profi", label: "Profi" },
+  { id: "anfaenger", label: "Anfänger", icon: "1" },
+  { id: "fortgeschritten", label: "Fortgeschritten", icon: "2" },
+  { id: "profi", label: "Profi", icon: "3" },
 ];
 
 const availabilityOptions = [
-  { id: "morgens", label: "Morgens (6–12 Uhr)" },
-  { id: "mittags", label: "Mittags (12–14 Uhr)" },
-  { id: "nachmittags", label: "Nachmittags (14–18 Uhr)" },
-  { id: "abends", label: "Abends (18–22 Uhr)" },
-  { id: "wochenende", label: "Wochenende" },
+  { id: "morgens", label: "Morgens (6–12 Uhr)", icon: Sunrise },
+  { id: "mittags", label: "Mittags (12–14 Uhr)", icon: Sun },
+  { id: "nachmittags", label: "Nachmittags (14–18 Uhr)", icon: SunFill },
+  { id: "abends", label: "Abends (18–22 Uhr)", icon: Moon },
+  { id: "wochenende", label: "Wochenende", icon: Calendar },
 ];
 
 const MultiStepForm = () => {
@@ -106,7 +134,7 @@ const MultiStepForm = () => {
         <div className="w-20 h-20 rounded-full bg-clr_base flex items-center justify-center mx-auto mb-6">
           <Check className="text-4xl text-clr_subtitle" />
         </div>
-        <h3 className="text-white text-2xl font-semibold mb-4">
+        <h3 className="text-white text-2xl font-medium mb-4">
           Vielen Dank für deine Anfrage!
         </h3>
         <p className="text-clr_pra text-lg">
@@ -137,53 +165,64 @@ const MultiStepForm = () => {
         {currentStep === 1 && (
           <div className="space-y-8">
             <div>
-              <h3 className="text-white text-2xl font-semibold mb-2">Dein Ziel</h3>
+              <div className="flex items-center gap-3 mb-2">
+                <Trophy className="text-clr_base text-2xl" />
+                <h3 className="text-white text-2xl font-medium">Dein Ziel</h3>
+              </div>
               <p className="text-clr_pra mb-6">Was möchtest du erreichen?</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {goalOptions.map((goal) => (
-                  <button
-                    key={goal.id}
-                    type="button"
-                    onClick={() => toggleGoal(goal.id)}
-                    className={`p-4 rounded-lg border-2 transition-all duration-200 text-left ${
-                      formData.goals.includes(goal.id)
-                        ? "border-clr_base bg-[rgb(29,29,29)]"
-                        : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-white text-sm sm:text-base">{goal.label}</span>
-                      {formData.goals.includes(goal.id) && (
-                        <Check className="text-clr_base text-lg" />
-                      )}
-                    </div>
-                  </button>
-                ))}
+                {goalOptions.map((goal) => {
+                  const IconComponent = goal.icon;
+                  return (
+                    <button
+                      key={goal.id}
+                      type="button"
+                      onClick={() => toggleGoal(goal.id)}
+                      className={`p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                        formData.goals.includes(goal.id)
+                          ? "border-clr_base bg-[rgb(29,29,29)]"
+                          : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <IconComponent className={`text-xl ${formData.goals.includes(goal.id) ? "text-clr_base" : "text-clr_pra"}`} />
+                        <span className="text-white text-sm sm:text-base flex-1">{goal.label}</span>
+                        {formData.goals.includes(goal.id) && (
+                          <Check className="text-clr_base text-lg" />
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             <div>
               <p className="text-clr_pra mb-4">Welches Angebot interessiert dich?</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {serviceOptions.map((service) => (
-                  <button
-                    key={service.id}
-                    type="button"
-                    onClick={() => setFormData((prev) => ({ ...prev, service: service.id }))}
-                    className={`p-4 rounded-lg border-2 transition-all duration-200 text-left ${
-                      formData.service === service.id
-                        ? "border-clr_base bg-[rgb(29,29,29)]"
-                        : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-white text-sm sm:text-base">{service.label}</span>
-                      {formData.service === service.id && (
-                        <Check className="text-clr_base text-lg" />
-                      )}
-                    </div>
-                  </button>
-                ))}
+                {serviceOptions.map((service) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <button
+                      key={service.id}
+                      type="button"
+                      onClick={() => setFormData((prev) => ({ ...prev, service: service.id }))}
+                      className={`p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                        formData.service === service.id
+                          ? "border-clr_base bg-[rgb(29,29,29)]"
+                          : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <IconComponent className={`text-xl ${formData.service === service.id ? "text-clr_base" : "text-clr_pra"}`} />
+                        <span className="text-white text-sm sm:text-base flex-1">{service.label}</span>
+                        {formData.service === service.id && (
+                          <Check className="text-clr_base text-lg" />
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -193,7 +232,10 @@ const MultiStepForm = () => {
         {currentStep === 2 && (
           <div className="space-y-8">
             <div>
-              <h3 className="text-white text-2xl font-semibold mb-2">Über dich</h3>
+              <div className="flex items-center gap-3 mb-2">
+                <BarChart className="text-clr_base text-2xl" />
+                <h3 className="text-white text-2xl font-medium">Über dich</h3>
+              </div>
               <p className="text-clr_pra mb-6">Wie schätzt du dein aktuelles Fitnesslevel ein?</p>
               <div className="grid grid-cols-3 gap-3">
                 {fitnessLevels.map((level) => (
@@ -207,11 +249,15 @@ const MultiStepForm = () => {
                         : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
                     }`}
                   >
-                    <div className="flex items-center justify-center gap-2">
+                    <div className="flex flex-col items-center gap-2">
+                      <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                        formData.fitnessLevel === level.id
+                          ? "bg-clr_base text-clr_subtitle"
+                          : "bg-[rgb(38,37,37)] text-clr_pra"
+                      }`}>
+                        {level.icon}
+                      </span>
                       <span className="text-white text-sm sm:text-base">{level.label}</span>
-                      {formData.fitnessLevel === level.id && (
-                        <Check className="text-clr_base text-lg" />
-                      )}
                     </div>
                   </button>
                 ))}
@@ -219,32 +265,42 @@ const MultiStepForm = () => {
             </div>
 
             <div>
-              <p className="text-clr_pra mb-4">Wann hast du Zeit zum Trainieren?</p>
+              <div className="flex items-center gap-3 mb-4">
+                <Clock className="text-clr_base text-xl" />
+                <p className="text-clr_pra">Wann hast du Zeit zum Trainieren?</p>
+              </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {availabilityOptions.map((avail) => (
-                  <button
-                    key={avail.id}
-                    type="button"
-                    onClick={() => toggleAvailability(avail.id)}
-                    className={`p-4 rounded-lg border-2 transition-all duration-200 text-left ${
-                      formData.availability.includes(avail.id)
-                        ? "border-clr_base bg-[rgb(29,29,29)]"
-                        : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-white text-sm">{avail.label}</span>
-                      {formData.availability.includes(avail.id) && (
-                        <Check className="text-clr_base text-lg" />
-                      )}
-                    </div>
-                  </button>
-                ))}
+                {availabilityOptions.map((avail) => {
+                  const IconComponent = avail.icon;
+                  return (
+                    <button
+                      key={avail.id}
+                      type="button"
+                      onClick={() => toggleAvailability(avail.id)}
+                      className={`p-4 rounded-lg border-2 transition-all duration-200 text-left ${
+                        formData.availability.includes(avail.id)
+                          ? "border-clr_base bg-[rgb(29,29,29)]"
+                          : "border-clr_cusborder bg-[rgb(29,29,29)] hover:border-clr_pra"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <IconComponent className={`text-lg ${formData.availability.includes(avail.id) ? "text-clr_base" : "text-clr_pra"}`} />
+                        <span className="text-white text-sm flex-1">{avail.label}</span>
+                        {formData.availability.includes(avail.id) && (
+                          <Check className="text-clr_base text-lg" />
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             <div>
-              <p className="text-clr_pra mb-4">Gibt es gesundheitliche Einschränkungen?</p>
+              <div className="flex items-center gap-3 mb-4">
+                <HeartPulse className="text-clr_base text-xl" />
+                <p className="text-clr_pra">Gibt es gesundheitliche Einschränkungen?</p>
+              </div>
               <div className="flex gap-4 mb-4">
                 <button
                   type="button"
@@ -286,49 +342,56 @@ const MultiStepForm = () => {
         {currentStep === 3 && (
           <div className="space-y-6">
             <div>
-              <h3 className="text-white text-2xl font-semibold mb-2">Kontakt</h3>
+              <div className="flex items-center gap-3 mb-2">
+                <Envelope className="text-clr_base text-2xl" />
+                <h3 className="text-white text-2xl font-medium">Kontakt</h3>
+              </div>
               <p className="text-clr_pra mb-6">Fast geschafft! Wie können wir dich erreichen?</p>
             </div>
 
-            <div>
+            <div className="relative">
+              <Person className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" />
               <input
                 type="text"
                 value={formData.name}
                 onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 placeholder="Dein Name *"
-                className="w-full py-[18px] px-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
                 required
               />
             </div>
 
-            <div>
+            <div className="relative">
+              <Envelope className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" />
               <input
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                 placeholder="Deine E-Mail-Adresse *"
-                className="w-full py-[18px] px-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
                 required
               />
             </div>
 
-            <div>
+            <div className="relative">
+              <Telephone className="absolute left-4 top-1/2 -translate-y-1/2 text-clr_pra text-xl" />
               <input
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                 placeholder="Deine Telefonnummer (optional)"
-                className="w-full py-[18px] px-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
               />
             </div>
 
-            <div>
+            <div className="relative">
+              <ChatText className="absolute left-4 top-5 text-clr_pra text-xl" />
               <textarea
                 value={formData.message}
                 onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
                 placeholder="Deine Nachricht (optional)"
                 rows="4"
-                className="w-full py-[18px] px-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra"
+                className="w-full py-[18px] pl-12 pr-5 rounded-[10px] bg-[rgb(29_29_29)] border border-clr_cusborder text-white outline-none placeholder:text-clr_pra focus:border-clr_base transition-colors"
               />
             </div>
           </div>

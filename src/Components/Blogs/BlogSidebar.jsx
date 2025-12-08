@@ -53,7 +53,7 @@ const BlogSidebar = () => {
   return (
     <div className="border border-clr_cusborder xl:p-[30px] py-5 px-[18px] rounded-lg sticky top-[120px]">
       <div className="xl:mb-[60px] mb-10">
-        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-semibold">
+        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-medium">
           Serach
         </h4>
         <form action="#0" className="flex content-center justify-between">
@@ -73,7 +73,7 @@ const BlogSidebar = () => {
         </form>
       </div>
       <div className="xl:mb-[60px] mb-10 position-relative">
-        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-semibold">
+        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-medium">
           Categories
         </h4>
         <ul className="category">
@@ -96,7 +96,7 @@ const BlogSidebar = () => {
         </ul>
       </div>
       <div className="xl:mb-[60px] mb-10">
-        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-semibold">
+        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-medium">
           Recent Post
         </h4>
         <ul>
@@ -125,7 +125,7 @@ const BlogSidebar = () => {
         </ul>
       </div>
       <div>
-        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-semibold">
+        <h4 className="text-white border-b border-b-clr_cusborder pb-[14px] mb-[30px] text-2xl font-medium">
           Tag
         </h4>
         <ul className="flex flex-wrap gap-3">

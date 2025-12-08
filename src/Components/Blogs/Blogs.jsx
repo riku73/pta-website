@@ -6,7 +6,7 @@ import CircleBox from "../Shared/CircleBox";
 
 const Blogs = () => {
   return (
-    <section className="pt-16 pb_120" id="blog">
+    <section className="bg-common_bg pt-16 pb_120" id="blog">
       <div className="container">
         <div className="grid xl:grid-cols-[33%_auto] lg:grid-cols-[28%_auto] grid-cols-1 gap-12">
           <div>

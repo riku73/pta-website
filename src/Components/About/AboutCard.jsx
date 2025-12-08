@@ -11,7 +11,7 @@ const AboutCard = ({ title, para, info, image }) => {
         </div>
         <div>
           <div className="lg:pl-10 pl-0">
-            <h2 className="text-[42px] font-semibold text-clr_white mb-5">
+            <h2 className="font-medium lg:text-5xl md:text-4xl text-3xl text-white mb-5 leading-tight">
               {title}
             </h2>
             <p className="text-lg text-clr_pra mb-0">{para}</p>
@@ -23,7 +23,7 @@ const AboutCard = ({ title, para, info, image }) => {
                       {date}
                     </span>
                     <div>
-                      <h4 className="mb-[10px] text-white font-semibold md:text-2xl text-lg leading-normal">
+                      <h4 className="mb-[10px] text-white font-medium md:text-2xl text-lg leading-normal">
                         {position}
                       </h4>
                       <p className="md:text-lg text-base text-clr_pra">

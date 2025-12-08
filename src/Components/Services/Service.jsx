@@ -13,8 +13,8 @@ const Service = ({ heading, subHeading, para, id, slug }) => {
         <div className="flex lg:gap-[60px] gap-[16px]">
           <span className="text-xl text-white"> {id} </span>
           <div>
-            <h5 className="text-base lg:text-xl font-semibold text-white mb-2">{subHeading}</h5>
-            <h2 className="text-[26px] xl:text-[40px] lg:text-3xl font-semibold lg:leading-[120%]">
+            <h3 className="text-base lg:text-xl font-medium text-white mb-2">{subHeading}</h3>
+            <h2 className="text-[26px] xl:text-[40px] lg:text-3xl font-medium lg:leading-[120%]">
               <Link href={`/leistungen/${slug}`} className="text-white duration-500">
                 {" "}
                 {heading}{" "}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Kontakt | PTA Personal Training Academy Luxembourg",
-  description: "Kontaktiere uns für ein kostenloses Erstgespräch. PTA Personal Training Academy in Heiderscheid, Luxembourg. Tel: +352 123 456, Email: info@pta-training.lu",
+  description: "Kontaktiere uns für ein kostenloses Erstgespräch. PTA Personal Training Academy in Heiderscheid, Luxembourg. Tel: +352 691 789 483, Email: info@pta-training.lu",
   openGraph: {
     title: "Kontakt | PTA Training Luxembourg",
     description: "Kontaktiere uns für ein kostenloses Erstgespräch. Personal Training Academy in Heiderscheid, Luxembourg.",
@@ -22,9 +22,9 @@ const Contact = () => {
       <PageHeader
         heading={"Lass uns sprechen"}
         page={"Kontakt"}
-        backgroundImage="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1920&q=80"
+        backgroundImage="/images/pta-entrance.jpg"
       />
-      <section className="contact__section">
+      <section className="pt-16 pb_120 bg-common_bg">
         <div className="container">
           <div className="grid lg:grid-cols-[66.66%_auto] grid-cols-1 gap-6">
             <div
@@ -41,14 +41,14 @@ const Contact = () => {
              
             >
               <div className="bg-common_bg py-[30px] px-4 sm:px-5 xl:px-[30px] xl:py-[60px]">
-                <h4 className="lg:mb-[30px] mb-5xl xl:text-2xl text-xl font-semibold text-white capitalize ">Wir freuen uns auf deine Nachricht</h4>
+                <h4 className="lg:mb-[30px] mb-5xl xl:text-2xl text-xl font-medium text-white capitalize ">Wir freuen uns auf deine Nachricht</h4>
                 <div className="lg:mb-5 mb-4 rounded-[10px] bg-[rgb(29_29_29)] xl:p-[30px] p-4">
                   <span className="mb-[14px] block text-clr_pra capitalize">E-Mail</span>
                   <Link href={"mailto:info@pta-training.lu"} className="text-white xl:text-xl text-base block">info@pta-training.lu</Link>
                 </div>
                 <div className="lg:mb-5 mb-4 rounded-[10px] bg-[rgb(29_29_29)] xl:p-[30px] p-4">
                   <span className="mb-[14px] block text-clr_pra capitalize">Telefon</span>
-                  <Link href={"tel:+352123456"} className="text-white xl:text-xl text-base block">+352 123 456</Link>
+                  <Link href={"tel:+352691789483"} className="text-white xl:text-xl text-base block">+352 691 789 483</Link>
                 </div>
                 <div className="lg:mb-5 mb-4 rounded-[10px] bg-[rgb(29_29_29)] xl:p-[30px] p-4">
                   <span className="mb-[14px] block text-clr_pra capitalize">Adresse</span>
@@ -56,8 +56,10 @@ const Contact = () => {
                 </div>
                 <div className="rounded-[10px] bg-[rgb(29_29_29)] xl:p-[30px] p-4">
                   <span className="mb-[14px] block text-clr_pra capitalize">Öffnungszeiten</span>
-                  <span className="text-white xl:text-xl text-base block">Mo-Fr: 06:00 - 22:00 Uhr</span>
-                  <span className="text-white xl:text-xl text-base block">Sa-So: 08:00 - 20:00 Uhr</span>
+                  <span className="text-white xl:text-xl text-base block">Mo-Do: 08:00 - 21:00 Uhr</span>
+                  <span className="text-white xl:text-xl text-base block">Fr: 09:00 - 19:00 Uhr</span>
+                  <span className="text-white xl:text-xl text-base block">Sa: 09:00 - 12:00 Uhr</span>
+                  <span className="text-white xl:text-xl text-base block">So: Geschlossen</span>
                 </div>
               </div>
             </div>

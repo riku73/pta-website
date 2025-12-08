@@ -26,7 +26,7 @@ const Blog = ({ date, heading, image, index, slug }) => {
               <span className="text-clr_pra text-base border border-clr_cusborder rounded-[100px] py-[7px] px-[15px] sm:mb-6 mb-[18px] inline-block">
                 {date}
               </span>
-              <h3 className="xl:text-3xl sm:text-[22px] text-xl text-white sm:leading-[44px] leading-8 font-semibold capitalize">
+              <h3 className="xl:text-3xl sm:text-[22px] text-xl text-white sm:leading-[44px] leading-8 font-medium capitalize">
                 <Link
                   href={`/blog/${slug}`}
                   className="text-white duration-500 group-hover:text-clr_base"

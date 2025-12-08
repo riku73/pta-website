@@ -23,12 +23,12 @@ const Experience = ({ isTabActive }) => {
             instition: "Zufriedene Kunden",
           },
           {
-            date: "15+",
+            date: "5",
             position: "Zertifizierte Trainer",
             instition: "Professionelles Team",
           },
         ]}
-        image="https://images.unsplash.com/photo-1594882645126-14020914d58d?w=500&h=600&fit=crop"
+        image="/images/gym-interior-wide.jpg"
       />
     </div>
   );

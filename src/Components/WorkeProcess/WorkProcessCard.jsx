@@ -7,7 +7,7 @@ const WorkProcessCard = ({ title, info, list }) => {
      
     >
       <div className="overflow-hidden duration-500 border border-clr_cusborder rounded-[10px] p-[30px] relative after:absolute after:w-[50px] after:h-[50px] after:bottom-0 after:right-0 after:content-[''] after:bg-[#121212] after:rounded-tl-[100px] after:rounded-tr-[20px] after:duration-500 hover:border-clr_base  hover:after:bg-clr_base">
-        <h2 className="text-white lg:mb-6 mb-4 capitalize sm:text-[40px] text-3xl leading-[120%] font-semibold">
+        <h2 className="text-white lg:mb-6 mb-4 capitalize sm:text-[40px] text-3xl leading-[120%] font-medium">
           {title}
         </h2>
         <p className="lg:mb-[30px] mb-5 text-clr_pra text-lg">{info}</p>

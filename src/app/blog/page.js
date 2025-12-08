@@ -92,7 +92,7 @@ const Blog = () => {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Wissen & Tipps</span>
-            <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-white text-4xl lg:text-5xl font-medium mb-6">
               Fitness-Wissen für deinen Erfolg
             </h2>
             <p className="text-clr_pra text-lg">
@@ -132,7 +132,7 @@ const Blog = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-white text-xl font-semibold mb-3 group-hover:text-clr_base duration-300">
+                  <h3 className="text-white text-xl font-medium mb-3 group-hover:text-clr_base duration-300">
                     {title}
                   </h3>
                   <p className="text-clr_pra mb-4">{excerpt}</p>

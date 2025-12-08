@@ -24,7 +24,7 @@ const ProjectCard = ({
           <span className="text-clr_base xl:mb-4 mb-2 block uppercase xl:text-lg text-base">
             {heading}
           </span>
-          <h3 className="xl:text-[30px] sm:text-2xl text-xl font-semibold text-white">{subHeading}</h3>
+          <h3 className="xl:text-[30px] sm:text-2xl text-xl font-medium text-white">{subHeading}</h3>
         </Link>
         <div onClick={() => openLightbox(index)} className="h-[45px] w-[45px] sm:w-[60px] sm:h-[60px] rounded-md bg-[#1D1D1D] flex justify-center items-center duration-500 group-hover:bg-clr_base cursor-pointer">
           <ArrowUpRight className="duration-500 group-hover:text-clr_title text-lg sm:text-xl text-white " />

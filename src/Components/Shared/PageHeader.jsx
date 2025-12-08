@@ -19,7 +19,7 @@ const PageHeader = ({heading, page, backgroundImage, useH2 = false}) => {
         <div className="flex justify-center">
           <div>
             <div className="text-center">
-              <HeadingTag className="lg:text-6xl sm:text-4xl text-3xl text-white lg:mb-10 sm:mb-9 mb-6 font-bold">{heading}</HeadingTag>
+              <HeadingTag className="lg:text-6xl sm:text-4xl text-3xl text-white lg:mb-10 sm:mb-9 mb-6 font-medium">{heading}</HeadingTag>
               <ul className="flex items-center justify-center sm:flex-nowrap flex-wrap sm:gap-[10px] gap-y-1 gap-x-[14px]">
                 <li className="text-2xl font-caveat">
                   <Link href="/" scroll={true} className="text-white hover:text-clr_base duration-300">Startseite</Link>

@@ -68,9 +68,9 @@ const organizationSchema = {
   "alternateName": "PTA Training Luxembourg",
   "description": "Deine Personal Training Academy in Luxembourg - Functional Training, Rehabilitation und mehr. Für jeden Körper, für jedes Ziel.",
   "url": "https://pta-training.lu",
-  "logo": "https://pta-training.lu/img/logo.png",
-  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop",
-  "telephone": "+352 123 456 789",
+  "logo": "https://pta-training.lu/images/pta-logo.svg",
+  "image": "https://pta-training.lu/images/gym-interior-wide.jpg",
+  "telephone": "+352 691 789 483",
   "email": "info@pta-training.lu",
   "address": {
     "@type": "PostalAddress",
@@ -87,15 +87,21 @@ const organizationSchema = {
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "06:00",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "08:00",
       "closes": "21:00"
     },
     {
       "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "18:00"
+      "opens": "09:00",
+      "closes": "12:00"
     }
   ],
   "priceRange": "€€",
@@ -109,8 +115,8 @@ const organizationSchema = {
     "geoRadius": "50000"
   },
   "sameAs": [
-    "https://www.facebook.com/ptatraining",
-    "https://www.instagram.com/ptatraining"
+    "https://www.facebook.com/PTAlTraining",
+    "https://www.instagram.com/pta.training"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

@@ -5,25 +5,21 @@ const skillsList = [
     id: 1,
     skill: "Krafttraining",
     percentage: "95%",
-    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=120&h=120&fit=crop",
   },
   {
     id: 2,
     skill: "Ernährung",
     percentage: "90%",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=120&h=120&fit=crop",
   },
   {
     id: 3,
     skill: "Cardio & HIIT",
     percentage: "92%",
-    image: "https://images.unsplash.com/photo-1434596922112-19c563067271?w=120&h=120&fit=crop",
   },
   {
     id: 4,
     skill: "Rehabilitation",
     percentage: "88%",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=120&h=120&fit=crop",
   },
 ];
 
@@ -33,13 +29,14 @@ const Skills = ({ isTabActive }) => {
       <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px]">
         <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
           <div>
-            <div>
-              <img src="https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=500&h=600&fit=crop" alt="Fitness Training" className="w-full rounded-lg object-cover" />
+            <div className="w-full space-y-4">
+              <img src="/images/team-trainers.jpg" alt="PTA Team" className="w-full rounded-lg object-cover" />
+              <img src="/images/pta-banner.jpg" alt="PTA Personal Training Academy" className="w-full rounded-lg object-cover" />
             </div>
           </div>
           <div>
             <div>
-              <h2 className="text-[42px] font-semibold text-clr_white mb-5">Unsere Expertise</h2>
+              <h2 className="font-medium lg:text-5xl md:text-4xl text-3xl text-white mb-5 leading-tight">Unsere Expertise</h2>
               <p className="text-lg text-clr_pra mb-0">
                 Unsere Trainer sind in verschiedenen Bereichen spezialisiert,
                 um dir die bestmögliche Betreuung zu bieten. Von Krafttraining
@@ -48,17 +45,12 @@ const Skills = ({ isTabActive }) => {
               </p>
               <div className="mt-10">
                 <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-between  gap-6">
-                  {skillsList.map(({id, skill, image, percentage}) => {
+                  {skillsList.map(({id, skill, percentage}) => {
                     return (
                       <div key={id} className="rounded-[10px] bg-[#1D1D1D] p-[35px] border border-[#1D1D1D] duration-500 hover:border-clr_base">
-                        <div className="flex items-center gap-6">
-                          <div className="w-[60px] h-[60px] rounded-lg overflow-hidden flex-shrink-0">
-                            <img src={image} alt={skill} className="w-full h-full object-cover" />
-                          </div>
-                          <div>
-                            <span className="md:text-lg text-base lg:mb-[15px] mb-[10px] block text-clr_pra">{skill}</span>
-                            <span className="font-semibold text-5xl text-clr_white block">{percentage}</span>
-                          </div>
+                        <div>
+                          <span className="md:text-lg text-base lg:mb-[15px] mb-[10px] block text-clr_pra">{skill}</span>
+                          <span className="font-semibold text-5xl text-clr_base block">{percentage}</span>
                         </div>
                       </div>
                     );

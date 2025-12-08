@@ -22,21 +22,21 @@ const teamMembers = [
     name: "Functional Training",
     role: "Unser Kernbereich",
     description: "Zertifizierte Trainer mit Leidenschaft für Bewegung und Gesundheit. Wir begleiten dich auf deinem Weg – egal wo du startest.",
-    image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=400&h=400&fit=crop"
+    image: "/images/functional-training-area.jpg"
   },
   {
     id: 2,
     name: "Rehabilitation",
     role: "Spezialisierte Betreuung",
     description: "Erfahrung mit Reha-Patienten, Verletzungsprävention und Wiederaufbau. Wir arbeiten eng mit Ärzten und Physiotherapeuten zusammen.",
-    image: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=400&h=400&fit=crop"
+    image: "/images/gym-pullup-trx.jpg"
   },
   {
     id: 3,
     name: "Ernährung",
     role: "Ganzheitlicher Ansatz",
     description: "Training und Ernährung gehen Hand in Hand. Wir helfen dir, beides in deinen Alltag zu integrieren – ohne Verzicht.",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=400&fit=crop"
+    image: "/images/medicine-balls.jpg"
   }
 ];
 
@@ -46,22 +46,23 @@ const AboutUs = () => {
       <PageHeader
         heading={"Über Uns"}
         page={"Über Uns"}
-        backgroundImage="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=1920&q=80"
+        backgroundImage="/images/gym-interior-wide.jpg"
       />
 
+      {/* Story Section */}
       <section className="pt_120 pb_120">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-10 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1570829460005-c840387bb1ca?w=800&h=600&fit=crop"
-                alt="PTA Gym"
+                src="/images/team-trainers.jpg"
+                alt="PTA Team - Jason, Jimmy und João"
                 className="rounded-lg w-full h-auto object-cover"
               />
             </div>
             <div>
               <span className="text-clr_base font-caveat text-2xl mb-4 block">Unsere Geschichte</span>
-              <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-white text-4xl lg:text-5xl font-medium mb-6">
                 Deine Personal Training Academy
               </h2>
               <p className="text-clr_pra text-lg mb-6">
@@ -82,10 +83,15 @@ const AboutUs = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Team Section */}
+      <section className="pt-16 pb_120 bg-common_bg">
+        <div className="container">
           <div className="text-center mb-16">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Was uns ausmacht</span>
-            <h2 className="text-white text-4xl lg:text-5xl font-bold">
+            <h2 className="text-white text-4xl lg:text-5xl font-medium">
               Lokal, familiär, professionell
             </h2>
           </div>
@@ -94,10 +100,10 @@ const AboutUs = () => {
             {teamMembers.map(({ id, name, role, description, image }) => (
               <div
                 key={id}
-                className="bg-common_bg rounded-lg overflow-hidden group"
-               
-               
-               
+                className="bg-[#1a1a1a] rounded-lg overflow-hidden group"
+
+
+
               >
                 <div className="h-64 overflow-hidden">
                   <img
@@ -107,15 +113,20 @@ const AboutUs = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-white text-2xl font-semibold mb-2">{name}</h3>
+                  <h3 className="text-white text-2xl font-medium mb-2">{name}</h3>
                   <span className="text-clr_base text-lg block mb-4">{role}</span>
                   <p className="text-clr_pra">{description}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-20 bg-common_bg rounded-lg p-10 lg:p-16">
+      {/* Stats Section */}
+      <section className="pt-16 pb_120">
+        <div className="container">
+          <div className="bg-common_bg rounded-lg p-10 lg:p-16">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
                 <span className="text-clr_base text-5xl lg:text-6xl font-bold block mb-2">500+</span>
@@ -126,7 +137,7 @@ const AboutUs = () => {
                 <span className="text-white text-lg">Jahre Erfahrung</span>
               </div>
               <div>
-                <span className="text-clr_base text-5xl lg:text-6xl font-bold block mb-2">15</span>
+                <span className="text-clr_base text-5xl lg:text-6xl font-bold block mb-2">5</span>
                 <span className="text-white text-lg">Trainer</span>
               </div>
               <div>

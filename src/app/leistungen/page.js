@@ -29,7 +29,7 @@ const services = [
       "Flexible Terminvereinbarung",
       "Motivation & Unterstützung"
     ],
-    image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=600&h=400&fit=crop"
+    image: "/images/gym-pullup-trx.jpg"
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ const services = [
       "Einkaufslisten & Rezepte",
       "Wöchentliche Check-ins"
     ],
-    image: "https://images.unsplash.com/photo-1518310952931-b1de897abd40?w=600&h=400&fit=crop"
+    image: "/images/medicine-balls.jpg"
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const services = [
       "Qualifizierte Trainer",
       "Starkes Gemeinschaftsgefühl"
     ],
-    image: "https://images.unsplash.com/photo-1561214078-f3247647fc5e?w=600&h=400&fit=crop"
+    image: "/images/functional-training-area.jpg"
   },
   {
     id: 4,
@@ -71,7 +71,7 @@ const services = [
       "Ernährungsplan inklusive",
       "Starke Community"
     ],
-    image: "https://images.unsplash.com/photo-1517963628607-235ccdd5476c?w=600&h=400&fit=crop"
+    image: "/images/kettlebells.jpg"
   },
   {
     id: 5,
@@ -85,7 +85,7 @@ const services = [
       "Schmerzfreies Training",
       "Langfristige Betreuung"
     ],
-    image: "https://images.unsplash.com/photo-1535743686920-55e4145369b9?w=600&h=400&fit=crop"
+    image: "/images/gym-interior-wide.jpg"
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ const services = [
       "Verletzungsprävention",
       "Saisonplanung & Periodisierung"
     ],
-    image: "https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=600&h=400&fit=crop"
+    image: "/images/team-trainers.jpg"
   }
 ];
 
@@ -109,14 +109,14 @@ const Services = () => {
       <PageHeader
         heading={"Unsere Leistungen"}
         page={"Leistungen"}
-        backgroundImage="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1920&q=80"
+        backgroundImage="/images/functional-training-area.jpg"
       />
 
       <section className="pt_120 pb_120">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Was wir bieten</span>
-            <h2 className="text-white text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-white text-4xl lg:text-5xl font-medium mb-6">
               Das bieten wir dir
             </h2>
             <p className="text-clr_pra text-lg">
@@ -143,7 +143,7 @@ const Services = () => {
                 </div>
                 <div className="p-6">
                   <span className="text-clr_base text-sm uppercase tracking-wider">{subtitle}</span>
-                  <h3 className="text-white text-2xl font-semibold mb-3 mt-1">{title}</h3>
+                  <h3 className="text-white text-2xl font-medium mb-3 mt-1">{title}</h3>
                   <p className="text-clr_pra mb-4">{description}</p>
 
                   <ul className="space-y-2 mb-6">
@@ -169,7 +169,7 @@ const Services = () => {
 
           <div className="mt-20 text-center">
             <div className="bg-common_bg rounded-lg p-10 lg:p-16">
-              <h3 className="text-white text-3xl lg:text-4xl font-bold mb-6">
+              <h3 className="text-white text-3xl lg:text-4xl font-medium mb-6">
                 Nicht sicher, was zu dir passt?
               </h3>
               <p className="text-clr_pra text-lg mb-8 max-w-2xl mx-auto">

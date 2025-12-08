@@ -5,7 +5,7 @@ import { Facebook, Instagram, ArrowUpRight, Telephone } from "react-bootstrap-ic
 const socalIcon = [
   {
     id: 1,
-    link: "https://www.facebook.com/PTAlTraining/",
+    link: "https://www.facebook.com/PTAlTraining",
     icon: <Facebook />,
   },
   {
@@ -21,7 +21,7 @@ const Banner = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=95&auto=format&fit=crop&sharp=10')",
+          backgroundImage: "url('/images/gym-interior-wide.jpg')",
           imageRendering: '-webkit-optimize-contrast',
           WebkitBackfaceVisibility: 'hidden',
           backfaceVisibility: 'hidden',
@@ -31,7 +31,7 @@ const Banner = () => {
       >
         <div className="absolute inset-0 bg-black/75" />
       </div>
-      <div className="container relative z-10 min-h-screen flex items-center">
+      <div className="container relative z-10 min-h-screen flex items-center lg:pt-20">
         <div className="w-full">
             <div className="xl:pt-0 lg:pt-0 md:pt-0 pt-0">
               <Link href={"/kontakt"} className="md:text-[24px] text-lg leading-[140%] md:mb-[50px] mb-8 border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base">
@@ -58,17 +58,17 @@ const Banner = () => {
             </div>
         </div>
       </div>
-            <div className="hidden absolute right-0 top-[55%] -translate-y-1/2 xl:grid gap-[80px]  ">
-        <div className="rotate-90 flex items-center justify-center gap-[16px] ">
+            <div className="absolute right-4 top-[55%] -translate-y-1/2 hidden xl:grid gap-[80px] z-20">
+        <div className="rotate-90 flex items-center justify-center gap-[16px]">
           <Telephone className="text-clr_base -rotate-90 text-lg" />
-          <Link href={"tel:+352123456"} className="text-clr_white hover:text-clr_base duration-300">+352 123 456</Link>
+          <Link href={"tel:+352691789483"} className="text-clr_white hover:text-clr_base duration-300 cursor-pointer">+352 691 789 483</Link>
         </div>
         <div>
           <ul className="grid justify-center lg:gap-[14px] gap-[10px]">
             {socalIcon.map(({ icon, id, link }) => {
               return (
-                <li key={id} >
-                  <Link href={link} target="_blank" rel="noopener noreferrer" className="lg:w-[46px] lg:h-[46px] h-[38px] w-[38xp] rounded-full bg-[rgb(18_18_18)] flex justify-center items-center" >
+                <li key={id}>
+                  <Link href={link} target="_blank" rel="noopener noreferrer" className="lg:w-[46px] lg:h-[46px] h-[38px] w-[38px] rounded-full bg-[rgb(18_18_18)] flex justify-center items-center hover:bg-clr_base cursor-pointer transition-colors duration-300">
                     <i className="text-white">{icon}</i>
                   </Link>
                 </li>

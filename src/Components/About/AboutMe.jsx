@@ -11,7 +11,7 @@ const contactInfo = [
   {
     id: 2,
     system: "Telefon",
-    contact: "+352 123 456",
+    contact: "+352 691 789 483",
   },
   {
     id: 3,
@@ -34,18 +34,15 @@ const AboutMe = ({ isTabActive }) => {
       <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px]">
         <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start align-items-center">
           <div>
-            <div
-              className="w-full"
-             
-             
-            >
-              <img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=500&h=600&fit=crop" alt="Personal Training" className="w-full rounded-lg object-cover" />
+            <div className="w-full space-y-4">
+              <img src="/images/team-trainers.jpg" alt="PTA Team - Jason, Jimmy und João" className="w-full rounded-lg object-cover" />
+              <img src="/images/pta-banner.jpg" alt="PTA Personal Training Academy - Functional, Athletic, Strength, Speed, Interval, Mobility, Personal, Prevention, Agility, Outdoor" className="w-full rounded-lg object-cover" />
             </div>
           </div>
           <div>
             <div className="lg:pl-10 pl-0">
               <h2
-                className="text-[32px] lg:text-[42px] font-semibold text-clr_white mb-5 leading-tight"
+                className="font-medium lg:text-5xl md:text-4xl text-3xl text-white mb-5 leading-tight"
                
                
               >
@@ -77,11 +74,12 @@ const AboutMe = ({ isTabActive }) => {
                             <span className="text-xl text-clr_white">{contact}</span>
                             {socalContact && (
                               <ul className="flex items-center xl:gap-4 gap-2">
-                                {socalContact.map((info, index) => (
-                                  <li key={index}>
-                                    <Link href={"#"} className="text-clr_white text-2xl">{info}</Link>
-                                  </li>
-                                ))}
+                                <li>
+                                  <Link href="https://www.facebook.com/PTAlTraining" target="_blank" rel="noopener noreferrer" className="text-clr_white text-2xl hover:text-clr_base duration-300">{socalContact[0]}</Link>
+                                </li>
+                                <li>
+                                  <Link href="https://www.instagram.com/pta.training" target="_blank" rel="noopener noreferrer" className="text-clr_white text-2xl hover:text-clr_base duration-300">{socalContact[1]}</Link>
+                                </li>
                               </ul>
                             )}
                           </div>

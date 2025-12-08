@@ -16,7 +16,7 @@ const BlogCard = ({ heading, para, image, date }) => {
         <span className="flex items-center gap-1 text-clr_pra text-base mb-[30px]">
           <span className="uppercase text-white">NEWS</span>. {date}
         </span>
-        <h3 className="border-b border-b-clr_cusborder pb-[30px] mb-[30px] text-4xl font-semibold capitalize ">
+        <h3 className="border-b border-b-clr_cusborder pb-[30px] mb-[30px] text-4xl font-medium capitalize ">
           <Link href={"/blog-details"} className="text-white duration-500 group-hover:text-clr_base">{heading}</Link>
         </h3>
         <p className="text-clr_pra text-base mb-[30px]">{para}</p>

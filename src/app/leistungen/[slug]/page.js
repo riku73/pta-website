@@ -9,8 +9,8 @@ const servicesData = {
     title: "Personal Training",
     subtitle: "Training, das sich nach dir richtet",
     metaDescription: "Individuelles Personal Training in Luxemburg. Maßgeschneiderte Trainingspläne für Muskelaufbau, Gewichtsreduktion und mehr Fitness. Jetzt kostenloses Erstgespräch buchen!",
-    heroImage: "https://images.unsplash.com/photo-1623874228601-f4193c7b1818?w=1200&h=600&fit=crop",
-    contentImage: "https://images.unsplash.com/photo-1578762560042-46ad127c95ea?w=800&h=500&fit=crop",
+    heroImage: "/images/gym-interior-wide.jpg",
+    contentImage: "/images/gym-pullup-trx.jpg",
     intro: "Im Personal Training bei PTA steht nur eines im Fokus: Du. Keine Ablenkungen, keine Kompromisse – nur volle Konzentration auf deine individuellen Ziele. Ob du Muskeln aufbauen, Gewicht verlieren oder einfach fitter werden möchtest, wir entwickeln gemeinsam einen Plan, der zu deinem Leben passt.",
     description: `Personal Training ist die effektivste Form des Trainings, weil jede Übung, jede Wiederholung und jede Trainingseinheit speziell auf dich zugeschnitten ist. Bei PTA in Luxemburg arbeiten wir nach einem bewährten System, das bereits hunderten von Kunden geholfen hat, ihre Fitnessziele zu erreichen.
 
@@ -21,16 +21,16 @@ Das Besondere am Personal Training ist die ständige Betreuung durch deinen pers
 Ob Krafttraining, Functional Fitness oder gezielte Mobility-Arbeit – wir passen das Training an deine Bedürfnisse an. Dabei berücksichtigen wir auch deinen Alltag: beruflicher Stress, Reisen oder familiäre Verpflichtungen werden in die Planung einbezogen.`,
     benefits: [
       { icon: "target", title: "100% individuell", text: "Jede Übung wird auf deine Ziele und Fähigkeiten abgestimmt" },
-      { icon: "chart", title: "Messbare Fortschritte", text: "Regelmäßige Assessments dokumentieren deinen Erfolg" },
+      { icon: "chart", title: "Messbare Fortschritte", text: "Regelmäßige Analysen dokumentieren deinen Erfolg" },
       { icon: "clock", title: "Flexible Termine", text: "Training, wenn es in deinen Zeitplan passt" },
       { icon: "shield", title: "Sichere Technik", text: "Professionelle Anleitung minimiert das Verletzungsrisiko" },
       { icon: "motivation", title: "Maximale Motivation", text: "Dein Trainer hält dich auch an schwierigen Tagen auf Kurs" },
       { icon: "nutrition", title: "Ganzheitlicher Ansatz", text: "Optional mit Ernährungsberatung kombinierbar" }
     ],
     packages: [
-      { name: "Starter", sessions: "4 Sessions/Monat", price: "149", features: ["1x Training pro Woche", "Individueller Trainingsplan", "Technikschulung", "WhatsApp-Support"] },
-      { name: "Professional", sessions: "8 Sessions/Monat", price: "279", features: ["2x Training pro Woche", "Individueller Trainingsplan", "Ernährungsempfehlungen", "Fortschrittstracking", "Priority-Termine"], popular: true },
-      { name: "Elite", sessions: "12 Sessions/Monat", price: "399", features: ["3x Training pro Woche", "Individueller Trainingsplan", "Vollständige Ernährungsberatung", "24/7 WhatsApp-Support", "Monatliche Assessments"] }
+      { name: "Trimester", sessions: "3 Monate", price: "445", features: ["Unbegrenzte Sessions", "Individueller Trainingsplan", "WhatsApp-Betreuung", "Technikschulung"] },
+      { name: "Jahresabo", sessions: "12 Monate", price: "995", features: ["Unbegrenzte Sessions", "Individueller Trainingsplan", "Persönlicher Coach", "24/7 WhatsApp-Betreuung", "Vollständige Ernährungsberatung", "2 Bonusmonate geschenkt"], popular: true },
+      { name: "Semester", sessions: "6 Monate", price: "695", features: ["Unbegrenzte Sessions", "Individueller Trainingsplan", "WhatsApp-Betreuung", "Fortschrittstracking", "Ernährungsempfehlungen"] }
     ],
     faq: [
       { q: "Wie läuft das erste Training ab?", a: "Wir starten mit einem kostenlosen Erstgespräch, in dem wir deine Ziele, deine Fitness-Geschichte und eventuelle Einschränkungen besprechen. Dann folgt ein Bewegungsscreening, bevor wir mit dem eigentlichen Training beginnen." },
@@ -43,8 +43,8 @@ Ob Krafttraining, Functional Fitness oder gezielte Mobility-Arbeit – wir passe
     title: "Ernährungsberatung",
     subtitle: "Essen, das zu dir passt",
     metaDescription: "Professionelle Ernährungsberatung in Luxemburg. Nachhaltige Ernährungspläne ohne Verzicht. Abnehmen, Muskelaufbau oder gesünder leben. Jetzt beraten lassen!",
-    heroImage: "https://images.unsplash.com/photo-1547592180-85f173990554?w=1200&h=600&fit=crop",
-    contentImage: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=800&h=500&fit=crop",
+    heroImage: "/images/medicine-balls.jpg",
+    contentImage: "/images/team-trainers.jpg",
     intro: "Vergiss Crash-Diäten und starre Ernährungspläne. Bei PTA entwickeln wir gemeinsam eine Ernährungsstrategie, die zu deinem Leben passt – realistisch, genussvoll und nachhaltig wirksam.",
     description: `Die richtige Ernährung ist der Schlüssel zu deinen Fitnesszielen. Egal ob Gewichtsreduktion, Muskelaufbau oder einfach mehr Energie im Alltag – ohne die passende Ernährung bleiben selbst die besten Trainingsergebnisse aus.
 
@@ -52,19 +52,19 @@ Unsere Ernährungsberatung bei PTA in Luxemburg basiert auf wissenschaftlichen E
 
 Das Besondere an unserem Ansatz: Wir verzichten auf strikte Verbote. Stattdessen lernst du, Lebensmittel bewusst zu wählen und zu genießen. Du erhältst praktische Rezepte, Einkaufslisten und konkrete Strategien für Situationen wie Restaurantbesuche, Geschäftsessen oder Reisen.
 
-Unsere Ernährungsexperten begleiten dich kontinuierlich mit wöchentlichen Check-ins. So können wir den Plan anpassen, Fragen klären und sicherstellen, dass du auf Kurs bleibst. Ob du 5 oder 50 Kilo verlieren möchtest, mehr Muskelmasse aufbauen oder einfach gesünder leben willst – wir zeigen dir den Weg.`,
+Unsere Ernährungsexperten begleiten dich kontinuierlich mit wöchentlichen Fortschrittsgespräche. So können wir den Plan anpassen, Fragen klären und sicherstellen, dass du auf Kurs bleibst. Ob du 5 oder 50 Kilo verlieren möchtest, mehr Muskelmasse aufbauen oder einfach gesünder leben willst – wir zeigen dir den Weg.`,
     benefits: [
       { icon: "target", title: "Personalisiert", text: "Ernährungspläne basierend auf deinen Vorlieben und Zielen" },
       { icon: "chart", title: "Wissenschaftlich", text: "Evidenzbasierte Empfehlungen, keine Trends" },
       { icon: "clock", title: "Alltagstauglich", text: "Praktische Rezepte, die in jeden Zeitplan passen" },
       { icon: "shield", title: "Keine Verbote", text: "Flexible Ernährung ohne schlechtes Gewissen" },
-      { icon: "motivation", title: "Kontinuierliche Betreuung", text: "Wöchentliche Check-ins halten dich auf Kurs" },
+      { icon: "motivation", title: "Kontinuierliche Betreuung", text: "Wöchentliche Fortschrittsgespräche halten dich auf Kurs" },
       { icon: "nutrition", title: "Nachhaltig", text: "Langfristige Gewohnheiten statt kurzfristiger Diäten" }
     ],
     packages: [
-      { name: "Basis", sessions: "Einmalig", price: "99", features: ["Ausführliche Erstanalyse", "Individueller Ernährungsplan", "Makroberechnung", "20 Rezepte"] },
-      { name: "Coaching", sessions: "3 Monate", price: "199", features: ["Alles aus Basis", "Wöchentliche Check-ins", "Planänderungen inklusive", "Einkaufslisten", "WhatsApp-Support"], popular: true },
-      { name: "Premium", sessions: "6 Monate", price: "349", features: ["Alles aus Coaching", "Bi-wöchentliche Video-Calls", "Unlimitierte Rezepte", "Restaurantguide", "Supplement-Beratung"] }
+      { name: "Trimester", sessions: "3 Monate", price: "75", features: ["Ausführliche Erstanalyse", "Individueller Ernährungsplan", "Makroberechnung", "Wöchentliche Fortschrittsgespräche", "WhatsApp-Betreuung"] },
+      { name: "Jahresabo", sessions: "12 Monate", price: "245", features: ["Alles aus Semester", "Unbegrenzte Rezepte", "Restaurantguide", "Supplement-Beratung", "2 Bonusmonate geschenkt"], popular: true },
+      { name: "Semester", sessions: "6 Monate", price: "165", features: ["Alles aus Trimester", "Planänderungen inklusive", "Einkaufslisten", "Bi-wöchentliche Videogespräche", "30 Rezepte"] }
     ],
     faq: [
       { q: "Muss ich auf alles verzichten, was mir schmeckt?", a: "Nein! Unser Ansatz basiert auf Flexibilität. Wir zeigen dir, wie du deine Lieblingsgerichte in einen gesunden Ernährungsplan integrieren kannst." },
@@ -77,8 +77,8 @@ Unsere Ernährungsexperten begleiten dich kontinuierlich mit wöchentlichen Chec
     title: "Gruppentraining",
     subtitle: "Gemeinsam stärker",
     metaDescription: "Motivierendes Gruppentraining in Luxemburg. Kleine Gruppen, qualifizierte Trainer, maximaler Spaß. Krafttraining, HIIT und mehr. Jetzt Probetraining buchen!",
-    heroImage: "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1200&h=600&fit=crop",
-    contentImage: "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=800&h=500&fit=crop",
+    heroImage: "/images/functional-training-area.jpg",
+    contentImage: "/images/gym-interior-wide.jpg",
     intro: "Training macht in der Gruppe einfach mehr Spaß. Bei PTA trainierst du in kleinen, motivierten Gruppen unter professioneller Anleitung – mit dem Teamgeist als Extra-Antrieb.",
     description: `Gruppentraining bei PTA verbindet das Beste aus zwei Welten: die Motivation und den Spaß einer Trainingsgemeinschaft mit der Qualität und Aufmerksamkeit eines professionellen Trainers.
 
@@ -86,19 +86,19 @@ Unsere Kurse finden in kleinen Gruppen von maximal 8 Personen statt. So kann dei
 
 Das Kursangebot bei PTA ist vielfältig: Von Krafttraining über Functional Fitness bis hin zu Mobility-Sessions ist für jeden etwas dabei. Alle Kurse sind so konzipiert, dass Anfänger und Fortgeschrittene gemeinsam trainieren können – jeder arbeitet auf seinem eigenen Level.
 
-Das Besondere am Gruppentraining ist die Community. Du lernst Gleichgesinnte kennen, motivierst dich gegenseitig und baust Verbindungen auf, die über das Training hinausgehen. Viele unserer Mitglieder sagen, dass die Gruppe ihr größter Motivationsfaktor ist.`,
+Das Besondere am Gruppentraining ist die Gemeinschaft. Du lernst Gleichgesinnte kennen, motivierst dich gegenseitig und baust Verbindungen auf, die über das Training hinausgehen. Viele unserer Mitglieder sagen, dass die Gruppe ihr größter Motivationsfaktor ist.`,
     benefits: [
       { icon: "target", title: "Kleine Gruppen", text: "Maximal 8 Personen für individuelle Betreuung" },
-      { icon: "chart", title: "Qualifizierte Trainer", text: "Alle Kurse von zertifizierten Coaches geleitet" },
+      { icon: "chart", title: "Qualifizierte Trainer", text: "Alle Kurse von zertifizierten Trainern geleitet" },
       { icon: "clock", title: "Flexible Kurszeiten", text: "Morgens, mittags und abends verfügbar" },
       { icon: "shield", title: "Für alle Level", text: "Anfänger und Fortgeschrittene trainieren gemeinsam" },
       { icon: "motivation", title: "Team-Motivation", text: "Die Gruppe pusht dich zu Höchstleistungen" },
       { icon: "nutrition", title: "Vielfältiges Angebot", text: "Kraft, Ausdauer, Mobility und mehr" }
     ],
     packages: [
-      { name: "Flex", sessions: "4 Kurse/Monat", price: "59", features: ["4 Gruppenkurse", "Freie Kurswahl", "Zugang zum Kursplan", "Probetraining gratis"] },
-      { name: "Unlimited", sessions: "Unbegrenzt", price: "89", features: ["Unlimitierte Kurse", "Alle Kursformate", "Priority-Buchung", "Gastberechtigung 1x/Monat"], popular: true },
-      { name: "Team", sessions: "2 Personen", price: "149", features: ["Unlimitiert für 2", "Partner-Rabatt", "Alle Kursformate", "Flexible Buchung"] }
+      { name: "Basic", sessions: "4 Kurse/Monat", price: "75", features: ["4 Gruppenkurse", "Freie Kurswahl", "Zugang zum Kursplan", "Probetraining gratis"], isMonthly: true },
+      { name: "Flex", sessions: "8 Kurse/Monat", price: "95", features: ["8 Gruppenkurse", "Alle Kursformate", "Vorrang-Buchung", "Gastberechtigung 1x/Monat"], popular: true, isMonthly: true },
+      { name: "Team", sessions: "2 Personen", price: "145", features: ["10 Kurse für 2 Personen", "Partner-Rabatt", "Alle Kursformate", "Flexible Buchung"], isMonthly: true }
     ],
     faq: [
       { q: "Welche Kurse bietet ihr an?", a: "Wir bieten Krafttraining, Functional Fitness, HIIT, Mobility, Core-Training und spezielle Kurse wie Boxing Fitness. Der Kursplan wechselt regelmäßig." },
@@ -111,31 +111,32 @@ Das Besondere am Gruppentraining ist die Community. Du lernst Gleichgesinnte ken
     title: "Fitness Bootcamp",
     subtitle: "Intensiv, dynamisch, motivierend",
     metaDescription: "Intensives Fitness Bootcamp in Luxemburg. 4-Wochen Transformation mit HIIT, Functional Training und Ernährungsplan. Jetzt anmelden und durchstarten!",
-    heroImage: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1200&h=600&fit=crop",
-    contentImage: "https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=800&h=500&fit=crop",
-    intro: "Bereit für die Challenge deines Lebens? Unser 4-Wochen Bootcamp bringt dich an deine Grenzen – und darüber hinaus. Intensive Workouts, starke Community und sichtbare Ergebnisse.",
+    heroImage: "/images/kettlebells.jpg",
+    contentImage: "/images/functional-training-area.jpg",
+    intro: "Bereit für die Herausforderung deines Lebens? Unser 4-Wochen Bootcamp bringt dich an deine Grenzen – und darüber hinaus. Intensive Trainingseinheiten, starke Gemeinschaft und sichtbare Ergebnisse.",
     description: `Das PTA Fitness Bootcamp ist unser intensivstes Programm. In vier Wochen bringen wir dich durch eine Kombination aus hochintensivem Training, strukturierter Ernährung und mentaler Stärke auf ein neues Fitnesslevel.
 
-Das Bootcamp basiert auf dem Prinzip der progressiven Überlastung: Woche für Woche steigerst du dich, während dein Körper sich anpasst und stärker wird. Die Workouts kombinieren Functional Training, HIIT, Kraftübungen und Cardio zu einem ganzheitlichen Programm.
+Das Bootcamp basiert auf dem Prinzip der progressiven Überlastung: Woche für Woche steigerst du dich, während dein Körper sich anpasst und stärker wird. Die Trainingseinheiten kombinieren Functional Training, HIIT, Kraftübungen und Cardio zu einem ganzheitlichen Programm.
 
-Was das Bootcamp besonders macht, ist die Gruppendynamik. Du trainierst mit anderen Teilnehmern, die dasselbe Ziel haben: In kurzer Zeit das Maximum herausholen. Diese Community-Energie ist ansteckend und trägt dich auch durch die härtesten Workouts.
+Was das Bootcamp besonders macht, ist die Gruppendynamik. Du trainierst mit anderen Teilnehmern, die dasselbe Ziel haben: In kurzer Zeit das Maximum herausholen. Diese Gruppenenergie ist ansteckend und trägt dich auch durch die härtesten Trainingseinheiten.
 
 Im Preis inbegriffen ist ein kompletter Ernährungsplan, der auf die intensiven Trainingswochen abgestimmt ist. Du bekommst alles, was du brauchst: Rezepte, Einkaufslisten und klare Anweisungen, was wann zu essen ist.`,
     benefits: [
       { icon: "target", title: "4 Wochen Fokus", text: "Strukturiertes Programm mit klarem Zeitrahmen" },
       { icon: "chart", title: "Sichtbare Ergebnisse", text: "Messbare Transformation in kurzer Zeit" },
-      { icon: "clock", title: "Alles inklusive", text: "Training, Ernährung und Support in einem Paket" },
-      { icon: "shield", title: "Professionelle Leitung", text: "Erfahrene Trainer führen durch jede Session" },
-      { icon: "motivation", title: "Starke Community", text: "Trainiere mit Gleichgesinnten" },
+      { icon: "clock", title: "Alles inklusive", text: "Training, Ernährung und Betreuung in einem Paket" },
+      { icon: "shield", title: "Professionelle Leitung", text: "Erfahrene Trainer führen durch jede Einheit" },
+      { icon: "motivation", title: "Starke Gemeinschaft", text: "Trainiere mit Gleichgesinnten" },
       { icon: "nutrition", title: "Ernährungsplan", text: "Abgestimmte Ernährung für maximale Ergebnisse" }
     ],
     packages: [
-      { name: "Bootcamp", sessions: "4 Wochen", price: "349", features: ["12 Gruppensessions", "Ernährungsplan", "Vorher/Nachher Assessment", "WhatsApp-Gruppe", "Bonus-Workouts für zuhause"], popular: true },
-      { name: "Bootcamp Plus", sessions: "4 Wochen + 1:1", price: "499", features: ["Alles aus Bootcamp", "2x Personal Training", "Individuelle Ernährungsberatung", "1 Monat Follow-up Betreuung"] }
+      { name: "Bootcamp", sessions: "4 Wochen", price: "225", features: ["12 Gruppensessions", "WhatsApp-Gruppe", "Trainingsplan"] },
+      { name: "Bootcamp Plus", sessions: "4 Wochen", price: "295", features: ["Alles aus Bootcamp", "Ernährungsplan", "Vorher/Nachher Analyse", "Bonus-Übungen für zuhause"], popular: true },
+      { name: "Bootcamp Premium", sessions: "4 Wochen + 1:1", price: "395", features: ["Alles aus Plus", "2x Personal Training", "Individuelle Betreuung", "2 Wochen Nachbetreuung"] }
     ],
     faq: [
       { q: "Muss ich schon fit sein für das Bootcamp?", a: "Ein gewisses Fitnesslevel ist von Vorteil, aber nicht zwingend. Die Übungen werden auf verschiedene Level angepasst. Sprich uns an, wenn du unsicher bist." },
-      { q: "Wie oft wird trainiert?", a: "3x pro Woche à 60 Minuten. Zusätzlich bekommst du Workouts für zuhause, die optional sind." },
+      { q: "Wie oft wird trainiert?", a: "3x pro Woche à 60 Minuten. Zusätzlich bekommst du Übungen für zuhause, die optional sind." },
       { q: "Was passiert nach dem Bootcamp?", a: "Du kannst in unsere regulären Kurse wechseln, ein weiteres Bootcamp machen oder mit Personal Training weitermachen. Wir beraten dich am Ende des Programms." },
       { q: "Wann startet das nächste Bootcamp?", a: "Wir starten alle 6-8 Wochen ein neues Bootcamp. Kontaktiere uns für die nächsten Termine." }
     ]
@@ -144,8 +145,8 @@ Im Preis inbegriffen ist ein kompletter Ernährungsplan, der auf die intensiven 
     title: "Rehabilitation & Aufbautraining",
     subtitle: "Zurück zu voller Beweglichkeit",
     metaDescription: "Professionelles Rehabilitationstraining in Luxemburg. Behutsamer Aufbau nach Verletzung oder OP. In Abstimmung mit Ärzten und Physiotherapeuten. Jetzt Termin vereinbaren!",
-    heroImage: "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1200&h=600&fit=crop",
-    contentImage: "https://images.unsplash.com/photo-1593164842264-854604db2260?w=800&h=500&fit=crop",
+    heroImage: "/images/gym-pullup-trx.jpg",
+    contentImage: "/images/gym-interior-wide.jpg",
     intro: "Nach einer Verletzung, Operation oder bei chronischen Beschwerden ist der Weg zurück zur vollen Fitness eine Herausforderung. Bei PTA begleiten wir dich Schritt für Schritt – sicher, geduldig und professionell.",
     description: `Rehabilitation bei PTA bedeutet mehr als nur Übungen. Wir verstehen, dass eine Verletzung oder Operation nicht nur körperlich, sondern auch mental belastend sein kann. Deshalb begleiten wir dich ganzheitlich auf deinem Weg zurück zur vollen Leistungsfähigkeit.
 
@@ -163,9 +164,9 @@ Besonders wichtig ist uns die Kommunikation mit deinem medizinischen Team. Wir a
       { icon: "nutrition", title: "Langfristige Betreuung", text: "Von der Reha bis zur vollen Leistungsfähigkeit" }
     ],
     packages: [
-      { name: "Reha Start", sessions: "8 Sessions", price: "Ab 129", features: ["Ausführliche Erstanalyse", "Individueller Reha-Plan", "8x Personal Training", "Übungen für zuhause", "Ärztliche Abstimmung"] },
-      { name: "Reha Intensiv", sessions: "16 Sessions", price: "Ab 239", features: ["Alles aus Reha Start", "16x Personal Training", "Wöchentliche Anpassung", "Fortlaufende Dokumentation"], popular: true },
-      { name: "Zurück zur Leistung", sessions: "24 Sessions", price: "Ab 349", features: ["Alles aus Reha Intensiv", "24x Personal Training", "Return-to-Sport Testing", "Präventionstraining"] }
+      { name: "Reha Start", sessions: "8 Sessions", price: "125", features: ["Ausführliche Erstanalyse", "Individueller Reha-Plan", "Dein persönlicher Coach", "8x 1:1 Training", "Übungen für zuhause", "Ärztliche Abstimmung"] },
+      { name: "Reha Intensiv", sessions: "16 Sessions", price: "235", features: ["Alles aus Reha Start", "Dein persönlicher Coach fokussiert auf dich", "16x 1:1 Training", "Wöchentliche Anpassung", "Fortlaufende Dokumentation"], popular: true },
+      { name: "Zurück zur Leistung", sessions: "24 Sessions", price: "345", features: ["Alles aus Reha Intensiv", "Exklusiver persönlicher Coach", "24x 1:1 Training", "Sportfähigkeitstest", "Präventionstraining"] }
     ],
     faq: [
       { q: "Wann kann ich nach einer OP mit dem Training beginnen?", a: "Das hängt von der Art der Operation ab. Wir starten erst, wenn dein Arzt grünes Licht gibt. Oft können wir aber schon sehr früh mit sanften Übungen beginnen." },
@@ -178,8 +179,8 @@ Besonders wichtig ist uns die Kommunikation mit deinem medizinischen Team. Wir a
     title: "Sportmannschaften",
     subtitle: "Leistung für dein Team",
     metaDescription: "Professionelles Athletiktraining für Sportmannschaften in Luxemburg. Teamspezifische Programme für Fußball, Handball, Basketball und mehr. Jetzt Team-Training anfragen!",
-    heroImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=600&fit=crop",
-    contentImage: "https://images.unsplash.com/photo-1580086319619-3ed498161c77?w=800&h=500&fit=crop",
+    heroImage: "/images/team-trainers.jpg",
+    contentImage: "/images/functional-training-area.jpg",
     intro: "Ob Fußball, Handball, Basketball oder jede andere Sportart – professionelles Athletiktraining macht den Unterschied zwischen gut und großartig. Wir machen dein Team fit für die nächste Saison.",
     description: `Athletiktraining für Sportmannschaften bei PTA geht weit über klassisches Konditionstraining hinaus. Wir entwickeln sportartspezifische Programme, die genau auf die Anforderungen deiner Mannschaft zugeschnitten sind.
 
@@ -193,12 +194,12 @@ Ein wichtiger Fokus liegt auf der Verletzungsprävention. Durch gezieltes Traini
       { icon: "chart", title: "Leistungssteigerung", text: "Messbare Verbesserung athletischer Parameter" },
       { icon: "clock", title: "Flexible Planung", text: "Training passend zu eurem Spielplan" },
       { icon: "shield", title: "Verletzungsprävention", text: "Weniger Ausfälle durch gezieltes Training" },
-      { icon: "motivation", title: "Teambuilding", text: "Gemeinsames Training stärkt den Zusammenhalt" },
+      { icon: "motivation", title: "Teamzusammenhalt", text: "Gemeinsames Training stärkt den Zusammenhalt" },
       { icon: "nutrition", title: "Saisonplanung", text: "Periodisierung über die gesamte Saison" }
     ],
     packages: [
-      { name: "Team Basics", sessions: "1x/Woche", price: "Ab 499/Monat", features: ["1x wöchentliches Training", "Bis zu 20 Spieler", "Grundlegendes Athletiktraining", "Warm-up Routinen"] },
-      { name: "Team Pro", sessions: "2x/Woche", price: "Ab 899/Monat", features: ["2x wöchentliches Training", "Bis zu 25 Spieler", "Sportartspezifisches Programm", "Individuelle Übungspläne", "Leistungsdiagnostik"], popular: true },
+      { name: "Basic", sessions: "1x/Woche", price: "495", features: ["1x wöchentliches Training", "Bis zu 20 Spieler", "Grundlegendes Athletiktraining", "Warm-up Routinen"], isMonthly: true },
+      { name: "Pro", sessions: "2x/Woche", price: "895", features: ["2x wöchentliches Training", "Bis zu 25 Spieler", "Sportartspezifisches Programm", "Individuelle Übungspläne", "Leistungsdiagnostik"], popular: true, isMonthly: true },
       { name: "Elite", sessions: "Individuell", price: "Auf Anfrage", features: ["Maßgeschneidertes Programm", "Unbegrenzte Spielerzahl", "Saisonplanung", "Einzelspieler-Betreuung", "Regenerationsstrategien"] }
     ],
     faq: [
@@ -301,7 +302,7 @@ const ServicePage = async ({ params }) => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-clr_base font-caveat text-2xl mb-4 block">{service.subtitle}</span>
-              <h2 className="text-white text-3xl lg:text-4xl font-bold mb-6">
+              <h2 className="text-white text-3xl lg:text-4xl font-medium mb-6">
                 {service.title}
               </h2>
               <p className="text-clr_pra text-lg leading-relaxed mb-8">
@@ -319,7 +320,7 @@ const ServicePage = async ({ params }) => {
               <img
                 src={service.contentImage}
                 alt={service.title}
-                className="w-full h-[400px] object-cover rounded-lg"
+                className="w-full h-[400px] object-cover object-top rounded-lg"
               />
             </div>
           </div>
@@ -327,7 +328,7 @@ const ServicePage = async ({ params }) => {
       </section>
 
       {/* Description Section */}
-      <section className="pb-16">
+      <section className="pt-16 pb-16 bg-common_bg">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert">
@@ -342,11 +343,11 @@ const ServicePage = async ({ params }) => {
       </section>
 
       {/* Benefits Section */}
-      <section className="pb_120">
+      <section className="pt-16 pb_120">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Vorteile</span>
-            <h2 className="text-white text-3xl lg:text-4xl font-bold">
+            <h2 className="text-white text-3xl lg:text-4xl font-medium">
               Das bekommst du bei uns
             </h2>
           </div>
@@ -362,7 +363,7 @@ const ServicePage = async ({ params }) => {
                 <div className="w-12 h-12 bg-clr_base rounded-full flex items-center justify-center mb-4">
                   <CheckCircleFill className="text-clr_title text-xl" />
                 </div>
-                <h3 className="text-white text-xl font-semibold mb-2">{benefit.title}</h3>
+                <h3 className="text-white text-xl font-medium mb-2">{benefit.title}</h3>
                 <p className="text-clr_pra">{benefit.text}</p>
               </div>
             ))}
@@ -371,11 +372,11 @@ const ServicePage = async ({ params }) => {
       </section>
 
       {/* Pricing Section */}
-      <section className="pb_120 bg-common_bg">
-        <div className="container py-20">
+      <section className="pt-16 pb_120 bg-common_bg">
+        <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">Pakete & Preise</span>
-            <h2 className="text-white text-3xl lg:text-4xl font-bold">
+            <h2 className="text-white text-3xl lg:text-4xl font-medium">
               Wähle dein passendes Paket
             </h2>
           </div>
@@ -393,11 +394,11 @@ const ServicePage = async ({ params }) => {
                     Beliebt
                   </span>
                 )}
-                <h3 className="text-white text-2xl font-bold mb-2">{pkg.name}</h3>
+                <h3 className="text-white text-2xl font-medium mb-2">{pkg.name}</h3>
                 <p className="text-clr_pra mb-4">{pkg.sessions}</p>
                 <div className="mb-6">
-                  <span className="text-clr_base text-4xl font-bold">€{pkg.price}</span>
-                  {!pkg.price.includes("Anfrage") && !pkg.price.includes("Ab") && (
+                  <span className="text-clr_base text-4xl font-bold">{pkg.price}{pkg.price !== "Auf Anfrage" && "€"}</span>
+                  {pkg.isMonthly && (
                     <span className="text-clr_pra">/Monat</span>
                   )}
                 </div>
@@ -427,11 +428,11 @@ const ServicePage = async ({ params }) => {
       </section>
 
       {/* FAQ Section */}
-      <section className="pb_120">
+      <section className="pt-16 pb_120">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-clr_base font-caveat text-2xl mb-4 block">FAQ</span>
-            <h2 className="text-white text-3xl lg:text-4xl font-bold">
+            <h2 className="text-white text-3xl lg:text-4xl font-medium">
               Häufig gestellte Fragen
             </h2>
           </div>
@@ -444,7 +445,7 @@ const ServicePage = async ({ params }) => {
                
                
               >
-                <h3 className="text-white text-lg font-semibold mb-3">{item.q}</h3>
+                <h3 className="text-white text-lg font-medium mb-3">{item.q}</h3>
                 <p className="text-clr_pra">{item.a}</p>
               </div>
             ))}
@@ -453,10 +454,10 @@ const ServicePage = async ({ params }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="pb_120">
+      <section className="pt-16 pb_120 bg-common_bg">
         <div className="container">
-          <div className="bg-common_bg rounded-lg p-10 lg:p-16 text-center">
-            <h3 className="text-white text-3xl lg:text-4xl font-bold mb-6">
+          <div className="bg-[#1a1a1a] rounded-lg p-10 lg:p-16 text-center">
+            <h3 className="text-white text-3xl lg:text-4xl font-medium mb-6">
               Bereit loszulegen?
             </h3>
             <p className="text-clr_pra text-lg mb-8 max-w-2xl mx-auto">

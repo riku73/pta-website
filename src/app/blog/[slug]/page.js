@@ -65,7 +65,7 @@ Trainiert die tiefliegende Rumpfmuskulatur und verbessert die Stabilität.
 
 ### 4. Dead Bug
 
-Eine der effektivsten Übungen für einen stabilen Core.
+Eine der effektivsten Übungen für eine stabile Körpermitte.
 
 **So gehts:**
 - Rückenlage, Beine im 90-Grad-Winkel angehoben
@@ -121,7 +121,7 @@ Bei PTA unterstützen wir dich gerne dabei, deinen Rücken zu stärken und schme
     content: `
 ## Warum Ernährung rund ums Training so wichtig ist
 
-Du gibst im Training alles – aber holst du auch das Maximum aus deiner Ernährung heraus? Die richtige Mahlzeit zur richtigen Zeit kann den Unterschied machen zwischen einem guten und einem großartigen Workout.
+Du gibst im Training alles – aber holst du auch das Maximum aus deiner Ernährung heraus? Die richtige Mahlzeit zur richtigen Zeit kann den Unterschied machen zwischen einem guten und einem großartigen Training.
 
 In diesem Artikel zeigen wir dir, was dein Körper vor und nach dem Training wirklich braucht und wie du deine Ernährung optimal auf dein Training abstimmst.
 
@@ -143,7 +143,7 @@ Die ideale Zeit für eine Mahlzeit vor dem Training hängt von deren Größe ab:
 
 **Wenig Fett**: Fett verlangsamt die Verdauung. Vor dem Training ist das nicht ideal, da du keine schwere Mahlzeit im Magen haben willst.
 
-### Pre-Workout Snack Ideen
+### Snack-Ideen vor dem Training
 
 - Banane mit einem Esslöffel Erdnussbutter
 - Haferflocken mit Beeren
@@ -159,7 +159,7 @@ Lange wurde geglaubt, dass du innerhalb von 30 Minuten nach dem Training essen m
 
 Wichtig ist, dass du innerhalb von 2-3 Stunden nach dem Training eine proteinreiche Mahlzeit zu dir nimmst. Wenn dein letztes Essen schon Stunden her ist, solltest du allerdings schneller zugreifen.
 
-### Die perfekte Post-Workout-Mahlzeit
+### Die perfekte Mahlzeit nach dem Training
 
 **Protein für den Muskelaufbau**: 20-40 Gramm hochwertiges Protein helfen deinen Muskeln bei der Regeneration. Gute Quellen sind Hühnchen, Fisch, Eier, Quark oder pflanzliche Alternativen wie Tofu.
 
@@ -167,7 +167,7 @@ Wichtig ist, dass du innerhalb von 2-3 Stunden nach dem Training eine proteinrei
 
 **Nicht vergessen: Flüssigkeit**: Trink ausreichend Wasser, um den Flüssigkeitsverlust auszugleichen. Bei sehr intensiven Einheiten können auch elektrolythaltige Getränke sinnvoll sein.
 
-### Post-Workout Mahlzeit Ideen
+### Mahlzeit-Ideen nach dem Training
 
 - Hähnchenbrust mit Süßkartoffeln und Gemüse
 - Lachs mit Reis und Brokkoli
@@ -206,14 +206,14 @@ Die Supplement-Industrie verspricht viel, aber die meisten Menschen brauchen kei
 
 **Meist überflüssig:**
 - BCAAs (wenn du genug Protein isst)
-- Pre-Workout Booster (Koffein tuts auch)
-- Fat Burner (funktionieren nicht wie beworben)
+- Trainingsbooster (Koffein tut es auch)
+- Fettverbrenner (funktionieren nicht wie beworben)
 
 ## Praktische Tipps für den Alltag
 
-1. **Meal Prep**: Bereite deine Mahlzeiten im Voraus vor, damit du immer eine gute Option parat hast
+1. **Mahlzeiten vorbereiten**: Bereite deine Mahlzeiten im Voraus vor, damit du immer eine gute Option parat hast
 2. **Snacks dabei haben**: Eine Banane oder Nüsse in der Tasche retten dich vor schlechten Entscheidungen
-3. **Tracke eine Weile**: Um ein Gefühl für Portionsgrößen zu bekommen, kann temporäres Tracking helfen
+3. **Protokolliere eine Weile**: Um ein Gefühl für Portionsgrößen zu bekommen, kann temporäres Aufschreiben helfen
 4. **Höre auf deinen Körper**: Nicht jeder verträgt dieselben Lebensmittel vor dem Training gleich gut
 
 ## Fazit
@@ -266,7 +266,7 @@ Wenn das Training zur Gewohnheit wird, brauchst du keine Motivation mehr – du 
 
 ## Trick 3: Finde dein Warum
 
-Oberflächliche Ziele wie "Ich will abnehmen" oder "Ich will fitter werden" sind zu abstrakt, um dich an schwierigen Tagen zu motivieren.
+Oberflächliche Ziele wie „Ich will abnehmen" oder „Ich will fitter werden" sind zu abstrakt, um dich an schwierigen Tagen zu motivieren.
 
 **Grab tiefer:**
 
@@ -284,7 +284,7 @@ Alleine trainieren ist hart. Die Versuchung, das Training ausfallen zu lassen, i
 
 - Finde einen Trainingspartner mit ähnlichen Zielen
 - Tritt einem Gruppenkurs bei (wie unserem Gruppentraining bei PTA)
-- Such dir eine Online-Community, die dich accountable hält
+- Such dir eine Online-Community, die dich in der Pflicht hält
 - Erzähl Freunden und Familie von deinen Zielen
 
 Wenn du weißt, dass jemand auf dich wartet oder nach deinem Fortschritt fragt, steigt die Wahrscheinlichkeit enorm, dass du dranbleibst.
@@ -306,8 +306,8 @@ Der Trick ist, die Belohnung an das Training zu koppeln, sodass dein Gehirn eine
 
 Je einfacher du es dir machst, desto wahrscheinlicher trainierst du. Schau, wo du Hürden abbauen kannst:
 
-- **Gym zu weit weg?** Such dir eines näher an deiner Arbeit oder Wohnung
-- **Keine Zeit?** Probier kürzere, aber intensivere Workouts
+- **Fitnessstudio zu weit weg?** Such dir eines näher an deiner Arbeit oder Wohnung
+- **Keine Zeit?** Probier kürzere, aber intensivere Trainingseinheiten
 - **Zu müde nach der Arbeit?** Trainier morgens oder in der Mittagspause
 - **Langweilig?** Probier neue Trainingsformen aus
 
@@ -334,13 +334,13 @@ Bei PTA unterstützen wir dich dabei, dranzubleiben. Unsere Trainer und unsere C
     content: `
 ## Die ewige Debatte: Kurz und intensiv oder lang und gleichmäßig?
 
-HIIT (High-Intensity Interval Training) ist seit Jahren der Fitness-Trend schlechthin. Kurze, knackige Workouts, die angeblich mehr bringen als stundenlange Joggingrunden. Aber stimmt das wirklich?
+HIIT (Hochintensives Intervalltraining) ist seit Jahren der Fitness-Trend schlechthin. Kurze, knackige Trainingseinheiten, die angeblich mehr bringen als stundenlange Joggingrunden. Aber stimmt das wirklich?
 
 In diesem Artikel vergleichen wir beide Trainingsformen objektiv und helfen dir herauszufinden, was für deine Ziele am besten geeignet ist.
 
 ## Was ist HIIT genau?
 
-HIIT steht für High-Intensity Interval Training und beschreibt ein Training, bei dem sich hochintensive Belastungsphasen mit kurzen Erholungsphasen abwechseln.
+HIIT steht für „High-Intensity Interval Training" (Hochintensives Intervalltraining) und beschreibt ein Training, bei dem sich hochintensive Belastungsphasen mit kurzen Erholungsphasen abwechseln.
 
 **Typisches HIIT-Protokoll:**
 - 20-30 Sekunden maximale Belastung
@@ -352,7 +352,7 @@ Die Intensität während der Belastungsphasen sollte bei 80-95% deiner maximalen
 
 ## Was ist Dauerlauf (LISS)?
 
-LISS steht für Low-Intensity Steady-State und beschreibt gleichmäßiges Ausdauertraining bei moderater Intensität.
+LISS steht für „Low-Intensity Steady-State" (Gleichmäßiges Training niedriger Intensität) und beschreibt gleichmäßiges Ausdauertraining bei moderater Intensität.
 
 **Typisches LISS-Training:**
 - Moderate Intensität (60-70% der maximalen Herzfrequenz)
@@ -421,9 +421,9 @@ Beide Trainingsformen funktionieren für die Gewichtsreduktion, solange du im Ka
 
 ### Wenn du Muskeln aufbauen willst
 
-Ausdauertraining sollte das Krafttraining ergänzen, nicht ersetzen. Zu viel Cardio kann den Muskelaufbau behindern.
+Ausdauertraining sollte das Krafttraining ergänzen, nicht ersetzen. Zu viel Ausdauertraining kann den Muskelaufbau behindern.
 
-**Empfehlung**: 1-2x kurze HIIT-Sessions pro Woche, kein langes Cardio.
+**Empfehlung**: 1-2x kurze HIIT-Einheiten pro Woche, kein langes Ausdauertraining.
 
 ### Wenn du deine Ausdauer verbessern willst
 
@@ -433,7 +433,7 @@ Für echte Ausdauerleistung (z.B. Marathonvorbereitung) brauchst du längere Ein
 
 ### Wenn du wenig Zeit hast
 
-HIIT ist die klare Wahl. In 20-30 Minuten bekommst du ein effektives Workout.
+HIIT ist die klare Wahl. In 20-30 Minuten bekommst du ein effektives Training.
 
 **Empfehlung**: 2-3x HIIT pro Woche.
 
@@ -570,7 +570,7 @@ Signalisiere deinem Körper, dass es Zeit zum Schlafen ist: Lesen, Dehnen, Medit
 
 Alkohol mag beim Einschlafen helfen, stört aber die Schlafarchitektur und reduziert die Tiefschlafphasen.
 
-### 9. Manage deinen Stress
+### 9. Bewältige deinen Stress
 
 Sorgen und Grübeln sind Schlafkiller. Schreib vor dem Schlafengehen deine Gedanken auf oder praktiziere Entspannungstechniken.
 
@@ -578,15 +578,15 @@ Sorgen und Grübeln sind Schlafkiller. Schreib vor dem Schlafengehen deine Gedan
 
 Natürliches Licht am Morgen reguliert deinen zirkadianen Rhythmus und verbessert den Schlaf am Abend.
 
-## Schlaf-Tracking: Sinnvoll oder nicht?
+## Schlafaufzeichnung: Sinnvoll oder nicht?
 
-Moderne Smartwatches und Ringe können deinen Schlaf tracken. Das kann hilfreich sein, um Muster zu erkennen – aber übertreib es nicht. Orthosomnie nennt man die Angst vor schlechtem Schlaf, die paradoxerweise zu schlechterem Schlaf führt.
+Moderne Smartwatches und Ringe können deinen Schlaf aufzeichnen. Das kann hilfreich sein, um Muster zu erkennen – aber übertreib es nicht. Orthosomnie nennt man die Angst vor schlechtem Schlaf, die paradoxerweise zu schlechterem Schlaf führt.
 
 ## Fazit: Schlaf ist Training
 
 Behandle Schlaf mit derselben Ernsthaftigkeit wie dein Training und deine Ernährung. Er ist keine verlorene Zeit, sondern essenziell für deine Fortschritte.
 
-Bei PTA berücksichtigen wir Regeneration als Teil des Trainingsplans. Denn wir wissen: Muskeln wachsen nicht im Gym, sondern im Schlaf.
+Bei PTA berücksichtigen wir Regeneration als Teil des Trainingsplans. Denn wir wissen: Muskeln wachsen nicht im Fitnessstudio, sondern im Schlaf.
     `
   },
   "anfaengerfehler-vermeiden": {
@@ -607,7 +607,7 @@ In diesem Artikel zeigen wir dir die 10 häufigsten Anfängerfehler und wie du s
 
 ## Fehler 1: Zu viel, zu schnell
 
-Der häufigste Fehler überhaupt: Anfänger starten mit zu viel Enthusiasm. 6 Tage Training pro Woche, stundenlange Sessions, jeden Tag Vollgas.
+Der häufigste Fehler überhaupt: Anfänger starten mit zu viel Begeisterung. 6 Tage Training pro Woche, stundenlange Einheiten, jeden Tag Vollgas.
 
 **Das Problem:** Dein Körper braucht Zeit, um sich anzupassen. Übertreibst du es, riskierst du Verletzungen, Übertraining und Burnout.
 
@@ -619,19 +619,19 @@ In der Euphorie des Anfangs greifen viele zu schweren Gewichten, bevor sie die G
 
 **Das Problem:** Schlechte Technik führt zu ineffektivem Training und erhöht das Verletzungsrisiko erheblich.
 
-**Die Lösung:** Lern die Basics von Grund auf. Squats, Deadlifts, Presses – beherrsche die Technik mit leichtem Gewicht, bevor du steigerst. Ein Personal Trainer kann hier Gold wert sein.
+**Die Lösung:** Lern die Grundlagen von Anfang an. Kniebeugen, Kreuzheben, Drückübungen – beherrsche die Technik mit leichtem Gewicht, bevor du steigerst. Ein Personal Trainer kann hier Gold wert sein.
 
 ## Fehler 3: Unrealistische Erwartungen
 
-"Ich will in 4 Wochen 10 Kilo abnehmen" oder "In 2 Monaten will ich aussehen wie ein Fitness-Model". Solche Erwartungen führen unweigerlich zu Enttäuschung.
+„Ich will in 4 Wochen 10 Kilo abnehmen" oder „In 2 Monaten will ich aussehen wie ein Fitness-Model". Solche Erwartungen führen unweigerlich zu Enttäuschung.
 
 **Das Problem:** Wenn die Ergebnisse ausbleiben, verlieren viele die Motivation und geben auf.
 
 **Die Lösung:** Setze realistische Ziele. 0,5-1 kg Gewichtsverlust pro Woche ist gesund. Sichtbarer Muskelaufbau braucht Monate, nicht Wochen. Geduld ist der Schlüssel.
 
-## Fehler 4: Nur Cardio oder nur Kraft
+## Fehler 4: Nur Ausdauer oder nur Kraft
 
-Viele Anfänger machen nur das, was sie mögen oder kennen. Frauen oft nur Cardio, Männer nur Krafttraining.
+Viele Anfänger machen nur das, was sie mögen oder kennen. Frauen oft nur Ausdauer, Männer nur Krafttraining.
 
 **Das Problem:** Du vernachlässigst wichtige Aspekte der Fitness und limitierst deine Ergebnisse.
 
@@ -639,7 +639,7 @@ Viele Anfänger machen nur das, was sie mögen oder kennen. Frauen oft nur Cardi
 
 ## Fehler 5: Ernährung ignorieren
 
-"Ich trainiere ja, also kann ich essen, was ich will." Leider funktioniert das so nicht.
+„Ich trainiere ja, also kann ich essen, was ich will." Leider funktioniert das so nicht.
 
 **Das Problem:** Du kannst ein schlechtes Training nicht raustrainieren. Ernährung macht 70-80% des Erfolgs aus.
 
@@ -647,11 +647,11 @@ Viele Anfänger machen nur das, was sie mögen oder kennen. Frauen oft nur Cardi
 
 ## Fehler 6: Aufwärmen überspringen
 
-Zeit ist knapp, also wird das Aufwärmen geskippt. Ein fataler Fehler.
+Zeit ist knapp, also wird das Aufwärmen übersprungen. Ein fataler Fehler.
 
 **Das Problem:** Kalte Muskeln und Gelenke sind anfälliger für Verletzungen. Deine Leistung ist ohne Aufwärmen schlechter.
 
-**Die Lösung:** 5-10 Minuten Aufwärmen. Leichtes Cardio und dynamische Dehnübungen. Dein Körper wird es dir danken.
+**Die Lösung:** 5-10 Minuten Aufwärmen. Leichtes Ausdauertraining und dynamische Dehnübungen. Dein Körper wird es dir danken.
 
 ## Fehler 7: Immer das gleiche Training
 
@@ -663,7 +663,7 @@ Woche für Woche dieselben Übungen, dieselben Gewichte, dieselbe Reihenfolge.
 
 ## Fehler 8: Regeneration unterschätzen
 
-"Mehr Training = mehr Ergebnisse", denken viele. Falsch.
+„Mehr Training = mehr Ergebnisse", denken viele. Falsch.
 
 **Das Problem:** Muskeln wachsen in der Erholungsphase, nicht im Training. Ohne ausreichend Regeneration übertreiben und dein Körper kommt nicht hinterher.
 
@@ -671,7 +671,7 @@ Woche für Woche dieselben Übungen, dieselben Gewichte, dieselbe Reihenfolge.
 
 ## Fehler 9: Vergleiche mit anderen
 
-Social Media zeigt uns gefilterte Highlight-Reels von Menschen, die seit Jahren trainieren. Der Vergleich ist unfair.
+Soziale Medien zeigen uns gefilterte Glanzmomente von Menschen, die seit Jahren trainieren. Der Vergleich ist unfair.
 
 **Das Problem:** Du vergleichst deinen Anfang mit dem Fortgeschrittenen-Level anderer. Das demotiviert.
 
@@ -727,6 +727,31 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Helper function to process inline markdown (bold text)
+const processInlineMarkdown = (text) => {
+  const parts = [];
+  let remaining = text;
+  let key = 0;
+
+  while (remaining.length > 0) {
+    const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
+
+    if (boldMatch) {
+      const beforeBold = remaining.substring(0, boldMatch.index);
+      if (beforeBold) {
+        parts.push(beforeBold);
+      }
+      parts.push(<strong key={key++} className="text-white font-semibold">{boldMatch[1]}</strong>);
+      remaining = remaining.substring(boldMatch.index + boldMatch[0].length);
+    } else {
+      parts.push(remaining);
+      break;
+    }
+  }
+
+  return parts.length > 0 ? parts : text;
+};
+
 const BlogPost = async ({ params }) => {
   const resolvedParams = await params;
   const post = blogData[resolvedParams.slug];
@@ -771,7 +796,7 @@ const BlogPost = async ({ params }) => {
                   {post.readTime}
                 </span>
               </div>
-              <h1 className="text-white text-3xl lg:text-5xl font-bold leading-tight">
+              <h1 className="text-white text-3xl lg:text-5xl font-medium leading-tight">
                 {post.title}
               </h1>
             </header>
@@ -794,15 +819,15 @@ const BlogPost = async ({ params }) => {
               {post.content.split('\n\n').map((block, index) => {
                 if (block.startsWith('## ')) {
                   return (
-                    <h2 key={index} className="text-white text-2xl lg:text-3xl font-bold mt-12 mb-6">
-                      {block.replace('## ', '')}
+                    <h2 key={index} className="text-white text-2xl lg:text-3xl font-medium mt-12 mb-6">
+                      {processInlineMarkdown(block.replace('## ', ''))}
                     </h2>
                   );
                 }
                 if (block.startsWith('### ')) {
                   return (
-                    <h3 key={index} className="text-white text-xl lg:text-2xl font-semibold mt-8 mb-4">
-                      {block.replace('### ', '')}
+                    <h3 key={index} className="text-white text-xl lg:text-2xl font-medium mt-8 mb-4">
+                      {processInlineMarkdown(block.replace('### ', ''))}
                     </h3>
                   );
                 }
@@ -818,7 +843,7 @@ const BlogPost = async ({ params }) => {
                   return (
                     <ul key={index} className="list-disc list-inside text-clr_pra mb-6 space-y-2">
                       {items.map((item, i) => (
-                        <li key={i}>{item.replace('- ', '')}</li>
+                        <li key={i}>{processInlineMarkdown(item.replace('- ', ''))}</li>
                       ))}
                     </ul>
                   );
@@ -826,7 +851,7 @@ const BlogPost = async ({ params }) => {
                 if (block.trim()) {
                   return (
                     <p key={index} className="text-clr_pra text-lg leading-relaxed mb-6">
-                      {block}
+                      {processInlineMarkdown(block)}
                     </p>
                   );
                 }
@@ -836,7 +861,7 @@ const BlogPost = async ({ params }) => {
 
             {/* CTA Section */}
             <div className="mt-16 bg-common_bg rounded-lg p-8 lg:p-12 text-center">
-              <h3 className="text-white text-2xl lg:text-3xl font-bold mb-4">
+              <h3 className="text-white text-2xl lg:text-3xl font-medium mb-4">
                 Bereit, dein Training auf das nächste Level zu bringen?
               </h3>
               <p className="text-clr_pra mb-6">

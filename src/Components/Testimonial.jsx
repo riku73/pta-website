@@ -88,7 +88,7 @@ const Testimonial = () => {
                     <p className="text-lg md:text-xl text-clr_white mb-6 italic leading-relaxed">
                       "{review}"
                     </p>
-                    <h4 className="text-clr_base font-semibold text-xl">
+                    <h4 className="text-clr_base font-medium text-xl">
                       {name}
                     </h4>
                     <span className="text-base text-clr_pra">

@@ -5,7 +5,7 @@ import { ArrowRight } from "react-bootstrap-icons";
 const Form = ({ isColTwo }) => {
   return (
     <div className="bg-common_bg p-[30px] rounded-lg">
-      <h3 className="mb-5 text-white capitalize sm:text-[32px] text-[26px] font-semibold">
+      <h3 className="mb-5 text-white capitalize sm:text-[32px] text-[26px] font-medium">
         Lass uns sprechen
       </h3>
       <p className="text-clr_pra mb-[30px]">

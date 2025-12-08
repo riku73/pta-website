@@ -45,7 +45,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
           <div>
             <div>
               <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> Telefon </span>
-              <Link href={"tel:+352123456"} className="textp capitalize text-white font-medium leading-[120%]"> +352 123 456 </Link>
+              <Link href={"tel:+352691789483"} className="textp capitalize text-white font-medium leading-[120%]"> +352 691 789 483 </Link>
             </div>
           </div>
         </div>

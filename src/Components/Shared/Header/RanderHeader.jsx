@@ -1,6 +1,7 @@
 'use client'
 import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { List, ArrowRight, X } from "react-bootstrap-icons";
 import { menuList } from "@/Utlits/menuList";
@@ -72,8 +73,8 @@ const RanderHeader = () => {
 
   return (
     <>
-      {/* Spacer to prevent layout shift when header becomes fixed */}
-      {fixedHeader && <div className="h-[82px]" />}
+      {/* Spacer to prevent layout shift when header becomes fixed (mobile only) */}
+      {fixedHeader && <div className="h-[82px] lg:h-0" />}
 
       {/* Mobile Menu Backdrop Overlay */}
       {menuActive && (
@@ -85,13 +86,24 @@ const RanderHeader = () => {
       )}
 
       <header
-        className={`${fixedHeader ? "fixed top-0 left-0 z-50 bg-[#121212]" : "relative"} w-full z-50`}
+        className={`${
+          fixedHeader
+            ? "fixed top-0 left-0 bg-[#121212]"
+            : "relative lg:absolute lg:top-0 lg:left-0 lg:bg-transparent"
+        } w-full z-50 transition-colors duration-300`}
       >
         <div className="container">
           <div className="flex justify-between items-center w-full relative py-5">
             <div className="main__logo">
               <Link href={"/"} scroll={false} className="block" onClick={(e) => handleNavigation(e, "/")}>
-                <span className="text-3xl xl:text-4xl font-bold text-clr_base">PTA</span>
+                <Image
+                  src="/images/pta-logo.svg"
+                  alt="PTA Training Luxembourg"
+                  width={60}
+                  height={60}
+                  className="w-[50px] h-[50px] xl:w-[60px] xl:h-[60px]"
+                  priority
+                />
               </Link>
             </div>
 

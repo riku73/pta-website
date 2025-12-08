@@ -5,7 +5,6 @@ import Services from "../Components/Services/Services";
 import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
 import Testimonial from "../Components/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
-import Awards from "../Components/About/Awards";
 import HomeScrollFix from "../Components/Shared/HomeScrollFix";
 
 export const metadata = {
@@ -20,7 +19,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop",
+        url: "https://pta-training.lu/images/gym-interior-wide.jpg",
         width: 1200,
         height: 630,
         alt: "PTA Personal Training Academy - Fitness Studio in Luxembourg",
@@ -31,7 +30,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "PTA - Personal Training Academy Luxembourg",
     description: "Individuelles Personal Training, Ernährungsberatung und Gruppentraining in Luxembourg.",
-    images: ["https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop"],
+    images: ["https://pta-training.lu/images/gym-interior-wide.jpg"],
   },
   alternates: {
     canonical: "https://pta-training.lu",
@@ -49,7 +48,6 @@ const Home = () => {
       <WorkeProcess />
       <Testimonial />
       <Metting />
-      <Awards />
       <Blogs />
     </>
   );

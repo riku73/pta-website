@@ -17,10 +17,10 @@ const Price = ({ image, planName, price, time, fetcher, id }) => {
         >
           <img src={image} alt={`${planName} Paket Icon`} />
         </div>
-        <h4 className="text-white lg:mb-6 mb-4 text-2xl font-semibold">
+        <h4 className="text-white lg:mb-6 mb-4 text-2xl font-medium">
           {planName}
         </h4>
-        <h2 className="lg:mb-10 lg:pb-10 mb-7 pb-7 flex text-6xl border-b border-b-clr_cusborder  text-white font-bold">
+        <h2 className="lg:mb-10 lg:pb-10 mb-7 pb-7 flex text-6xl border-b border-b-clr_cusborder  text-white font-medium">
           {price}
           <span className="text-xl self-end leading-[2.2] font-medium">
             /{time}

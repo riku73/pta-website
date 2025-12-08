@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { ArrowUpShort, Facebook, Instagram, Linkedin, Youtube, GeoAlt, Telephone, Envelope, Clock } from "react-bootstrap-icons";
@@ -48,14 +49,20 @@ const Footer = () => {
               {/* Column 1: Brand */}
               <div>
                 <Link href="/" scroll={false} onClick={(e) => handleNavigation(e, "/")} className="block mb-6">
-                  <span className="text-3xl font-bold text-clr_base">PTA</span>
+                  <Image
+                    src="/images/pta-logo.svg"
+                    alt="PTA Training Luxembourg"
+                    width={70}
+                    height={70}
+                    className="w-[70px] h-[70px]"
+                  />
                 </Link>
                 <p className="text-clr_pra mb-6 leading-relaxed">
                   Für jeden Körper. Für jedes Ziel.
                 </p>
                 <div className="flex gap-3">
                   <Link
-                    href="https://www.facebook.com/PTAlTraining/"
+                    href="https://www.facebook.com/PTAlTraining"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
@@ -75,7 +82,7 @@ const Footer = () => {
 
               {/* Column 2: Navigation */}
               <div>
-                <h4 className="text-white text-xl font-semibold mb-6">Navigation</h4>
+                <h4 className="text-white text-xl font-medium mb-6">Navigation</h4>
                 <ul className="space-y-3">
                   {navigation.map(({ id, name, path }) => (
                     <li key={id}>
@@ -94,7 +101,7 @@ const Footer = () => {
 
               {/* Column 3: Services */}
               <div>
-                <h4 className="text-white text-xl font-semibold mb-6">Leistungen</h4>
+                <h4 className="text-white text-xl font-medium mb-6">Leistungen</h4>
                 <ul className="space-y-3">
                   {services.map(({ id, name, path }) => (
                     <li key={id}>
@@ -113,7 +120,7 @@ const Footer = () => {
 
               {/* Column 4: Contact */}
               <div>
-                <h4 className="text-white text-xl font-semibold mb-6">Kontakt</h4>
+                <h4 className="text-white text-xl font-medium mb-6">Kontakt</h4>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <GeoAlt className="text-clr_base text-lg mt-1 flex-shrink-0" />
@@ -121,8 +128,8 @@ const Footer = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <Telephone className="text-clr_base text-lg flex-shrink-0" />
-                    <Link href="tel:+352123456" className="text-clr_pra hover:text-clr_base duration-300">
-                      +352 123 456
+                    <Link href="tel:+352691789483" className="text-clr_pra hover:text-clr_base duration-300">
+                      +352 691 789 483
                     </Link>
                   </li>
                   <li className="flex items-center gap-3">
@@ -134,8 +141,10 @@ const Footer = () => {
                   <li className="flex items-start gap-3">
                     <Clock className="text-clr_base text-lg mt-1 flex-shrink-0" />
                     <div className="text-clr_pra">
-                      <span className="block">Mo-Fr: 06:00 - 22:00</span>
-                      <span className="block">Sa-So: 08:00 - 20:00</span>
+                      <span className="block">Mo-Do: 08:00 - 21:00</span>
+                      <span className="block">Fr: 09:00 - 19:00</span>
+                      <span className="block">Sa: 09:00 - 12:00</span>
+                      <span className="block">So: Geschlossen</span>
                     </div>
                   </li>
                 </ul>

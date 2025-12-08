@@ -26,7 +26,7 @@ const Education = ({ isTabActive }) => {
             instition: "FMS, Kettlebell & TRX",
           },
         ]}
-        image="https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd?w=500&h=600&fit=crop"
+        image="/images/pta-entrance.jpg"
       />
     </div>
   );

@@ -4,7 +4,7 @@ export const socialIcons = [
   {
     id: 1,
     icon: <Facebook />,
-    link: "https://www.facebook.com/PTAlTraining/",
+    link: "https://www.facebook.com/PTAlTraining",
   },
   {
     id: 2,
