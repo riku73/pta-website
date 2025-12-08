@@ -1,11 +1,18 @@
+import dynamic from "next/dynamic";
 import Banner from "../components/Banner";
 import About from "../components/About/About";
 import Meeting from "../components/Meeting";
 import Services from "../components/Services/Services";
 import WorkProcess from "../components/WorkProcess/WorkProcess";
-import Testimonial from "../components/Testimonial";
-import Blogs from "../components/Blogs/Blogs";
 import HomeScrollFix from "../components/Shared/HomeScrollFix";
+
+// Lazy load below-fold components
+const Testimonial = dynamic(() => import("../components/Testimonial"), {
+  loading: () => <div className="h-96 bg-[#141410]" />,
+});
+const Blogs = dynamic(() => import("../components/Blogs/Blogs"), {
+  loading: () => <div className="h-96 bg-[#141410]" />,
+});
 
 export const metadata = {
   title: "PTA - Personal Training Academy | Fitness in Heiderscheid, Luxembourg",

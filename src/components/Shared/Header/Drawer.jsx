@@ -14,16 +14,15 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
         isSidebarActive ? "right-0" : "-right-80"
       }`}
     >
-      <div
+      <button
         onClick={() => setIsSidebarActive(false)}
-        className="flex justify-center items-center w-10 h-10 m-[10px] bg-clr_base ml-auto p-[5px] rounded-md hover:cursor-pointer"
+        aria-label="Menü schließen"
+        className="flex justify-center items-center w-12 h-12 m-[10px] bg-clr_base ml-auto p-[5px] rounded-md hover:cursor-pointer"
       >
-        <i className="text-[22px] text-clr_mtitle">
-          <XLg />
-        </i>
-      </div>
+        <XLg className="text-[22px] text-clr_mtitle" aria-hidden="true" />
+      </button>
       <div className="grid py-10 px-5">
-        <Link href={"/"} onClick={scrollToTop} scroll={false} className="mb-5">
+        <Link href={"/"} onClick={scrollToTop} scroll={false} className="mb-5" aria-label="Zur Startseite">
           <span className="text-3xl font-bold text-clr_base">PTA</span>
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">
@@ -51,15 +50,16 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
         </div>
         <div className="lg:mb-20 mb-14 relative">
           <ul className="flex gap-[14px]">
-            {socialIcons.map(({ icon, id, link }) => (
+            {socialIcons.map(({ icon, id, link, label }) => (
               <li key={id}>
                 <Link
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[45px] h-[45px] rounded-full bg-clr_base border border-clr_base  flex justify-center items-center "
+                  aria-label={label}
+                  className="w-12 h-12 rounded-full bg-clr_base border border-clr_base flex justify-center items-center"
                 >
-                  <i className="text-clr_title">{icon}</i>
+                  <span className="text-clr_title" aria-hidden="true">{icon}</span>
                 </Link>
               </li>
             ))}

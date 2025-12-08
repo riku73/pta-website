@@ -13,13 +13,12 @@ const Service = ({ heading, subHeading, para, id, slug }) => {
         <div className="flex lg:gap-[60px] gap-[16px]">
           <span className="text-xl text-white"> {id} </span>
           <div>
-            <h3 className="text-base lg:text-xl font-medium text-white mb-2">{subHeading}</h3>
-            <h2 className="text-[26px] xl:text-[40px] lg:text-3xl font-medium lg:leading-[120%]">
+            <p className="text-base lg:text-xl font-medium text-white mb-2">{subHeading}</p>
+            <h3 className="text-[26px] xl:text-[40px] lg:text-3xl font-medium lg:leading-[120%]">
               <Link href={`/leistungen/${slug}`} className="text-white duration-500">
-                {" "}
-                {heading}{" "}
+                {heading}
               </Link>
-            </h2>
+            </h3>
           </div>
         </div>
         <p className="text-clr_pra text-base lg:w-[400px] w-[300px]">{para}</p>
@@ -27,9 +26,10 @@ const Service = ({ heading, subHeading, para, id, slug }) => {
 
       <Link
         href={`/leistungen/${slug}`}
-        className="h-[45px] w-[45px] sm:w-[60px] sm:h-[60px] rounded-md bg-[#1D1D1D] flex justify-center items-center duration-500 group-hover:bg-clr_base cursor-pointer"
+        aria-label={`Mehr erfahren über ${heading}`}
+        className="h-12 w-12 sm:w-[60px] sm:h-[60px] rounded-md bg-[#1D1D1D] flex justify-center items-center duration-500 group-hover:bg-clr_base cursor-pointer"
       >
-        <ArrowUpRight className="duration-500 group-hover:text-clr_title text-lg sm:text-xl text-white " />
+        <ArrowUpRight className="duration-500 group-hover:text-clr_title text-lg sm:text-xl text-white" aria-hidden="true" />
       </Link>
     </div>
   );

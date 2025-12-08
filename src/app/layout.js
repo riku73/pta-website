@@ -1,8 +1,16 @@
 import "./globals.css";
+import { Caveat } from "next/font/google";
 import AddAnimation from "@/components/Shared/AddAnimation";
 import Footer from "@/components/Shared/Footer";
 import Header from "@/components/Shared/Header/Header";
 import ScrollToTop from "@/components/Shared/ScrollToTop";
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-caveat",
+});
 
 export const metadata = {
   metadataBase: new URL('https://pta-training.lu'),
@@ -179,7 +187,7 @@ const organizationSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
+    <html lang="de" className={caveat.variable}>
       <head>
         <script
           type="application/ld+json"

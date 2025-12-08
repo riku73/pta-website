@@ -36,7 +36,7 @@ export default {
         "mainShadow": "rgba(0, 0, 0, 0.15) 0px -1px 34px 0px"
       },
       backgroundImage: {
-        "common_bg": "url('/images/about-bg.png')",
+        "common_bg": "url('/images/about-bg.webp')",
       },
       keyframes: {
         scales: {
@@ -61,7 +61,7 @@ export default {
 
       },
       fontFamily: {
-        "caveat": ["Caveat", "cursive"]
+        "caveat": ["var(--font-caveat)", "cursive"]
       },
       
     },

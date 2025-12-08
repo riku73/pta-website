@@ -1,12 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutCard = ({ title, para, info, image }) => {
   return (
     <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px]">
       <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
         <div>
-          <div>
-            <img src={image} alt={title} className="w-full rounded-lg object-cover" />
+          <div className="relative aspect-[3/2] w-full">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="rounded-lg object-cover"
+              sizes="(max-width: 1024px) 100vw, 41vw"
+            />
           </div>
         </div>
         <div>

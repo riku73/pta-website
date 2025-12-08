@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, ArrowUpRight, Telephone } from "react-bootstrap-icons";
 
 const socalIcon = [
@@ -19,18 +20,17 @@ const socalIcon = [
 const Banner = () => {
   return (
     <section id="home" className="relative w-full min-h-screen">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/gym-interior-wide.jpg')",
-          imageRendering: '-webkit-optimize-contrast',
-          WebkitBackfaceVisibility: 'hidden',
-          backfaceVisibility: 'hidden',
-          transform: 'translateZ(0)',
-          willChange: 'transform',
-        }}
-      >
+      {/* Background Image - Optimized with Next.js Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/gym-interior-wide.jpg"
+          alt="PTA Training Gym Interior"
+          fill
+          priority
+          quality={75}
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/75" />
       </div>
       <div className="container relative z-10 min-h-screen flex items-center lg:pt-20">
@@ -68,7 +68,7 @@ const Banner = () => {
             {socalIcon.map(({ icon, id, link, label }) => {
               return (
                 <li key={id}>
-                  <Link href={link} target="_blank" rel="noopener noreferrer me" aria-label={label} className="lg:w-[46px] lg:h-[46px] h-[38px] w-[38px] rounded-full bg-[rgb(18_18_18)] flex justify-center items-center hover:bg-clr_base cursor-pointer transition-colors duration-300">
+                  <Link href={link} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-12 h-12 rounded-full bg-[rgb(18_18_18)] flex justify-center items-center hover:bg-clr_base cursor-pointer transition-colors duration-300">
                     <span className="text-white">{icon}</span>
                   </Link>
                 </li>

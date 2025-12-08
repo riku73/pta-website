@@ -1,5 +1,5 @@
 'use client'
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
@@ -41,15 +41,24 @@ const RenderHeader = () => {
     }
   };
 
-  // Function for handling the sticky header
-  const updateHeaderStickyState = useCallback(() => {
-    setFixedHeader(window.scrollY >= 35);
-  }, []);
-
+  // Function for handling the sticky header with requestAnimationFrame throttling
   useEffect(() => {
-    window.addEventListener("scroll", updateHeaderStickyState);
-    return () => window.removeEventListener("scroll", updateHeaderStickyState);
-  }, [updateHeaderStickyState]);
+    let ticking = false;
+    const updateHeaderStickyState = () => {
+      setFixedHeader(window.scrollY >= 35);
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateHeaderStickyState);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {

@@ -39,9 +39,10 @@ const Blog = ({ date, heading, image, slug }) => {
       </div>
       <Link
         href={`/blog/${slug}`}
+        aria-label={`Artikel lesen: ${heading}`}
         className="w-[60px] h-[60px] flex justify-center items-center bg-none rounded-full border border-white duration-500 group-hover:border-clr_base group-hover:bg-clr_base"
       >
-        <ArrowRight className="text-white duration-500 group-hover:text-clr_title" />
+        <ArrowRight className="text-white duration-500 group-hover:text-clr_title" aria-hidden="true" />
       </Link>
     </div>
   );

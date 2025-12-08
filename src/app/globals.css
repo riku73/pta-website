@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap");
+/* Font loaded via next/font in layout.js for better performance */
 
 html {
   scroll-behavior: auto;
@@ -109,7 +109,7 @@ body {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-/* -------------- Animation text */
+/* -------------- Animation text (GPU-accelerated with clip-path) */
 .designers {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -121,17 +121,18 @@ body {
 .designers::before {
   content: attr(data-text);
   position: absolute;
+  left: 0;
   color: #c9f31d;
-  width: 0px;
-  overflow: hidden;
-  animation: pulse-width 3s ease-in infinite;
+  clip-path: inset(0 100% 0 0);
+  animation: pulse-clip 3s ease-in infinite;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #c9f31d;
+  will-change: clip-path;
 }
 
-@keyframes pulse-width {
+@keyframes pulse-clip {
   50% {
-    width: 100%;
+    clip-path: inset(0 0 0 0);
   }
 }
 

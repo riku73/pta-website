@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const skillsList = [
   {
@@ -30,8 +31,22 @@ const Skills = ({ isTabActive }) => {
         <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
           <div>
             <div className="w-full space-y-4">
-              <img src="/images/team-trainers.jpg" alt="PTA Team" className="w-full rounded-lg object-cover" />
-              <img src="/images/pta-banner.jpg" alt="PTA Personal Training Academy" className="w-full rounded-lg object-cover" />
+              <Image
+                src="/images/team-trainers.jpg"
+                alt="PTA Team"
+                width={2048}
+                height={1366}
+                className="w-full rounded-lg object-cover"
+                sizes="(max-width: 1024px) 100vw, 41vw"
+              />
+              <Image
+                src="/images/pta-banner.jpg"
+                alt="PTA Personal Training Academy"
+                width={1920}
+                height={823}
+                className="w-full rounded-lg object-cover"
+                sizes="(max-width: 1024px) 100vw, 41vw"
+              />
             </div>
           </div>
           <div>

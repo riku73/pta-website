@@ -66,7 +66,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer me"
                     aria-label="Besuche uns auf Facebook"
-                    className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
+                    className="w-12 h-12 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
                   >
                     <Facebook className="text-lg" aria-hidden="true" />
                   </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer me"
                     aria-label="Folge uns auf Instagram"
-                    className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
+                    className="w-12 h-12 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white hover:bg-clr_base hover:text-clr_title duration-300"
                   >
                     <Instagram className="text-lg" aria-hidden="true" />
                   </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
 
               {/* Column 2: Navigation */}
               <div>
-                <h4 className="text-white text-xl font-medium mb-6">Navigation</h4>
+                <h3 className="text-white text-xl font-medium mb-6">Navigation</h3>
                 <ul className="space-y-3">
                   {navigation.map(({ id, name, path }) => (
                     <li key={id}>
@@ -103,7 +103,7 @@ const Footer = () => {
 
               {/* Column 3: Services */}
               <div>
-                <h4 className="text-white text-xl font-medium mb-6">Leistungen</h4>
+                <h3 className="text-white text-xl font-medium mb-6">Leistungen</h3>
                 <ul className="space-y-3">
                   {services.map(({ id, name, path }) => (
                     <li key={id}>
@@ -122,7 +122,7 @@ const Footer = () => {
 
               {/* Column 4: Contact */}
               <div>
-                <h4 className="text-white text-xl font-medium mb-6">Kontakt</h4>
+                <h3 className="text-white text-xl font-medium mb-6">Kontakt</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <GeoAlt className="text-clr_base text-lg mt-1 flex-shrink-0" aria-hidden="true" />
@@ -169,17 +169,17 @@ const Footer = () => {
             </p>
             <ul className="flex gap-6">
               <li>
-                <Link href="#" className="text-sm text-clr_pra hover:text-clr_base duration-300">
+                <Link href="/agb" className="text-sm text-clr_pra hover:text-clr_base duration-300">
                   AGB
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-clr_pra hover:text-clr_base duration-300">
+                <Link href="/datenschutz" className="text-sm text-clr_pra hover:text-clr_base duration-300">
                   Datenschutz
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-clr_pra hover:text-clr_base duration-300">
+                <Link href="/impressum" className="text-sm text-clr_pra hover:text-clr_base duration-300">
                   Impressum
                 </Link>
               </li>
@@ -187,7 +187,7 @@ const Footer = () => {
             <button
               onClick={() => window.scrollTo(0, 0)}
               aria-label="Nach oben scrollen"
-              className="w-10 h-10 bg-clr_base rounded flex justify-center items-center hover:bg-[#aad302] duration-300"
+              className="w-12 h-12 bg-clr_base rounded flex justify-center items-center hover:bg-[#aad302] duration-300"
             >
               <ArrowUpShort className="text-xl text-clr_title" aria-hidden="true" />
             </button>

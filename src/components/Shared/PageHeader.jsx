@@ -1,20 +1,29 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
-const defaultBg = "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80";
+const defaultBg = "/images/gym-interior-wide.jpg";
 
 const PageHeader = ({heading, page, backgroundImage, useH2 = false, parentLink = "/", parentLabel = "Startseite"}) => {
   const HeadingTag = useH2 ? 'h2' : 'h1';
+  const imageSrc = backgroundImage || defaultBg;
 
   return (
-    <div
-      className="relative bg-center bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url('${backgroundImage || defaultBg}')`
-      }}
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/75 z-0"></div>
+    <div className="relative">
+      {/* Background Image - Optimized with Next.js Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={imageSrc}
+          alt={`${heading} - PTA Training`}
+          fill
+          priority
+          quality={75}
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/75 z-0"></div>
+      </div>
       <div className="container pt_120 pb_120 relative z-10">
         <div className="flex justify-center">
           <div>
