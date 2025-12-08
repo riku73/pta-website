@@ -12,7 +12,7 @@ const AboutCard = ({ title, para, info, image }) => {
               alt={title}
               fill
               className="rounded-lg object-cover"
-              sizes="(max-width: 1024px) 100vw, 41vw"
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 400px"
             />
           </div>
         </div>

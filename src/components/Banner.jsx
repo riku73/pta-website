@@ -27,7 +27,7 @@ const Banner = () => {
           alt="PTA Training Gym Interior"
           fill
           priority
-          quality={75}
+          quality={60}
           sizes="100vw"
           className="object-cover"
         />

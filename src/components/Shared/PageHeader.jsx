@@ -17,7 +17,7 @@ const PageHeader = ({heading, page, backgroundImage, useH2 = false, parentLink =
           alt={`${heading} - PTA Training`}
           fill
           priority
-          quality={75}
+          quality={60}
           sizes="100vw"
           className="object-cover"
         />

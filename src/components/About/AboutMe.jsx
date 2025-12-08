@@ -42,7 +42,7 @@ const AboutMe = ({ isTabActive }) => {
                 width={2048}
                 height={1366}
                 className="w-full rounded-lg object-cover"
-                sizes="(max-width: 1024px) 100vw, 41vw"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 400px"
               />
               <Image
                 src="/images/pta-banner.jpg"
@@ -50,7 +50,7 @@ const AboutMe = ({ isTabActive }) => {
                 width={1920}
                 height={823}
                 className="w-full rounded-lg object-cover"
-                sizes="(max-width: 1024px) 100vw, 41vw"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 400px"
               />
             </div>
           </div>
